@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cx3mfrt7tu4ab"]
+
+[ext_resource type="Script" path="res://InventorySystem/Items/Item.gd" id="1_1n4c5"]
+[ext_resource type="Texture2D" uid="uid://cy46ahhc8lnl2" path="res://InventorySystem/Items/Res/SugarMilk.png" id="2_vkh4n"]
+
+[resource]
+script = ExtResource("1_1n4c5")
+id = 0
+name = "Sugar milk"
+texture = ExtResource("2_vkh4n")
+size = Vector2i(0, 0)
+pickable_path = "res://InventorySystem/Items/Pickup/sugar_milk.tscn"
+pickup_sound_path = ""
+first_person_prefab_path = "res://InventorySystem/Items/FPPrefab/sugar_milk.tscn"
+one_time_use = true
+upgrade_rough = Array[int]([])
+upgrade_coarse = Array[int]([])
+upgrade_one_to_one = Array[int]([])
+upgrade_fine = Array[int]([])
+upgrade_very_fine = Array[int]([])

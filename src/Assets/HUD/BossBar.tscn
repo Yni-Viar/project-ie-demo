@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctc4ktb6f7sba"]
+
+[ext_resource type="Texture2D" uid="uid://cwdnksovksto4" path="res://Assets/HUD/bossbar_unfilled.png" id="1_fa7ug"]
+[ext_resource type="Script" path="res://Scripts/BossBar.gd" id="1_vsaag"]
+[ext_resource type="Texture2D" uid="uid://dutfkfrp6bikp" path="res://Assets/HUD/bossbar_filled.png" id="2_la0ri"]
+[ext_resource type="FontFile" uid="uid://j45d6xc2rd07" path="res://Assets/Fonts/Home_Video/HomeVideo-Regular.otf" id="3_b64iw"]
+
+[node name="BossBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 384.0
+offset_bottom = 64.0
+script = ExtResource("1_vsaag")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 0
+offset_right = 384.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("3_b64iw")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Health" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 384.0
+offset_bottom = 64.0
+nine_patch_stretch = true
+stretch_margin_left = 16
+stretch_margin_right = 16
+texture_under = ExtResource("1_fa7ug")
+texture_progress = ExtResource("2_la0ri")

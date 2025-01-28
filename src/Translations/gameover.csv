@@ -1,0 +1,6 @@
+keys,en,ru
+DEATH,o' Death,о' Смерть
+REASON_GENERIC,Your soul was teared apart,Ваша душа распалась на части
+REASON_ELECTRIC_BITTEN,You were shocked by electricity to death,Вы получили смертельный удар током
+REASON_DEMO,You got lost. Maybe you should go to the different direction?,"Вы потерялись. Может быть, стоило пойти в другую сторону?"
+SIMULATION_LOST,Connection lost,Связь прервана

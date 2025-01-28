@@ -1,0 +1,215 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://debc804otqy0b"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_bwwch"]
+
+[resource]
+script = ExtResource("1_bwwch")
+starts = {
+"dlg_test": &"0_1",
+"dlg_test_2": &"0_2"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(88, 321),
+"start_id": "dlg_test"
+},
+"0_2": {
+"link": &"1_11",
+"offset": Vector2(100, 1240),
+"start_id": "dlg_test_2"
+},
+"1_1": {
+"dialogue": "Good morning, honey!",
+"offset": Vector2(380, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Julia Cloud (your wife)"
+},
+"1_10": {
+"dialogue": "You won't go for a work today.
+You are in real virtuality, you cannot go out from you home...",
+"offset": Vector2(2420, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_7",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Voice"
+},
+"1_11": {
+"dialogue": "Did you hear that voice?",
+"offset": Vector2(400, 1220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_12",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "You"
+},
+"1_12": {
+"dialogue": "Yes... I feel strange.",
+"offset": Vector2(740, 1220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_13",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Julia Cloud"
+},
+"1_13": {
+"dialogue": "Let's go together around the house to find this voice source!",
+"offset": Vector2(1080, 1220),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Julia Cloud"
+},
+"1_2": {
+"dialogue": "I had a dream today...",
+"offset": Vector2(719, 328.484),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Julia Cloud"
+},
+"1_3": {
+"dialogue": "That the developer was creating a game.",
+"offset": Vector2(1060, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Julia Cloud"
+},
+"1_4": {
+"dialogue": "Will you create a game about us?",
+"offset": Vector2(1400, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": "I need to go to the work"
+},
+1: {
+"condition": {},
+"link": &"1_9",
+"text": "Let's do this!"
+}
+},
+"size": Vector2(300, 289),
+"speaker": "Julia Cloud"
+},
+"1_5": {
+"dialogue": "Okay... Maybe in a spare time?",
+"offset": Vector2(1740, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_6",
+"text": "Of course!"
+}
+},
+"size": Vector2(300, 256),
+"speaker": "Julia Cloud"
+},
+"1_6": {
+"dialogue": "... you hear an strange voice...",
+"offset": Vector2(2080, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_10",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_7": {
+"dialogue": "Yni Viar just wanted to showcase Internal Eternal...",
+"offset": Vector2(2760, 660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_8",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Voice"
+},
+"1_8": {
+"dialogue": "What was that?",
+"offset": Vector2(3120, 660),
+"options": {
+0: {
+"condition": {},
+"link": &"3_3",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Your mind"
+},
+"1_9": {
+"dialogue": "... you hear an strange voice...",
+"offset": Vector2(1720, 640),
+"options": {
+0: {
+"condition": {},
+"link": &"1_7",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"3_1": {
+"link": &"3_2",
+"offset": Vector2(1478.95, 1211.19),
+"signalValue": "follow_player"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(1720, 1200),
+"signalValue": "stop_talk"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2(3520, 660),
+"signalValue": "next_talk_pos"
+}
+}
+variables = {}
+strays = Array[String]([])
+characters = ""

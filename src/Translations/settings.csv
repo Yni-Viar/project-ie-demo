@@ -1,0 +1,19 @@
+keys,en,ru
+SETTINGS,Settings,Настройки
+LANGUAGE,Language:,Язык:
+GRAPHICS,Graphics:,Графика:
+SOUNDS,Sounds:,Звуки:
+INPUT,Input:,Ввод:
+MUSIC_SET,Music volume,Громкость музыки
+SOUND_SET,Sound volume (affects ALL sounds),Общая громкость
+SENS_SET,Mouse sensivity,Чувствительность мыши
+DYNAMIC_GI_SET,Dynamic GI,Динамичная графика (например свечение текстур)
+FOG_SET,"Volumetric fog toggle\n(if disabled, then standard fog appears instead of volumetric)","Объемная дымка\n(если отключено, применяется обычная дымка)"
+FULLSCREEN_SET,Fullscreen," Полный экран"
+GRAPHICS_DEFAULT_ENV,Default environment graphics,Графика окружения по умолчанию
+LANGUAGE_WARNING," ""The in-game text may be not translated if there is no translation file coming with the game"""," ""Если внутри игры не задан файл перевода то текст будет на изначальном языке!"""
+GLOW,Glow effect,Эффект свечения
+RESOLUTION,Screen resolution,Разрешение экрана
+GAMEPLAY,Gameplay,Геймплей
+MAIN_OPTIMIZATOR_SET,Optimize game functions,Оптимизировать функции игры
+MAIN_OPTIMIZATOR_DESCR,"0 / left - disable unnecessary objects and unused\nfunctions (performance),\n1 / center - disable only unused objects, \n2 / right - disable nothing","0 / слева - выключить несущественные объекты и\nнеиспользованные функции, (производительность),\n1 / центр - выключить только неиспользованные объекты,\n2 / справа - ничего не выключать"

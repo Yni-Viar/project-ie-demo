@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://csan8bknfmodc"]
+
+[ext_resource type="AnimationLibrary" uid="uid://cuxxbj7avet71" path="res://addons/humanizer/data/animations/animations.glb" id="2_a0fcn"]
+[ext_resource type="AnimationLibrary" uid="uid://emmvvsfesjxk" path="res://addons/humanizer/data/animations/Output/animations.res" id="2_n8ot3"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xuanj"]
+animation = &"animations/Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4gpo2"]
+animation = &"animations/Run"
+
+[sub_resource type="AnimationNodeBlend3" id="AnimationNodeBlend3_uk20m"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tc657"]
+animation = &"animations 2/Walking"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_acror"]
+graph_offset = Vector2(-630.391, 204.898)
+nodes/idle/node = SubResource("AnimationNodeAnimation_xuanj")
+nodes/idle/position = Vector2(-260, -80)
+nodes/run/node = SubResource("AnimationNodeAnimation_4gpo2")
+nodes/run/position = Vector2(-280, 180)
+nodes/state_machine/node = SubResource("AnimationNodeBlend3_uk20m")
+nodes/state_machine/position = Vector2(-60, 60)
+nodes/walk/node = SubResource("AnimationNodeAnimation_tc657")
+nodes/walk/position = Vector2(-440, 60)
+node_connections = [&"output", 0, &"state_machine", &"state_machine", 0, &"idle", &"state_machine", 1, &"walk", &"state_machine", 2, &"run"]
+
+[node name="AnimationTree" type="AnimationTree"]
+active = false
+root_node = NodePath(".")
+tree_root = SubResource("AnimationNodeBlendTree_acror")
+anim_player = NodePath("AnimationPlayer")
+parameters/state_machine/blend_amount = -1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"animations": ExtResource("2_a0fcn"),
+"animations 2": ExtResource("2_n8ot3")
+}
