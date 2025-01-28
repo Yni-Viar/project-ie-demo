@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="SettingsResource" load_steps=2 format=3 uid="uid://bdftvlo16o7wt"]
+
+[ext_resource type="Script" path="res://Scripts/SettingsResource/SettingsResource.gd" id="1_y4xtp"]
+
+[resource]
+script = ExtResource("1_y4xtp")
+available_languages = Array[String](["en", "ru"])
+dynamic_gi = false
+ssao = false
+ssil = false
+ssr = false
+fog = false
+music = 1.0
+sound = 1.0
+fullscreen = true
+mouse_sensitivity = 0.05
+window_size = Array[Vector2i]([Vector2i(1920, 1080), Vector2i(1600, 900), Vector2i(1366, 768), Vector2i(1280, 720), Vector2i(1024, 768), Vector2i(800, 600)])
+ui_language = 0
+glow = false
+ui_window_size = 0
+vsync = true
+reflection_probes = false
+enable_light_shadows = false
+camera_field_of_view = 75.0
+game_optimizator = 0

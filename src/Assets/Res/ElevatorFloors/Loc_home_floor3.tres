@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ElevatorFloor" load_steps=2 format=3 uid="uid://b6j1xrijrf6vl"]
+
+[ext_resource type="Script" path="res://Scripts/ElevatorSystem/ElevatorFloor.gd" id="1_gdn5w"]
+
+[resource]
+script = ExtResource("1_gdn5w")
+destination_point = "/root/Game/Loc_Home/HouseElevator/Floor3"
+up_helper_point = ""
+down_helper_point = ""

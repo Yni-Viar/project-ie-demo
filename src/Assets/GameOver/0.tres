@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameOverResource" load_steps=3 format=3 uid="uid://buhn0pxphp2q8"]
+
+[ext_resource type="Texture2D" uid="uid://bijbh16ss2qio" path="res://Assets/GameOver/Screens/odeath.png" id="1_420og"]
+[ext_resource type="Script" path="res://Scripts/GameOverResource.gd" id="1_vbalp"]
+
+[resource]
+script = ExtResource("1_vbalp")
+screen = ExtResource("1_420og")
+text = "DEATH"
+reason = ""

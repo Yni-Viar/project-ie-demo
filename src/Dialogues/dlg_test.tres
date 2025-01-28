@@ -1,0 +1,321 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://debc804otqy0b"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_bwwch"]
+
+[resource]
+script = ExtResource("1_bwwch")
+starts = {
+"dlg_test": &"0_1",
+"dlg_test_2": &"0_2",
+"dlg_test_3": &"0_3"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(88, 321),
+"start_id": "dlg_test"
+},
+"0_2": {
+"link": &"1_11",
+"offset": Vector2(100, 1240),
+"start_id": "dlg_test_2"
+},
+"0_3": {
+"link": &"1_14",
+"offset": Vector2(60, 2040),
+"start_id": "dlg_test_3"
+},
+"1_1": {
+"dialogue": "DLG_TEST_1_1",
+"offset": Vector2(380, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_WIFE_FIRSTSTART"
+},
+"1_10": {
+"dialogue": "DLG_TEST_1_7",
+"offset": Vector2(2420, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_7",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_VOICE"
+},
+"1_11": {
+"dialogue": "DLG_TEST_2_1",
+"offset": Vector2(400, 1220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_12",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SERGE_FEATHER"
+},
+"1_12": {
+"dialogue": "DLG_TEST_2_2",
+"offset": Vector2(740, 1220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_13",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_WIFE"
+},
+"1_13": {
+"dialogue": "DLG_TEST_2_3",
+"offset": Vector2(1080, 1220),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_WIFE"
+},
+"1_14": {
+"dialogue": "DLG_TEST_3_1",
+"offset": Vector2(360, 2120),
+"options": {
+0: {
+"condition": {},
+"link": &"1_15",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_WIFE"
+},
+"1_15": {
+"dialogue": "DLG_TEST_3_2",
+"offset": Vector2(740, 2320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_16",
+"text": "DLG_TEST_3_2a"
+},
+1: {
+"condition": {},
+"link": &"1_17",
+"text": "DLG_TEST_3_2b"
+}
+},
+"size": Vector2(300, 289),
+"speaker": "NPC_VOICE"
+},
+"1_16": {
+"dialogue": "DLG_TEST_3_3",
+"offset": Vector2(720, 2020),
+"options": {
+0: {
+"condition": {},
+"link": &"1_15",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_VOICE"
+},
+"1_17": {
+"dialogue": "DLG_TEST_3_4",
+"offset": Vector2(1180, 2380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_18",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_VOICE"
+},
+"1_18": {
+"dialogue": "DLG_TEST_3_5",
+"offset": Vector2(1520, 2380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_19",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_VOICE"
+},
+"1_19": {
+"dialogue": "DLG_TEST_3_6",
+"offset": Vector2(1860, 2380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_20",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_VOICE"
+},
+"1_2": {
+"dialogue": "DLG_TEST_1_2",
+"offset": Vector2(719, 328.484),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_WIFE"
+},
+"1_20": {
+"dialogue": "DLG_TEST_3_7",
+"offset": Vector2(2200, 2380),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_VOICE"
+},
+"1_3": {
+"dialogue": "DLG_TEST_1_3",
+"offset": Vector2(1060, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_WIFE"
+},
+"1_4": {
+"dialogue": "DLG_TEST_1_4",
+"offset": Vector2(1400, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": "DLG_TEST_1_4a"
+},
+1: {
+"condition": {},
+"link": &"1_9",
+"text": "DLG_TEST_1_4b"
+}
+},
+"size": Vector2(300, 289),
+"speaker": "NPC_WIFE"
+},
+"1_5": {
+"dialogue": "DLG_TEST_1_5",
+"offset": Vector2(1740, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_6",
+"text": "DLG_TEST_1_5a"
+}
+},
+"size": Vector2(300, 256),
+"speaker": "NPC_WIFE"
+},
+"1_6": {
+"dialogue": "DLG_TEST_1_6",
+"offset": Vector2(2080, 320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_10",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_7": {
+"dialogue": "DLG_TEST_1_8",
+"offset": Vector2(2760, 660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_8",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_VOICE"
+},
+"1_8": {
+"dialogue": "DLG_TEST_1_9",
+"offset": Vector2(3120, 660),
+"options": {
+0: {
+"condition": {},
+"link": &"3_3",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SERGE_MIND"
+},
+"1_9": {
+"dialogue": "DLG_TEST_1_6",
+"offset": Vector2(1720, 640),
+"options": {
+0: {
+"condition": {},
+"link": &"1_7",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"3_1": {
+"link": &"3_4",
+"offset": Vector2(1478.95, 1211.19),
+"signalValue": "follow_player"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(1980, 1200),
+"signalValue": "stop_talk"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2(3520, 660),
+"signalValue": "next_talk_pos"
+},
+"3_4": {
+"link": &"3_2",
+"offset": Vector2(1720, 1200),
+"signalValue": "next_talk_pos"
+}
+}
+variables = {}
+strays = Array[String]([])
+characters = ""

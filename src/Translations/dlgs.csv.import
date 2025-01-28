@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cbp5b2a0fy4c5"
+
+[deps]
+
+files=["res://Translations/dlgs.en.translation", "res://Translations/dlgs.ru.translation"]
+
+source_file="res://Translations/dlgs.csv"
+dest_files=["res://Translations/dlgs.en.translation", "res://Translations/dlgs.ru.translation"]
+
+[params]
+
+compress=true
+delimiter=0
