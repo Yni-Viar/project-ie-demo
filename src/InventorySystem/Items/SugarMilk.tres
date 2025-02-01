@@ -7,12 +7,14 @@
 script = ExtResource("1_1n4c5")
 id = 0
 name = "Sugar milk"
-texture = ExtResource("2_vkh4n")
-size = Vector2i(0, 0)
+texture_tiled = ExtResource("2_vkh4n")
+texture_slot = ExtResource("2_vkh4n")
 pickable_path = "res://InventorySystem/Items/Pickup/sugar_milk.tscn"
 pickup_sound_path = ""
 first_person_prefab_path = "res://InventorySystem/Items/FPPrefab/sugar_milk.tscn"
+size = Vector2i(0, 0)
 one_time_use = true
+usage = 0
 upgrade_rough = Array[int]([])
 upgrade_coarse = Array[int]([])
 upgrade_one_to_one = Array[int]([])
