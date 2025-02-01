@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://dyeqacmwaajfm"]
+[gd_scene load_steps=33 format=4 uid="uid://dyeqacmwaajfm"]
 
 [ext_resource type="Script" path="res://Scripts/GameCore.gd" id="1_hqmbo"]
 [ext_resource type="Resource" uid="uid://dtootndbrxot5" path="res://Scripts/GameData/gamedata.tres" id="2_pv0oa"]
@@ -16,7 +16,6 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="13_clcop"]
 [ext_resource type="Environment" uid="uid://cpjkvy5s2l8ae" path="res://Assets/Environments/RealVirtualityGraphics.tres" id="14_uvye0"]
 [ext_resource type="PackedScene" uid="uid://bjbe75eis8tu6" path="res://Scenes/Settings.tscn" id="15_85lew"]
-[ext_resource type="PackedScene" uid="uid://o6rnnciwmwvn" path="res://GDsh/InGameConsole.tscn" id="16_rrh7f"]
 [ext_resource type="PackedScene" uid="uid://bkvhbuu4pc1px" path="res://Assets/Locations/loc_home_2025.tscn" id="17_yj2b2"]
 [ext_resource type="Shader" path="res://Shaders/PbrGlassShader/PbrGlass.gdshader" id="60_8y7uj"]
 
@@ -271,7 +270,7 @@ text = "- Calculator model by GameDev Nick (CC-BY 4.0)
 - Music:
 Credit: Alexey Kasyanchuk (DEgITx) (CC BY 4.0)
 Kevin MacLeod (CC-BY 4.0)
-Other assets and code are CC0 or Unlicense, or made by me (Yni Viar).
+Other assets and code are CC0, or made by me (Yni Viar).
 Check the sources folder for authors information...."
 autowrap_mode = 3
 
@@ -482,9 +481,6 @@ environment = ExtResource("14_uvye0")
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 bus = &"Music"
-
-[node name="InGameConsole" parent="." instance=ExtResource("16_rrh7f")]
-visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -963,7 +963,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8514, 51.634, -3.57357)
 [node name="EasterEgg" type="Node3D" parent="SergesHome"]
 
 [node name="omnidotplush" parent="SergesHome/EasterEgg" instance=ExtResource("13_35qgn")]
-transform = Transform3D(0.999195, 0, 0.0401144, 0, 1, 0, -0.0401144, 0, 0.999195, -16.7251, 51.8121, -2.40888)
+transform = Transform3D(0.999195, 0, 0.0401144, 0, 1, 0, -0.0401144, 0, 0.999195, -16.7251, 51.8579, -2.46269)
 
 [node name="Key2" parent="SergesHome/EasterEgg" instance=ExtResource("14_f73sv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5871, 54.3389, 4.66123)

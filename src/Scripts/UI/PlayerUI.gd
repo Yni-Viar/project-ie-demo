@@ -20,20 +20,23 @@ func _process(delta):
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
 		input_values("exitgame")
-	if Input.is_action_just_pressed("console"):
-		input_values("console")
+	#if Input.is_action_just_pressed("console"):
+		#input_values("console")
 	if Input.is_action_just_pressed("human_inventory"):
 		input_values("inventory")
 
 func input_values(state: String):
 	match state:
-		"console":
-			if !special_screen:
-				get_tree().root.get_node("Game/InGameConsole").visible = true
-				special_screen = true
-			else:
-				get_tree().root.get_node("Game/InGameConsole").visible = false
-				special_screen = false
+		#"console":
+			#if !special_screen:
+				#get_tree().root.get_node("Game/InGameConsole").visible = true
+				#special_screen = true
+			#else:
+				#get_tree().root.get_node("Game/InGameConsole").visible = false
+				#special_screen = false
+			
+			# See: https://softwareengineering.stackexchange.com/questions/147111/what-is-wrong-with-the-unlicense
+			# The ingame terminal was licensed under this license
 		"exitgame":
 			if !special_screen:
 				$PauseMenu.show()

@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cu440emlhve1m"]
+[gd_scene load_steps=6 format=3 uid="uid://cu440emlhve1m"]
 
-[ext_resource type="Script" path="res://FPSController/PlayerScript.gd" id="1_rticr"]
-[ext_resource type="Script" path="res://FPSController/Commands.gd" id="2_acwsa"]
+[ext_resource type="Script" path="res://FPSController/PlayerScript.gd" id="1_t58vj"]
 [ext_resource type="PackedScene" uid="uid://de8sgghqvldw3" path="res://InventorySystem/InventoryPanel.tscn" id="4_xovxo"]
 
 [sub_resource type="CapsuleShape3D" id="1"]
@@ -33,10 +32,11 @@ _data = {
 [node name="Player" type="CharacterBody3D" groups=["Players"]]
 collision_layer = 2
 collision_mask = 5
-script = ExtResource("1_rticr")
+script = ExtResource("1_t58vj")
+sprint_enabled = true
+enable_inventory = true
 
 [node name="Commands" type="Node" parent="."]
-script = ExtResource("2_acwsa")
 
 [node name="PlayerModel" type="Node3D" parent="."]
 

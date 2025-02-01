@@ -4,7 +4,7 @@ render_mode unshaded;
 	Made by nuzcraft
 	The shader code and all code snippets in this post are under CC0 license
 	and can be used freely without the author's permission.
-	
+
 	Edited by Yni for simplifying the shader.
 */
 uniform sampler2D SCREEN_TEXTURE: hint_screen_texture, filter_linear_mipmap;
