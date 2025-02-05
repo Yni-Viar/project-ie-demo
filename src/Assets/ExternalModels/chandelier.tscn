@@ -93,10 +93,12 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14092, 0.513476, 0.297774)
 light_color = Color(1, 1, 0.752941, 1)
 distance_fade_enabled = true
+omni_range = 7.5
 script = ExtResource("4_t4din")
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.161463, 0.485709, -0.276753)
 light_color = Color(1, 1, 0.752941, 1)
 distance_fade_enabled = true
+omni_range = 7.5
 script = ExtResource("4_t4din")

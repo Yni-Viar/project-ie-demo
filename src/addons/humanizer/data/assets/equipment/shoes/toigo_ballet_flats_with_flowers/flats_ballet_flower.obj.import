@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cka60ep2vb6iy"
+path="res://.godot/imported/flats_ballet_flower.obj-38d1dc3c6c42e52bb0d3a72017616a6a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/flats_ballet_flower.obj-38d1dc3c6c42e52bb0d3a72017616a6a.mesh"]
+
+source_file="res://addons/humanizer/data/assets/equipment/shoes/toigo_ballet_flats_with_flowers/flats_ballet_flower.obj"
+dest_files=["res://.godot/imported/flats_ballet_flower.obj-38d1dc3c6c42e52bb0d3a72017616a6a.mesh", "res://.godot/imported/flats_ballet_flower.obj-38d1dc3c6c42e52bb0d3a72017616a6a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

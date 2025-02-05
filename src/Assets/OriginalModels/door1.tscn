@@ -122,6 +122,7 @@ _data = {
 
 [node name="Door" type="Node3D"]
 script = ExtResource("1_uwyod")
+can_manual_open = false
 
 [node name="Cube_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.64, 0)

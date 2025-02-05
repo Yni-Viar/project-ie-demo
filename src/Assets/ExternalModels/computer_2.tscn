@@ -58,7 +58,7 @@ points = PackedVector3Array(-0.0899, 0.00528033, -0.18779, 0.0756693, 0.426039, 
 
 [node name="Computer" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-ignore_occlusion_culling = true
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_exaua")
 skeleton = NodePath("")
 

@@ -48,6 +48,6 @@ shadow_mesh = SubResource("ArrayMesh_vmj57")
 
 [node name="Keyboard" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.021, 0, 0, 0, 0.021, 0, 0, 0, 0.021, 0, 0, 0)
-ignore_occlusion_culling = true
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_0csb6")
 skeleton = NodePath("")

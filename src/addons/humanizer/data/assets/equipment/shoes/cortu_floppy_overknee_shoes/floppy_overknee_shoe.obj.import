@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://driuwxgk1v0uc"
+path="res://.godot/imported/floppy_overknee_shoe.obj-df0e159a123434dd65629cde17952654.mesh"
+
+[deps]
+
+files=["res://.godot/imported/floppy_overknee_shoe.obj-df0e159a123434dd65629cde17952654.mesh"]
+
+source_file="res://addons/humanizer/data/assets/equipment/shoes/cortu_floppy_overknee_shoes/floppy_overknee_shoe.obj"
+dest_files=["res://.godot/imported/floppy_overknee_shoe.obj-df0e159a123434dd65629cde17952654.mesh", "res://.godot/imported/floppy_overknee_shoe.obj-df0e159a123434dd65629cde17952654.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

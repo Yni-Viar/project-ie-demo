@@ -1,4 +1,4 @@
-extends InteractableNode
+extends InteractableStatic
 
 
 func interact(player: Node3D):

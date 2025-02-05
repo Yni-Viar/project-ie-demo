@@ -1,4 +1,4 @@
-extends InteractableNode
+extends InteractableStatic
 
 @export var path: String
 @export var floor: int

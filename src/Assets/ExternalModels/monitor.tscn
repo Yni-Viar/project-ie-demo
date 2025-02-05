@@ -427,53 +427,62 @@ shadow_mesh = SubResource("ArrayMesh_khpg8")
 [node name="monitorMount-zg-base" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0, 0)
 ignore_occlusion_culling = true
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_fbg1f")
 skeleton = NodePath("")
 
 [node name="monitorMount-zg-piv_1" type="MeshInstance3D" parent="monitorMount-zg-base"]
 transform = Transform3D(0.389595, 0, -0.920986, 0, 1, 0, 0.920986, 0, 0.389595, 0, 2.86899, 2.2739)
 ignore_occlusion_culling = true
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_c7bjb")
 skeleton = NodePath("")
 
 [node name="monitorMount-zg-arm_1" type="MeshInstance3D" parent="monitorMount-zg-base/monitorMount-zg-piv_1"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.5817, 1.52428)
 ignore_occlusion_culling = true
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_vcv8v")
 skeleton = NodePath("")
 
 [node name="monitorMount-zg-piv_2" type="MeshInstance3D" parent="monitorMount-zg-base/monitorMount-zg-piv_1/monitorMount-zg-arm_1"]
 transform = Transform3D(1, 0, 0, 0, -0.866025, 0.5, 0, -0.5, -0.866025, 0, 1.46358, 14.6526)
 ignore_occlusion_culling = true
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_w7fck")
 skeleton = NodePath("")
 
 [node name="monitorMount-zg-arm_2" type="MeshInstance3D" parent="monitorMount-zg-base/monitorMount-zg-piv_1/monitorMount-zg-arm_1/monitorMount-zg-piv_2"]
 transform = Transform3D(0.406604, 0, -0.913604, 0, 1, 0, 0.913604, 0, 0.406604, -2.85249e-06, 0.577205, 2.04366e-06)
 ignore_occlusion_culling = true
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_2xvh3")
 skeleton = NodePath("")
 
 [node name="monitorMount-zg-piv_3" type="MeshInstance3D" parent="monitorMount-zg-base/monitorMount-zg-piv_1/monitorMount-zg-arm_1/monitorMount-zg-piv_2/monitorMount-zg-arm_2"]
 transform = Transform3D(0.737901, 0, 0, 0, 0.737901, 0, 0, 0, 0.737901, -4.51757e-06, -1.92465, -7.82151)
 ignore_occlusion_culling = true
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_o2vhr")
 skeleton = NodePath("")
 
 [node name="monitorMount-zg-piv_4" type="MeshInstance3D" parent="monitorMount-zg-base/monitorMount-zg-piv_1/monitorMount-zg-arm_1/monitorMount-zg-piv_2/monitorMount-zg-arm_2/monitorMount-zg-piv_3"]
 transform = Transform3D(7.26983e-07, 1.3552, -1.21164e-06, 1.21164e-07, 1.21164e-06, 1.3552, 1.3552, -7.26984e-07, -1.21163e-07, 0, -1.25811, -1.22778)
 ignore_occlusion_culling = true
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_sqikg")
 skeleton = NodePath("")
 
 [node name="monitorMount-zg-piv_5" type="MeshInstance3D" parent="monitorMount-zg-base/monitorMount-zg-piv_1/monitorMount-zg-arm_1/monitorMount-zg-piv_2/monitorMount-zg-arm_2/monitorMount-zg-piv_3/monitorMount-zg-piv_4"]
 transform = Transform3D(0, -1, 0, 1.12306, 0, 0, 0, 0, 1.12306, -1.39976, 0, 0.54445)
 ignore_occlusion_culling = true
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_lndec")
 skeleton = NodePath("")
 
 [node name="monitor-27in-zg-frame" type="MeshInstance3D" parent="monitorMount-zg-base/monitorMount-zg-piv_1/monitorMount-zg-arm_1/monitorMount-zg-piv_2/monitorMount-zg-arm_2/monitorMount-zg-piv_3/monitorMount-zg-piv_4/monitorMount-zg-piv_5"]
 transform = Transform3D(44.5211, 0, 0, 0, -3.1844e-05, 50, 0, -44.5211, -3.57628e-05, 0, 1.4766, -3.5064)
 ignore_occlusion_culling = true
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_x48ic")
 skeleton = NodePath("")

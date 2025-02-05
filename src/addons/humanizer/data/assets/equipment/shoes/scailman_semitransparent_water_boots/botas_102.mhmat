@@ -1,0 +1,28 @@
+# MakeHuman Material definition
+
+name botas_102Material
+
+// Color shading attributes
+diffuseColor  1 1 1
+specularColor  0.35 0.35 0.35
+shininess 0.06667
+opacity 1.0
+translucency 1.0
+
+castShadows True
+
+receiveShadows True
+
+// Textures and properties
+diffuseTexture Botas_102.png
+
+// Shader programme
+shader data/shaders/glsl/phong
+
+// Configure built-in shader defines
+shaderConfig diffuse true
+shaderConfig bump false
+shaderConfig normal  false
+shaderConfig displacement  false
+shaderConfig spec  false
+shaderConfig vertexColors false

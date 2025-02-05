@@ -1,4 +1,4 @@
-extends InteractableNode
+extends InteractableStatic
 
 enum Direction {down, up}
 @export var elevator_direction: Direction = Direction.up

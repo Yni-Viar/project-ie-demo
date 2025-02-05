@@ -271,7 +271,9 @@ text = "- Calculator model by GameDev Nick (CC-BY 4.0)
 Credit: Alexey Kasyanchuk (DEgITx) (CC BY 4.0)
 Kevin MacLeod (CC-BY 4.0)
 Other assets and code are CC0, or made by me (Yni Viar).
-Check the sources folder for authors information...."
+Check the sources folder for authors information....
+
+Thanks to awesome people from dscrd servers for pointing me on game-design issues!"
 autowrap_mode = 3
 
 [node name="GameOverPanel" type="Control" parent="PlayerUI"]

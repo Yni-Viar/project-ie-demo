@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bgoff17bg5ev3"
+path="res://.godot/imported/gogo_boots.obj-187f9eac5628cdfeeb7b25f3fe837f9e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/gogo_boots.obj-187f9eac5628cdfeeb7b25f3fe837f9e.mesh"]
+
+source_file="res://addons/humanizer/data/assets/equipment/shoes/scailman_gogo_platform_boots/gogo_boots.obj"
+dest_files=["res://.godot/imported/gogo_boots.obj-187f9eac5628cdfeeb7b25f3fe837f9e.mesh", "res://.godot/imported/gogo_boots.obj-187f9eac5628cdfeeb7b25f3fe837f9e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

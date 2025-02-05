@@ -157,17 +157,21 @@ shadow_mesh = SubResource("ArrayMesh_n2cfh")
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="potted_plant_04_ground" type="MeshInstance3D" parent="Mesh"]
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_by7ex")
 skeleton = NodePath("")
 
 [node name="potted_plant_04_dirt" type="MeshInstance3D" parent="Mesh"]
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_dflsx")
 skeleton = NodePath("")
 
 [node name="potted_plant_04_plant" type="MeshInstance3D" parent="Mesh"]
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_a30sp")
 skeleton = NodePath("")
 
 [node name="potted_plant_04_pot" type="MeshInstance3D" parent="Mesh"]
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_smul8")
 skeleton = NodePath("")

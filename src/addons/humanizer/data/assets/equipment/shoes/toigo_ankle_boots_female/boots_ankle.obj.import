@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bgpf8s2pnlpx7"
+path="res://.godot/imported/boots_ankle.obj-67ff0e5ac3118b917914a783f96f2e52.mesh"
+
+[deps]
+
+files=["res://.godot/imported/boots_ankle.obj-67ff0e5ac3118b917914a783f96f2e52.mesh"]
+
+source_file="res://addons/humanizer/data/assets/equipment/shoes/toigo_ankle_boots_female/boots_ankle.obj"
+dest_files=["res://.godot/imported/boots_ankle.obj-67ff0e5ac3118b917914a783f96f2e52.mesh", "res://.godot/imported/boots_ankle.obj-67ff0e5ac3118b917914a783f96f2e52.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

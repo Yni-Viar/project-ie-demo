@@ -44,25 +44,15 @@ enable_inventory = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.968611, -0.292869)
 
 [node name="PlayerRecoil" type="Node3D" parent="PlayerHead"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.968611, 0.292869)
 
 [node name="PlayerCamera" type="Camera3D" parent="PlayerHead/PlayerRecoil"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96861, -0.159767)
 cull_mask = 524287
 
-[node name="VisionRadius" type="RayCast3D" parent="PlayerHead/PlayerRecoil"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.968611, -0.292869)
-visible = false
-target_position = Vector3(0, 0, -128)
-collision_mask = 15
-
 [node name="RayCast3D" type="RayCast3D" parent="PlayerHead/PlayerRecoil"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.968611, -0.292869)
 target_position = Vector3(0, 0, -3)
 collision_mask = 13
 
 [node name="PlayerHand" type="Marker3D" parent="PlayerHead/PlayerRecoil"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.968611, -0.961648)
 
 [node name="ItemSpawn" type="Marker3D" parent="PlayerHead"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.197413, -0.0797351)

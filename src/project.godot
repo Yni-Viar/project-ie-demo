@@ -25,7 +25,6 @@ config/icon="res://icon.png"
 [autoload]
 
 ResourceStorage="*res://Scripts/ResourceStorage.gd"
-GDsh="*res://GDsh/GDsh.gd"
 Settings="*res://Scripts/Settings.gd"
 HumanizerGlobal="*res://addons/humanizer/scenes/humanizer_global.tscn"
 
@@ -71,6 +70,7 @@ import/fbx/enabled=true
 [global_group]
 
 reflection_probe="Reflection probes"
+planar_reflection=""
 
 [input]
 

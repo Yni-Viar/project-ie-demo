@@ -60,6 +60,7 @@ size = Vector3(3.09523, 0.542969, 0.785034)
 
 [node name="Sofa 2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+visibility_range_end = 256.0
 mesh = SubResource("ArrayMesh_o2htv")
 skeleton = NodePath("")
 

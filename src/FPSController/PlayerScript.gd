@@ -35,6 +35,9 @@ var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var is_sprinting: bool = false
 var is_walking: bool = false
 
+func _ready() -> void:
+	ray.add_exception(self)
+
 ## Mouse rotation
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -80,7 +83,7 @@ func _physics_process(delta: float) -> void:
 	if ray.is_colliding():
 		if Input.is_action_just_pressed("interact"):
 			var collided_with = ray.get_collider()
-			if collided_with is InteractableNode:
+			if collided_with is InteractableStatic:
 				collided_with.call("interact", self)
 			elif collided_with is InteractableRigidBody:
 				collided_with.call("interact", self)
@@ -90,7 +93,7 @@ func _physics_process(delta: float) -> void:
 				collided_with.call("interact")
 		elif Input.is_action_just_pressed("interact_alt"):
 			var collided_with = ray.get_collider()
-			if collided_with is InteractableNode:
+			if collided_with is InteractableStatic:
 				collided_with.call("interact_alt", self)
 			elif collided_with is InteractableRigidBody:
 				collided_with.call("interact_alt", self)

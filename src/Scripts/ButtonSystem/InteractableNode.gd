@@ -1,5 +1,5 @@
-extends Node3D
-class_name InteractableNode
+extends StaticBody3D
+class_name InteractableStatic
 
 @export var has_sound: bool
 @export var sound_path: String

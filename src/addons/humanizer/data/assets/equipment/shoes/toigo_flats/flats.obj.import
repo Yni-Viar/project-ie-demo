@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dg004ym4gttjm"
+path="res://.godot/imported/flats.obj-a0fdda3aa3b2c328e8600053edfdc342.mesh"
+
+[deps]
+
+files=["res://.godot/imported/flats.obj-a0fdda3aa3b2c328e8600053edfdc342.mesh"]
+
+source_file="res://addons/humanizer/data/assets/equipment/shoes/toigo_flats/flats.obj"
+dest_files=["res://.godot/imported/flats.obj-a0fdda3aa3b2c328e8600053edfdc342.mesh", "res://.godot/imported/flats.obj-a0fdda3aa3b2c328e8600053edfdc342.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

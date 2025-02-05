@@ -1,0 +1,14 @@
+# MakeHuman Material definition
+
+name boots.001Material
+
+// Color shading attributes
+diffuseColor  0.65 0.65 0.65
+specularColor  0.1 0.1 0.1
+shininess 1
+opacity 1
+
+// Textures and properties
+diffuseTexture boot.png
+
+
