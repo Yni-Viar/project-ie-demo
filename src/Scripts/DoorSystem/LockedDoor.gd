@@ -14,9 +14,13 @@ func _on_area_3d_body_entered(body):
 	if body is PlayerScript:
 		if (body.keycards.has(keycard) || keycard == -1) && can_open:
 			door_open()
+			if get_node_or_null("NavigationLink3D") != null:
+				$NavigationLink3D.enabled = true
 
 
 func _on_area_3d_body_exited(body):
 	if body is PlayerScript:
 		if (body.keycards.has(keycard) || keycard == -1) && can_open:
 			door_close()
+			if get_node_or_null("NavigationLink3D") != null:
+				$NavigationLink3D.enabled = false

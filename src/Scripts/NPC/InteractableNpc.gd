@@ -12,6 +12,7 @@ enum State {
 @export var dialogues: Array[Array]
 @export var state: State = State.IDLE
 @export var apply_height_bugfix: bool = false
+@export var height_bugfix_amount: float = -0.04
 
 var current_dialogue: int = 0
 var follow_update_timer: float = 1.0
@@ -59,7 +60,7 @@ func set_target_position(target_position: Vector3) -> void:
 	else:
 		state = State.WALKING
 	if apply_height_bugfix && !height_bugfix_applied:
-		$Armature.position.y = -0.4
+		$Armature.position.y = height_bugfix_amount
 
 # End Godot Demo code (MIT License)
 
