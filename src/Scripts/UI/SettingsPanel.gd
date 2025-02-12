@@ -29,7 +29,7 @@ func _on_language_set_item_selected(index):
 
 func _on_window_size_set_item_selected(index):
 	Settings.setting_res.ui_window_size = index
-	get_window().size = Settings.setting_res.window_size[Settings.setting_res.ui_window_size]
+	#get_window().size = Settings.setting_res.window_size[Settings.setting_res.ui_window_size]
 	#Settings.save_setting("window_size", Settings.window_size)
 
 
@@ -37,16 +37,16 @@ func _on_fullscreen_set_toggled(toggled_on):
 	if toggled_on:
 		if !Settings.first_start:
 			# Override Godot bug.
-			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
-			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
+			#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
+			#DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
 			#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
 			#DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
 			#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 			Settings.setting_res.fullscreen = true
 		
 	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, false)
+		#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		#DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, false)
 		Settings.setting_res.fullscreen = false
 	#Settings.save_setting("fullscreen", Settings.fullscreen)
 
@@ -123,24 +123,34 @@ func graphic_device_check():
 		$ScrollContainer/HBoxContainer/Page1/SSAOSet.disabled = false
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.disabled = false
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.disabled = false
+		$ScrollContainer/HBoxContainer/Page1/FogSet.disabled = false
+		$ScrollContainer/HBoxContainer/Page1/VSyncSet.disabled = false
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.show()
 		$ScrollContainer/HBoxContainer/Page1/SSAOSet.show()
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.show()
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.show()
+		$ScrollContainer/HBoxContainer/Page1/FogSet.show()
+		$ScrollContainer/HBoxContainer/Page1/VSyncSet.show()
 		Settings.current_graphic_device = 2
 	else: #ProjectSettings.get_setting("rendering/renderer/rendering_method") == "gl_compatibility":
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/SSAOSet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.button_pressed = false
+		$ScrollContainer/HBoxContainer/Page1/FogSet.button_pressed = false
+		$ScrollContainer/HBoxContainer/Page1/VSyncSet.button_pressed = true
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/SSAOSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.disabled = true
+		$ScrollContainer/HBoxContainer/Page1/FogSet.disabled = true
+		$ScrollContainer/HBoxContainer/Page1/VSyncSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.hide()
 		$ScrollContainer/HBoxContainer/Page1/SSAOSet.hide()
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.hide()
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.hide()
+		$ScrollContainer/HBoxContainer/Page1/FogSet.hide()
+		$ScrollContainer/HBoxContainer/Page1/VSyncSet.hide()
 		Settings.current_graphic_device = 1
 
 

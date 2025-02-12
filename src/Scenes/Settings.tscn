@@ -103,22 +103,26 @@ theme_override_font_sizes/font_size = 48
 text = "GRAPHICS"
 
 [node name="ResolutionLabel" type="Label" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "RESOLUTION"
 
 [node name="WindowSizeSet" type="OptionButton" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
+visible = false
 layout_mode = 2
 theme = ExtResource("3_2qins")
 theme_override_font_sizes/font_size = 24
 
 [node name="OverrideResolution" type="Button" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
+visible = false
 layout_mode = 2
 theme = ExtResource("3_2qins")
 theme_override_font_sizes/font_size = 24
 text = "OVERRIDE_RESOLUTION"
 
 [node name="FullscreenSet" type="CheckButton" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
+visible = false
 layout_mode = 2
 theme = ExtResource("3_2qins")
 theme_override_font_sizes/font_size = 24
@@ -128,7 +132,7 @@ text = "FULLSCREEN_SET"
 layout_mode = 2
 theme = ExtResource("3_2qins")
 theme_override_font_sizes/font_size = 24
-text = "VOXEL_GI"
+text = "DYNAMIC_GI"
 
 [node name="SSAOSet" type="CheckButton" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
 layout_mode = 2
