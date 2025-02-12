@@ -17,3 +17,4 @@ mono_crash.*.json
 # Internal resources
 raw_assets/
 builds/
+CHANGELOG_RELEASE.md
