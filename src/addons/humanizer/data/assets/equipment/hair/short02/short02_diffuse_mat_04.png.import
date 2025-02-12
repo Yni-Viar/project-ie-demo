@@ -3,19 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csekfvb43y5e7"
-path="res://.godot/imported/short02_diffuse_mat_04.png-790ca9e5062b1e22c65e60fc4300dfac.ctex"
+path.s3tc="res://.godot/imported/short02_diffuse_mat_04.png-790ca9e5062b1e22c65e60fc4300dfac.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://addons/humanizer/data/assets/equipment/hair/short02/short02_diffuse_mat_04.png"
-dest_files=["res://.godot/imported/short02_diffuse_mat_04.png-790ca9e5062b1e22c65e60fc4300dfac.ctex"]
+dest_files=["res://.godot/imported/short02_diffuse_mat_04.png-790ca9e5062b1e22c65e60fc4300dfac.s3tc.ctex"]
 
 [params]
 
-compress/mode=3
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -119,6 +119,20 @@ offset_bottom = 26.0
 text = "FPS"
 script = ExtResource("7_w6m7r")
 
+[node name="help" type="Label" parent="PlayerUI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 26.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "WASD - move
+E - interact/talk
+ESC/F3 - Settings/Credits/Exit/Unfocus mouse"
+horizontal_alignment = 2
+
 [node name="BossContainer" type="VBoxContainer" parent="PlayerUI"]
 layout_mode = 1
 anchors_preset = 5
@@ -181,8 +195,8 @@ anchor_bottom = 1.0
 offset_top = -304.0
 offset_right = 448.0
 grow_vertical = 0
-text = "- Calculator model by GameDev Nick (CC-BY 4.0)
-- Chair model (from home hall) - Neil dela Merced (solvalou)
+text = "- Stopwatch model by mantledmoon (CC-BY)
+- Chair model (from home hall) - Neil dela Merced (solvalou) (CC-BY)
 - Screen of home computer contains assets, made by Microsoft, that are licensed under CC-BY
 - Robot vacuum cleaner.ogg by Eelke -- https://freesound.org/s/383372/ -- License: Attribution 4.0
 - Music:
