@@ -20,6 +20,7 @@ config/use_custom_user_dir=true
 config/custom_user_dir_name="InternalEternal"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://Assets/intro.png"
 config/icon="res://icon.png"
 
 [autoload]
