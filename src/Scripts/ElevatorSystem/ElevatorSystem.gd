@@ -6,24 +6,38 @@ class_name ElevatorSystem
 signal changed_launch_state(start: bool)
 enum LastMove {UP, DOWN}
 var last_move: LastMove = LastMove.UP
+## Elevator floors
 @export var floors : Array[ElevatorFloor]
+## Elevator's external doors
 @export var elevator_doors : PackedStringArray
+## Elevator speed
 @export var speed: float = 2
+## Check if moving, automatic
 @export var is_moving: bool = false
+## Sounds, that will played, when door is opened.
 @export var open_door_sounds : PackedStringArray
+## Sounds, that will played, when door is closed.
 @export var close_door_sounds : PackedStringArray
+## Since v2, it holds smooth rotation, while transport moves along the curve
 @export var objects_to_teleport : Array
+## Current floor (where are you), automatic
 @export var current_floor : int
+## Target floor (where are you going), automatic
 @export var target_floor : int
+## Waypoints (All waypoints to process, automatic)
 @export var waypoints : Array[Array]
+## Locks the elevator
 @export var locked: bool = false
-var counter : int = 0
-var pass_floor : bool = false
+var counter: int = 0
+var pass_floor: bool = false
 var default_rotation: Vector3
+## For checking difference between rotation
+var rotator: Vector3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	default_rotation = rotation
+	rotator = global_rotation
 	if !is_moving:
 		if !elevator_doors.is_empty():
 			get_tree().root.get_node(elevator_doors[current_floor]).door_open()
@@ -44,8 +58,9 @@ func _physics_process(delta):
 				global_rotation = global_rotation.move_toward(waypoints[counter][1] + default_rotation, speed * delta)
 			for i in range(objects_to_teleport.size()):
 				var node: Node3D = get_node(objects_to_teleport[i])
-				node.global_position = node.global_position.move_toward(waypoints[counter][0], speed * delta)
-				# remember, floating numbers needs IsEqualApprox, Yni!
+				node.global_rotation = node.global_rotation + (global_rotation - rotator)
+				rotator = global_rotation
+			# remember, floating numbers needs IsEqualApprox, Yni!
 			if global_position.is_equal_approx(waypoints[counter][0]):
 				if (counter < waypoints.size() - 1):
 					counter += 1
@@ -53,17 +68,16 @@ func _physics_process(delta):
 					counter = 0
 					waypoints.clear()
 					if pass_floor:
-						if multiplayer.is_server():
-							if last_move == LastMove.DOWN:
-								if (current_floor < target_floor - 1):
-									elevator_move(true, false)
-								else:
-									elevator_move(false, false)
-							elif last_move == LastMove.UP:
-								if (current_floor > target_floor + 1):
-									elevator_move(true, false)
-								else:
-									elevator_move(false, false)
+						if last_move == LastMove.DOWN:
+							if (current_floor < target_floor - 1):
+								elevator_move(true, false)
+							else:
+								elevator_move(false, false)
+						elif last_move == LastMove.UP:
+							if (current_floor > target_floor + 1):
+								elevator_move(true, false)
+							else:
+								elevator_move(false, false)
 					else:
 						is_moving = false
 						changed_launch_state.emit(false)

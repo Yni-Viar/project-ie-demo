@@ -63,16 +63,23 @@ func speak(dlg_path: String, dlg_start_id: String, speaker_nodepath: String):
 	if !$DialogueBox.is_running():
 		$DialogueBox.data = load(dlg_path)
 		speaker_prefab = get_node(speaker_nodepath)
+		# Wait until 4.4 face IK solution :-D
+		var player: PlayerScript = get_tree().root.get_node("Game/Player")
+		player.look_at(Vector3(speaker_prefab.global_position.x, player.global_position.y, speaker_prefab.global_position.z))
+		speaker_prefab.look_at(Vector3(player.global_position.x, speaker_prefab.global_position.y, player.global_position.z))
 		special_screen = true
 		$DialogueBox.start(dlg_start_id)
 		$DialogueBox.show()
-		get_tree().root.get_node("Game/Player").set_physics_process(false)
+		player.motion_enabled = false
+		player.set_physics_process(false)
 
 
 func _on_dialogue_box_dialogue_ended() -> void:
 	special_screen = false
 	speaker_prefab = null
-	get_tree().root.get_node("Game/Player").set_physics_process(true)
+	var player: PlayerScript = get_tree().root.get_node("Game/Player")
+	player.motion_enabled = true
+	player.set_physics_process(true)
 
 
 func _on_dialogue_box_dialogue_signal(value: String) -> void:

@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://q7sgr1j7yydg"]
+[gd_scene load_steps=11 format=4 uid="uid://q7sgr1j7yydg"]
 
 [ext_resource type="Script" path="res://InventorySystem/Items/ItemPickable.gd" id="1_wi2gg"]
+[ext_resource type="Resource" uid="uid://cjcpb12bymsed" path="res://InventorySystem/Items/MyFlashDisk.tres" id="2_gjrec"]
 [ext_resource type="Texture2D" uid="uid://dglrst5ff1voa" path="res://Assets/OriginalModels/Eledrive/Eledrive_base.png" id="3_0sd5s"]
 [ext_resource type="Texture2D" uid="uid://dwdu7ryo44bf2" path="res://Assets/OriginalModels/Eledrive/Eledrive_metal-Eledrive_rough.png" id="4_56cyb"]
 [ext_resource type="Material" uid="uid://fo0lvwxp1orq" path="res://Shaders/item_next_pass_material.tres" id="5_dp7pn"]
@@ -59,6 +60,7 @@ shadow_mesh = SubResource("ArrayMesh_526ht")
 [node name="UsbDisk" type="RigidBody3D"]
 collision_layer = 2
 script = ExtResource("1_wi2gg")
+item = ExtResource("2_gjrec")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0178284, 0.0120616, 0.0053159)

@@ -19,7 +19,7 @@ const JUMP_VELOCITY = 4
 @export var sprint_sounds: Array[String]
 ## Inventory toggle
 @export var enable_inventory: bool = false
-## Movement toggle
+## Movement toggle (camera can be still moved through, even if this property is disabled)
 @export var can_move: bool = true
 ## Current item in hand
 @export var using_item: String = ""
@@ -34,13 +34,15 @@ const JUMP_VELOCITY = 4
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var is_sprinting: bool = false
 var is_walking: bool = false
+## Enables or disables ALL motion (including camera rotate)
+var motion_enabled = true
 
 func _ready() -> void:
 	ray.add_exception(self)
 
 ## Mouse rotation
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion && motion_enabled:
 		rotate_y(-event.relative.x * Settings.setting_res.mouse_sensitivity * 0.05)
 		$PlayerHead.rotate_x(-event.relative.y * Settings.setting_res.mouse_sensitivity * 0.05)
 		
@@ -64,7 +66,7 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
+	if direction && can_move && motion_enabled:
 		if Input.is_action_pressed("move_sprint"):
 			velocity.x = direction.x * SPEED * 2
 			velocity.z = direction.z * SPEED * 2

@@ -32,13 +32,13 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	animation_state_machine(delta)
+	if !follow_target.is_empty():
+		if get_node_or_null(follow_target) != null:
+			target_follow()
 	if _nav_agent.is_navigation_finished():
-		if !follow_target.is_empty():
-			if get_node_or_null(follow_target) != null:
-				target_follow()
 		if state != State.IDLE:
 			# Strange bug fix (where NPC was always had standing animation (even when moving))
-			if global_position.distance_to(_nav_agent.get_final_position()) <= 1:
+			if global_position.distance_to(_nav_agent.get_final_position()) <= 1.25:
 				state = State.IDLE
 		return
 	
@@ -46,8 +46,6 @@ func _physics_process(delta: float) -> void:
 	var offset := next_position - global_position
 	global_position = global_position.move_toward(next_position, delta * character_speed)
 
-	# Make the robot look at the direction we're traveling.
-	# Clamp Y to 0 so the robot only looks left and right, not up/down.
 	offset.y = 0
 	if not offset.is_zero_approx():
 		look_at(global_position + offset, Vector3.UP)
