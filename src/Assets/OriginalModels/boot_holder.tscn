@@ -1,33 +1,7 @@
-[gd_scene load_steps=12 format=4 uid="uid://ccn606edn4ylv"]
+[gd_scene load_steps=6 format=4 uid="uid://ccn606edn4ylv"]
 
-[ext_resource type="Texture2D" uid="uid://dyrxrfnrrkgbr" path="res://Assets/OriginalModels/BootHolder/Metal028_2K-PNG_Color.png" id="1_xw20u"]
-[ext_resource type="Texture2D" uid="uid://b6ddutfnyudsg" path="res://Assets/OriginalModels/BootHolder/Metal028_2K-PNG_Roughness.png" id="2_6143c"]
-[ext_resource type="Texture2D" uid="uid://csmj0qdnqy8k6" path="res://Assets/OriginalModels/BootHolder/Metal028_2K-PNG_NormalGL.png" id="3_0iqf3"]
-[ext_resource type="Texture2D" uid="uid://ci35j2p0v10en" path="res://Assets/OriginalModels/BootHolder/PaintedWood007A_2K-PNG_Color.png" id="4_3butm"]
-[ext_resource type="Texture2D" uid="uid://vnirwner4yrd" path="res://Assets/OriginalModels/BootHolder/PaintedWood007A_2K-PNG_Roughness.png" id="5_w74w7"]
-[ext_resource type="Texture2D" uid="uid://bp0o1o1mafylh" path="res://Assets/OriginalModels/BootHolder/PaintedWood007A_2K-PNG_NormalGL.png" id="6_urpwg"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1omar"]
-resource_name = "Material"
-cull_mode = 2
-albedo_texture = ExtResource("1_xw20u")
-metallic_texture = ExtResource("2_6143c")
-metallic_texture_channel = 2
-roughness_texture = ExtResource("2_6143c")
-roughness_texture_channel = 1
-normal_enabled = true
-normal_texture = ExtResource("3_0iqf3")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5mlm"]
-resource_name = "Wood"
-cull_mode = 2
-albedo_texture = ExtResource("4_3butm")
-metallic_texture = ExtResource("5_w74w7")
-metallic_texture_channel = 2
-roughness_texture = ExtResource("5_w74w7")
-roughness_texture_channel = 1
-normal_enabled = true
-normal_texture = ExtResource("6_urpwg")
+[ext_resource type="Material" uid="uid://b58bqwkql7cxx" path="res://Assets/Materials/metal028.tres" id="1_qkvk5"]
+[ext_resource type="Material" uid="uid://bd45sv28vabcj" path="res://Assets/Materials/wood007a.tres" id="2_76qq1"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xlnbd"]
 _surfaces = [{
@@ -63,7 +37,7 @@ _surfaces = [{
 "index_count": 432,
 "index_data": PackedByteArray("VgCaAKcAVgBQAJoARwBkAEUAZABrAGgAawBmAG0AZgCUAJAAlACZAJcAmQBHAJIARwBrAGQAawCUAGYAlABHAJkAawBHAJQAUwCbAFEAmwCiAJ8AogCdAKQAnQBzAG8AcwB4AHYAeABTAHEAUwCiAJsAogBzAJ0AcwBTAHgAogBTAHMAZQCGAFgAZQCPAIYABAAHAAoABAABAAcAQgBjAFoAQgBEAGMAVwB6AFUAegCBAH4AgQB8AIMAfACqAKYAqgCvAK0ArwBXAKgAVwCBAHoAgQCqAHwAqgBXAK8AgQBXAKoAewCcAG4AewClAJwAEAATABYAEAANABMAUgB5AHAAUgBUAHkABgAYAB4ABgAAABgACwAfAB0ACwAIAB8AAwAcABoAAwAJABwAAgAbABkAAgAFABsAEgAgACYAEgAMACAAFwAnACUAFwAUACcADwAkACIADwAVACQADgAjACEADgARACMAHgAoAC4AHgAYACgAHQAvAC0AHQAfAC8AGgAsACoAGgAcACwAJgAwADYAJgAgADAAIgA0ADIAIgAkADQAIQAzADEAIQAjADMALgA4AD4ALgAoADgALQA/AD0ALQAvAD8AKgA8ADoAKgAsADwAKQA7ADkAKQArADsAPgBAAEYAPgA4AEAAPQBHAEUAPQA/AEcAOgBEAEIAOgA8AEQANgBIAE4ANgAwAEgANQBPAE0ANQA3AE8AMgBMAEoAMgA0AEwAMQBLAEkAMQAzAEsATgBQAFYATgBIAFAASgBUAFIASgBMAFQASQBTAFEASQBLAFMAWABsAGUAWABcAGwAXABqAGwAXABfAGoAXgBnAGkAXgBhAGcAYQBjAGcAYQBaAGMAbgCCAHsAbgByAIIAcgCAAIIAcgB1AIAAdAB9AH8AdAB3AH0AdwB5AH0AdwBwAHkAQwCFAEEAhQCMAIkAjACHAI4AhwBdAFkAXQBiAGAAYgBDAFsAQwCMAIUAjABdAIcAXQBDAGIAjABDAF0AjwCNAIYAjwCTAI0AkwCLAI0AkwCWAIsAlQCIAIoAlQCYAIgAmACEAIgAmACRAIQApQCjAJwApQCpAKMAqQChAKMAqQCsAKEAqwCeAKAAqwCuAJ4ArgCaAJ4ArgCnAJoARgCEAJEARgBAAIQA"),
 "lods": [0.038568, PackedByteArray("VgCaAK4AqwCuAJoAqwCaAKAATgCaAFYANgCaAE4AJgCaADYAEgCaACYAEgAMAJoAkAA/AJcAawA/AJAAPwBrAGQACwA/AGQACwAIAD8AbwAzAHYAogAzAG8AMwCiAJsADgAzAJsADgARADMABAAHAAoABAABAAcAQgBjAGEAXgBhAGMAXgBjAGkAOgBjAEIAKgBjADoAGgBjACoAAwBjABoAAwAJAGMAVwB6AFUAVwCBAHoAgQBXAKYApgBXAK8ApgCvAK0AEAATABYAEAANABMAMgBUAHkAMgBMAFQAMgA0AEwAswAyAHkAswB5AH8AMgAkADQADwAkADIADwAVACQABgAYAD4ABgAAABgAPgAYACgAPgAoADgAPgA4AEAAPgBAAIQAtwA+AIQAtwCEAIoAAgAbABkAAgAFABsAFwAnACUAFwAUACcAKQA7ADkAKQArADsANQBPAE0ANQA3AE8AsACxALYAtgC1ALAAtgCWALUAsABfAGoAsgC0ALkAsgB1AIAApQC4ALIApQCsALgAQwCFAEEAQwCMAIUAjABDAFkAWQBDAGIAWQBiAGAA")],
-"material": SubResource("StandardMaterial3D_1omar"),
+"material": ExtResource("1_qkvk5"),
 "name": "Material",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -75,7 +49,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 48,
 "index_data": PackedByteArray("DgAAAAYADgAIAAAAAQAFAAcAAQADAAUAFQAdABcAFQAfAB0AEgAcABgAEgAWABwAEwAbABEAEwAZABsAEAAeABQAEAAaAB4AAgAMAAQAAgAKAAwACQANAAsACQAPAA0A"),
-"material": SubResource("StandardMaterial3D_f5mlm"),
+"material": ExtResource("2_76qq1"),
 "name": "Wood",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),

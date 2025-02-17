@@ -1,4 +1,4 @@
-[gd_scene load_steps=321 format=4 uid="uid://ce8coeohfwec8"]
+[gd_scene load_steps=317 format=4 uid="uid://ce8coeohfwec8"]
 
 [ext_resource type="Texture2D" uid="uid://qd0v8r4ryo7d" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Wallpaper002A_2K-PNG_Color.png" id="1_3orok"]
 [ext_resource type="Texture2D" uid="uid://tcckp504mvfg" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Wallpaper002A_2K-PNG_Roughness.png" id="2_72vi4"]
@@ -25,10 +25,11 @@
 [ext_resource type="Texture2D" uid="uid://dy5trmaeywr5m" path="res://Assets/ExternalModels/PaintedWoodenCabinet_KirillSannikov_CC0/textures/painted_wooden_cabinet_nor_gl_2k.jpg" id="22_m521g"]
 [ext_resource type="PackedScene" uid="uid://dt52wlcxtcswp" path="res://Assets/ExternalModels/Picture.tscn" id="26_hopf2"]
 [ext_resource type="Texture2D" uid="uid://upsl4bvj5sjx" path="res://Assets/ExternalModels/Monitor_WetNeon_CC0/Plastic003_2K_Roughness.png" id="27_ae8k7"]
+[ext_resource type="Material" uid="uid://6m4o6nqy3dyp" path="res://Assets/Materials/table_white.tres" id="27_jif0b"]
 [ext_resource type="PackedScene" uid="uid://cwrd78mhaencc" path="res://Assets/ExternalModels/Picture2.tscn" id="27_yxwvl"]
-[ext_resource type="Texture2D" uid="uid://b6ddutfnyudsg" path="res://Assets/OriginalModels/BootHolder/Metal028_2K-PNG_Roughness.png" id="28_bgtx1"]
 [ext_resource type="PackedScene" uid="uid://htrfsbj2h26i" path="res://Assets/ExternalModels/BathroomAssets/toilet.tscn" id="28_h5251"]
 [ext_resource type="Texture2D" uid="uid://cacgwsm1pqx8g" path="res://Assets/ExternalModels/Monitor_WetNeon_CC0/Plastic003_2K_Normal.jpg" id="28_s05mm"]
+[ext_resource type="Material" uid="uid://j8grikic1eyc" path="res://Assets/Materials/table_black.tres" id="28_sr065"]
 [ext_resource type="PackedScene" uid="uid://dwvjvm78gm8b" path="res://Assets/OriginalModels/closet.tscn" id="29_1ihit"]
 [ext_resource type="PackedScene" uid="uid://rvqgrk4cqols" path="res://Assets/ExternalModels/BathroomAssets/shower.tscn" id="29_1lijb"]
 [ext_resource type="Texture2D" uid="uid://2477wfci8n6a" path="res://Assets/HUD/Screens/Home_Generic.svg" id="29_4cplc"]
@@ -50,7 +51,7 @@
 [ext_resource type="PackedScene" uid="uid://rj65na3myb3i" path="res://Assets/HumanModels/MH_Julia/scene_Julia.tscn" id="44_c8mbq"]
 [ext_resource type="PackedScene" uid="uid://d0j01mgnl1tgy" path="res://Assets/ExternalModels/sofa_2.tscn" id="44_j652f"]
 [ext_resource type="PackedScene" uid="uid://btm3yh85og7mm" path="res://Assets/ExternalModels/monitor.tscn" id="50_8bju3"]
-[ext_resource type="AudioStream" uid="uid://do2pjn20acsix" path="res://Sounds/Music/DEgITx/City_Under_Sky.wav" id="51_qo0s4"]
+[ext_resource type="AudioStream" uid="uid://dur4rfn0ufek6" path="res://Sounds/Music/DEgITx/Somewhere_on_Glade.wav" id="51_8cocw"]
 [ext_resource type="PackedScene" uid="uid://bu825cm6uv3r2" path="res://DynamicObjects/ActionItems/chair_4.tscn" id="53_nsk5i"]
 [ext_resource type="Script" path="res://Scripts/ElevatorSystem/ElevatorSystem.gd" id="56_6sn48"]
 [ext_resource type="Script" path="res://Scripts/ElevatorSystem/ElevatorFloor.gd" id="57_wj3uy"]
@@ -77,8 +78,8 @@
 [ext_resource type="Script" path="res://Scripts/ButtonSystem/ElevatorButton.gd" id="78_s8n46"]
 [ext_resource type="AudioStream" uid="uid://c1fs5i36r3yx6" path="res://Sounds/Interact/button.ogg" id="79_11708"]
 [ext_resource type="Material" uid="uid://fo0lvwxp1orq" path="res://Shaders/item_next_pass_material.tres" id="80_mputj"]
+[ext_resource type="AudioStream" uid="uid://dx115hggjtwo2" path="res://Sounds/General/Elevator/tyleram_elevator-ambience_CC0.ogg" id="81_37khn"]
 [ext_resource type="PackedScene" uid="uid://oscivglwv7dx" path="res://Assets/OriginalModels/elevator_button.tscn" id="81_fpftt"]
-[ext_resource type="AudioStream" uid="uid://q4iwmkom3lqg" path="res://Sounds/Music/Elevator.ogg" id="82_n5gop"]
 [ext_resource type="PackedScene" uid="uid://cu3s515m111d0" path="res://Assets/OriginalModels/door_lift.tscn" id="83_i1e64"]
 [ext_resource type="Texture2D" uid="uid://ck1suneatlnkc" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Concrete042A_2K-PNG_Color.png" id="84_bqqpn"]
 [ext_resource type="Texture2D" uid="uid://d0kr2tklripe3" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Concrete042A_2K-PNG_Roughness.png" id="85_8gykf"]
@@ -93,11 +94,9 @@
 [ext_resource type="Texture2D" uid="uid://bm1mjk6djap5c" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/long_white_tiles_diff_2k.png" id="93_ypos2"]
 [ext_resource type="Texture2D" uid="uid://c2gbv7bpmecbp" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/long_white_tiles_rough_2k.png" id="94_fxvj8"]
 [ext_resource type="Texture2D" uid="uid://kygbfbssq4xe" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/long_white_tiles_nor_gl_2k.png" id="95_7xoob"]
-[ext_resource type="Texture2D" uid="uid://dx11peow5t14e" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Metal028_2K-PNG_Color.png" id="96_vo2nx"]
 [ext_resource type="Shader" path="res://Shaders/PbrGlassShader/PbrGlass.gdshader" id="97_3cl3m"]
-[ext_resource type="Texture2D" uid="uid://s6bh6sgkfhv5" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Metal028_2K-PNG_Roughness.png" id="97_pyl7f"]
-[ext_resource type="Texture2D" uid="uid://dfddsra0n2bxb" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Metal028_2K-PNG_NormalGL.png" id="98_0p5cg"]
 [ext_resource type="Material" uid="uid://bv1owxjostink" path="res://Assets/Materials/window.tres" id="98_lxvnn"]
+[ext_resource type="Material" uid="uid://b58bqwkql7cxx" path="res://Assets/Materials/metal028.tres" id="98_ypg12"]
 [ext_resource type="PackedScene" uid="uid://bwsbl2260ov51" path="res://Assets/OriginalModels/door_prop.tscn" id="99_1u63x"]
 [ext_resource type="PackedScene" uid="uid://c3o3hojgff8b0" path="res://Assets/OriginalModels/lamp_2_large.tscn" id="100_c1alp"]
 [ext_resource type="Material" uid="uid://bd2k2xeg40reu" path="res://Assets/Materials/wall_short.tres" id="102_2t3bv"]
@@ -715,24 +714,6 @@ _data = {
 "door_open": SubResource("Animation_vilir")
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0bjhr"]
-resource_name = "White"
-metallic = 0.5
-metallic_texture = ExtResource("28_bgtx1")
-metallic_texture_channel = 2
-roughness_texture = ExtResource("28_bgtx1")
-roughness_texture_channel = 1
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wj7v1"]
-resource_name = "Black"
-cull_mode = 2
-albedo_color = Color(0, 0, 0, 1)
-metallic = 1.0
-metallic_texture = ExtResource("28_bgtx1")
-metallic_texture_channel = 2
-roughness_texture = ExtResource("28_bgtx1")
-roughness_texture_channel = 1
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_5qnc2"]
 _surfaces = [{
 "aabb": AABB(-0.898545, -0.025, -0.325677, 1.80342, 0.05, 0.670344),
@@ -765,7 +746,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 66,
 "index_data": PackedByteArray("AQAJAAQAAQAGAAkAFAARABUAFAAPABEAEAAOABMAEAALAA4AHwACABsAHwAAAAIAHgADAAgAHgAcAAMAEgAZABYAEgANABkACgAYAAwACgAXABgAGgAVAB0AGgAUABUABQAdAAcABQAaAB0AFgAcAB4AFgAZABwAFwAbABgAFwAfABsA"),
-"material": SubResource("StandardMaterial3D_0bjhr"),
+"material": ExtResource("27_jif0b"),
 "name": "White",
 "primitive": 3,
 "uv_scale": Vector4(1.56902, 2, 0, 0),
@@ -777,7 +758,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 66,
 "index_data": PackedByteArray("BwAiAAUABwAlACIADwAMAAkADwASAAwAEAAfABMAEAAcAB8AGAAeABsAGAAVAB4AEQAUAAAAEQAdABQAAgAaAA4AAgAXABoAAQAZAAMAAQAWABkAJwAhACQAJwAqACEACAAjAAYACAAmACMABAApAAsABAAgACkADQAoAAoADQArACgA"),
-"material": SubResource("StandardMaterial3D_wj7v1"),
+"material": ExtResource("28_sr065"),
 "name": "Black",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -2005,18 +1986,6 @@ roughness_texture_channel = 1
 normal_enabled = true
 normal_texture = ExtResource("92_7l1cp")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1kb5o"]
-resource_name = "Entrance"
-cull_mode = 2
-albedo_texture = ExtResource("96_vo2nx")
-metallic = 1.0
-metallic_texture = ExtResource("97_pyl7f")
-metallic_texture_channel = 2
-roughness_texture = ExtResource("97_pyl7f")
-roughness_texture_channel = 1
-normal_enabled = true
-normal_texture = ExtResource("98_0p5cg")
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_868hl"]
 _surfaces = [{
 "aabb": AABB(-3.5, -6, -2, 7, 11, 4),
@@ -2127,7 +2096,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 66,
 "index_data": PackedByteArray("BwArAA8ABwAdACsACgAfAAgACgAjAB8AAgAaAAUAAgAVABoAIQAQAB4AIQATABAAJQAUACIAJQAXABQAKQAYACYAKQAbABgADgAoAA0ADgAqACgABAAcAAYABAAZABwAAAAWAAMAAAARABYACQASAAEACQAgABIADAAkAAsADAAnACQA"),
-"material": SubResource("StandardMaterial3D_1kb5o"),
+"material": ExtResource("98_ypg12"),
 "name": "Entrance",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -3950,7 +3919,7 @@ apply_height_bugfix = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="SergesHome"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.8348, 53.1742, -0.61618)
-stream = ExtResource("51_qo0s4")
+stream = ExtResource("51_8cocw")
 autoplay = true
 max_distance = 4.0
 
@@ -4134,7 +4103,7 @@ max_distance = 40.0
 
 [node name="Move" type="AudioStreamPlayer3D" parent="HouseElevator/elevator"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2.05812, 0)
-stream = ExtResource("82_n5gop")
+stream = ExtResource("81_37khn")
 max_distance = 48.0
 
 [node name="PlayerArea" type="Area3D" parent="HouseElevator/elevator"]

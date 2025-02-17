@@ -1,24 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://dwvjvm78gm8b"]
+[gd_scene load_steps=13 format=4 uid="uid://dwvjvm78gm8b"]
 
-[ext_resource type="Texture2D" uid="uid://dvtmuvrj66sml" path="res://Assets/OriginalModels/Closet/PaintedWood007A_2K-PNG_Color.png" id="1_dpfbp"]
-[ext_resource type="Texture2D" uid="uid://dc40iwhonl1xu" path="res://Assets/OriginalModels/Closet/PaintedWood007A_2K-PNG_Roughness.png" id="2_q2jd8"]
-[ext_resource type="Texture2D" uid="uid://cbwayp7yy47ce" path="res://Assets/OriginalModels/Closet/PaintedWood007A_2K-PNG_NormalGL.png" id="3_u7175"]
-[ext_resource type="Texture2D" uid="uid://cpg3apft3ej0f" path="res://Assets/OriginalModels/Closet/Metal028_2K-PNG_Roughness.png" id="4_t0etf"]
-[ext_resource type="Texture2D" uid="uid://bum1paxwe42ux" path="res://Assets/OriginalModels/Closet/Metal028_2K-PNG_NormalGL.png" id="5_nbdbn"]
+[ext_resource type="Material" uid="uid://bd45sv28vabcj" path="res://Assets/Materials/wood007a.tres" id="1_ir87j"]
+[ext_resource type="Texture2D" uid="uid://csmj0qdnqy8k6" path="res://Assets/Materials/Metal028_2K-PNG_NormalGL.png" id="2_5r22u"]
+[ext_resource type="Texture2D" uid="uid://b6ddutfnyudsg" path="res://Assets/Materials/Metal028_2K-PNG_Roughness.png" id="3_o3n38"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_afriu"]
 size = Vector3(2.02222, 3.03284, 1.37)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2fv5g"]
-resource_name = "Material"
-cull_mode = 2
-albedo_texture = ExtResource("1_dpfbp")
-metallic_texture = ExtResource("2_q2jd8")
-metallic_texture_channel = 2
-roughness_texture = ExtResource("2_q2jd8")
-roughness_texture_channel = 1
-normal_enabled = true
-normal_texture = ExtResource("3_u7175")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_0j63c"]
 _surfaces = [{
@@ -42,7 +29,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 84,
 "index_data": PackedByteArray("AgAaAAUAAgAdABoAFwAsABQAFwAvACwAIAARACMAIAAOABEADQAEABAADQABAAQAGwAMAB4AGwAAAAwAIQADABgAIQAPAAMACgAcAAcACgAZABwABwAfABMABwAcAB8AFgAZAAoAFgAiABkAEwAiABYAEwAfACIAJQAuACgAJQArAC4AEgAkAAYAEgAqACQACQAtABUACQAnAC0ACAApAAsACAAmACkA"),
-"material": SubResource("StandardMaterial3D_2fv5g"),
+"material": ExtResource("1_ir87j"),
 "name": "Material",
 "primitive": 3,
 "uv_scale": Vector4(3.01296, 3.60321, 0, 0),
@@ -52,17 +39,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0j63c")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kyrwm"]
-resource_name = "Material.001"
-cull_mode = 2
-albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
-metallic = 0.577273
-metallic_texture = ExtResource("4_t0etf")
-metallic_texture_channel = 2
-roughness_texture = ExtResource("4_t0etf")
-roughness_texture_channel = 1
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27tro"]
+roughness = 0.2
+roughness_texture = ExtResource("3_o3n38")
 normal_enabled = true
-normal_texture = ExtResource("5_nbdbn")
+normal_texture = ExtResource("2_5r22u")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_qcob6"]
 _surfaces = [{
@@ -98,7 +79,7 @@ _surfaces = [{
 "index_count": 174,
 "index_data": PackedByteArray("KQALAAUAKQArAAsAMwAWACEAMwAsABYALQARABcALQAvABEAMAAEAB8AMAAoAAQAJAAMABIAJAAiAAwAGgADAAkAGgAeAAMAIAAeABoAIAAmAB4ABgAcABgABgAAABwAMgAfACcAMgAwAB8AKgAbAAoAKgAxABsALgAnABAALgAyACcAFQAmACAAFQAPACYAGAAiACQAGAAcACIAMQAhABsAMQAzACEAOAAyAC4AOAA8ADIANAAxACoANAA7ADEAPAAwADIAPAA6ADAAOgAoADAAOgA+ACgANwAvAC0ANwA5AC8APQAsADMAPQA2ACwAPwArACkAPwA1ACsAAgA1AD8AAgAIADUAJQA2AD0AJQATADYAFAA5ADcAFAAOADkAHQA+ADoAHQABAD4AIwA6ADwAIwAdADoABwA7ADQABwAZADsADQA8ADgADQAjADwAGQA9ADsAGQAlAD0A"),
 "lods": [0.000169004, PackedByteArray("KQALAAUAKQArAAsAAgArACkAAgAIACsAMwAWACEAMwAsABYAMQAzACEAPQAsADMAKgAxACEAKgAhAAoAKgA7ADEABwA7ACoABwAlADsAJQA9ADsAJQAsAD0AJQATACwALQARABcALQAvABEAFAAvAC0AFAAOAC8AJAAMABIAJAAiAAwABgAiACQABgAAACIAIAADAAkAIAAeAAMAFQAeACAAFQAPAB4ALgAfABAALgAEAB8ADQAEAC4ADQAjAAQAIwAoAAQAIwABACgA")],
-"material": SubResource("StandardMaterial3D_2fv5g"),
+"material": ExtResource("1_ir87j"),
 "name": "Material",
 "primitive": 3,
 "uv_scale": Vector4(3.60321, 3.60321, 0, 0),
@@ -110,7 +91,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 54,
 "index_data": PackedByteArray("AwASAAcAAwAMABIADwAVAAkADwAbABUABQAKAAEABQAQAAoABgAOAAQABgARAA4AAAALAAIAAAAIAAsAHAAYABYAHAAeABgACAAXAAsACAAUABcAEQAaAA4AEQAdABoADQAfABMADQAZAB8A"),
-"material": SubResource("StandardMaterial3D_kyrwm"),
+"material": SubResource("StandardMaterial3D_27tro"),
 "name": "Material.001",
 "primitive": 3,
 "uv_scale": Vector4(0.869309, 0.205155, 0, 0),
@@ -119,6 +100,12 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qcob6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d1q3q"]
+roughness = 0.31
+roughness_texture = ExtResource("3_o3n38")
+normal_enabled = true
+normal_texture = ExtResource("2_5r22u")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7ettn"]
 _surfaces = [{
@@ -154,7 +141,7 @@ _surfaces = [{
 "index_count": 174,
 "index_data": PackedByteArray("KQALACsAKQAFAAsAMwAWACwAMwAhABYALQARAC8ALQAXABEAMAAEACgAMAAfAAQAJAAMACIAJAASAAwAGgADAB4AGgAJAAMAIAAeACYAIAAaAB4ABgAcAAAABgAYABwAMgAfADAAMgAnAB8AKgAbADEAKgAKABsALgAnADIALgAQACcAFQAmAA8AFQAgACYAGAAiABwAGAAkACIAMQAhADMAMQAbACEAOAAyADwAOAAuADIANAAxADsANAAqADEAPAAwADoAPAAyADAAOgAoAD4AOgAwACgANwAvADkANwAtAC8APQAsADYAPQAzACwAPwArADUAPwApACsAAgA1AAgAAgA/ADUAJQA2ABMAJQA9ADYAFAA5AA4AFAA3ADkAHQA+AAEAHQA6AD4AIwA6AB0AIwA8ADoABwA7ABkABwA0ADsADQA8ACMADQA4ADwAGQA9ACUAGQA7AD0A"),
 "lods": [0.000207133, PackedByteArray("KQALADUAKQAFAAsAAgApADUAAgA1AAgAMwAWADYAMwAhABYAPQAzADYAMQAhADMAJQA9ADYAJQA2ABMAJQA7AD0ABwA7ACUABwA0ADsANAAxADsANAAhADEANAAKACEANwARADkANwAXABEAFAA3ADkAFAA5AA4AJAAMACIAJAASAAwABgAkACIABgAiAAAAIAADACYAIAAJAAMAFQAgACYAFQAmAA8AOAAQACcAOAAnAAQAOAAEACgAIwA4ACgADQA4ACMAIwAoAAEA")],
-"material": SubResource("StandardMaterial3D_2fv5g"),
+"material": ExtResource("1_ir87j"),
 "name": "Material",
 "primitive": 3,
 "uv_scale": Vector4(3.44804, 3.60321, 0, 0),
@@ -166,7 +153,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 54,
 "index_data": PackedByteArray("AwATAA0AAwAHABMAEAAVABsAEAAKABUABQAJAA8ABQABAAkABgAOABEABgAEAA4AAAALAAgAAAACAAsAHAAZAB8AHAAWABkACAAXABQACAALABcAEQAaAB0AEQAOABoADAAeABgADAASAB4A"),
-"material": SubResource("StandardMaterial3D_kyrwm"),
+"material": SubResource("StandardMaterial3D_d1q3q"),
 "name": "Material.001",
 "primitive": 3,
 "uv_scale": Vector4(0.981137, 0.205155, 0, 0),

@@ -3,19 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtta0jkejspc2"
-path="res://.godot/imported/eyelashes01.png-6b703128421f4447823f58e477e9369d.ctex"
+path.s3tc="res://.godot/imported/eyelashes01.png-6b703128421f4447823f58e477e9369d.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/HumanModels/MH_Julia/Resources/Eyelashes/eyelashes01.png"
-dest_files=["res://.godot/imported/eyelashes01.png-6b703128421f4447823f58e477e9369d.ctex"]
+dest_files=["res://.godot/imported/eyelashes01.png-6b703128421f4447823f58e477e9369d.s3tc.ctex"]
 
 [params]
 
-compress/mode=3
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
