@@ -28,6 +28,10 @@ var last_move: LastMove = LastMove.UP
 @export var waypoints : Array[Array]
 ## Locks the elevator
 @export var locked: bool = false
+## Use only if you set navigation
+@export var navigation_link: NodePath
+## Use only if you set navigation
+@export var navigation_region: NodePath
 var counter: int = 0
 var pass_floor: bool = false
 var default_rotation: Vector3
@@ -92,6 +96,8 @@ func on_update(delta):
 func door_open():
 	var rng = RandomNumberGenerator.new()
 	$AnimationPlayer.play("door_open")
+	if get_node_or_null(navigation_link) != null:
+		get_node(navigation_link).enabled = true
 	set_physics_process(false)
 	if !open_door_sounds.is_empty():
 		$DoorSound.stream = load(open_door_sounds[rng.randi_range(0, open_door_sounds.size() - 1)])
@@ -100,6 +106,8 @@ func door_open():
 func door_close():
 	var rng = RandomNumberGenerator.new()
 	$AnimationPlayer.play("door_open", -1, -1, true)
+	if get_node_or_null(navigation_link) != null:
+		get_node(navigation_link).enabled = false
 	$AnimationPlayer.connect("animation_finished", _on_animation_finished)
 	if !close_door_sounds.is_empty():
 		$DoorSound.stream = load(close_door_sounds[rng.randi_range(0, close_door_sounds.size() - 1)])
@@ -164,18 +172,22 @@ func interact_down(player):
 		call("call_elevator", dir) #move the elevator down.
 
 func on_player_area_body_entered(body):
-	if body is CharacterBody3D: #|| body is Pickable || body is LootableAmmo:
+	if body is PlayerScript || body is InteractableNpc: #|| body is Pickable:
 		call("add_object", body.get_path())
 
 func on_player_area_body_exited(body):
-	if body is CharacterBody3D: # || body is Pickable || body is LootableAmmo:
+	if body is PlayerScript || body is InteractableNpc: # || body is Pickable:
 		call("remove_object", body.get_path())
 
-func add_object(name):
-	objects_to_teleport.append(name)
+func add_object(body):
+	if get_node(body) is InteractableNpc:
+		changed_launch_state.connect(get_node(body).on_moving_platform)
+	objects_to_teleport.append(body)
 
-func remove_object(name):
-	objects_to_teleport.erase(name)
+func remove_object(body):
+	if get_node(body) is InteractableNpc:
+		changed_launch_state.disconnect(get_node(body).on_moving_platform)
+	objects_to_teleport.erase(body)
 
 func _on_animation_finished(anim_name):
 	$AnimationPlayer.disconnect("animation_finished", _on_animation_finished)

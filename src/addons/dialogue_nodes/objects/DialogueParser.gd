@@ -282,7 +282,7 @@ func _parse_variable_names(value: String):
 func _update_wait_tags(node : RichTextLabel, value : String):
 	# add a wait if none present at beginning
 	if not value.begins_with('[wait'):
-		value = '[wait]' + value + '[/wait]'
+		value = '[wait]' + tr(value) + '[/wait]'
 	
 	# find the actual position of the last character sans bbcode
 	value = value.replace('\n', ' ').replace('[br]', '\n')

@@ -4,10 +4,10 @@ class_name ItemPickable
 @export var item: Item
 
 func interact(player: Node3D):
-	call("add_to_inventory")
+	call("add_to_inventory", player.get_path())
 
-func add_to_inventory():
-	get_tree().root.get_node("Main/Game/" + str(multiplayer.get_unique_id()) + "/InventoryUI/Inventory").rpc_id(multiplayer.get_unique_id(), "add_item", item.id)
+func add_to_inventory(player_path: String):
+	get_node(player_path + "/InventoryUI/Inventory/Inventory").call("add_item", item.id)
 	call("clear_world_item")
 
 func clear_world_item():

@@ -58,7 +58,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_526ht")
 
 [node name="UsbDisk" type="RigidBody3D"]
-collision_layer = 2
+collision_layer = 10
 script = ExtResource("1_wi2gg")
 item = ExtResource("2_gjrec")
 

@@ -128,9 +128,7 @@ offset_left = -40.0
 offset_bottom = 26.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 20
-text = "WASD - move
-E - interact/talk
-ESC/F3 - Settings/Credits/Exit/Unfocus mouse"
+text = "QUICK_MANUAL"
 horizontal_alignment = 2
 
 [node name="BossContainer" type="VBoxContainer" parent="PlayerUI"]
@@ -172,7 +170,7 @@ offset_left = -191.896
 offset_top = -32.12
 offset_right = 192.104
 offset_bottom = 31.88
-text = "Exit"
+text = "EXIT"
 
 [node name="SettingsButton" type="Button" parent="PlayerUI/PauseMenu/Panel"]
 layout_mode = 1
@@ -185,7 +183,7 @@ offset_left = -191.896
 offset_top = -30.32
 offset_right = 192.104
 offset_bottom = 30.68
-text = "Settings"
+text = "SETTINGS"
 
 [node name="Label" type="Label" parent="PlayerUI/PauseMenu/Panel"]
 layout_mode = 1
@@ -425,7 +423,7 @@ libraries = {
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(-0.0146777, 0, 0.999892, 0, 1, 0, -0.999892, 0, -0.0146777, -18.248, 54.5015, -2.26259)
-text = "The city will return... someday."
+text = "CITY_UNDER_SKY"
 
 [connection signal="pressed" from="PlayerUI/PauseMenu/Panel/ExitButton" to="PlayerUI" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="PlayerUI/PauseMenu/Panel/SettingsButton" to="PlayerUI" method="_on_settings_button_pressed"]

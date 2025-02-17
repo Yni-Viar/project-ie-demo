@@ -13,7 +13,7 @@ config_version=5
 config/name="Project \"I.E.\" public showcase"
 config/description="Public showcase (and a benchmark) for various platforms.
 Contains content for upcoming game."
-config/version="0.0.6"
+config/version="0.0.7"
 config/tags=PackedStringArray("game", "singleplayer")
 run/main_scene="res://Scenes/GameDemo.tscn"
 config/use_custom_user_dir=true
@@ -180,7 +180,7 @@ item_inspect={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Translations/mainmenu.en.translation", "res://Translations/mainmenu.ru.translation", "res://Translations/settings.en.translation", "res://Translations/settings.ru.translation", "res://Translations/loading_screen.en.translation", "res://Translations/loading_screen.ru.translation", "res://Translations/game.en.translation", "res://Translations/game.ru.translation", "res://Translations/gameover.en.translation", "res://Translations/gameover.ru.translation")
+locale/translations=PackedStringArray("res://Translations/mainmenu.en.translation", "res://Translations/mainmenu.ru.translation", "res://Translations/settings.en.translation", "res://Translations/settings.ru.translation", "res://Translations/loading_screen.en.translation", "res://Translations/loading_screen.ru.translation", "res://Translations/game.en.translation", "res://Translations/game.ru.translation", "res://Translations/gameover.en.translation", "res://Translations/gameover.ru.translation", "res://Translations/dlgs.en.translation", "res://Translations/dlgs.ru.translation", "res://Translations/npcs.en.translation", "res://Translations/npcs.ru.translation")
 
 [layer_names]
 

@@ -1,6 +1,6 @@
 extends Control
 
-var special_screen: bool = false
+var special_screen: Array = [false, ""]
 var speaker_prefab: InteractableNpc
 
 # Called when the node enters the scene tree for the first time.
@@ -12,7 +12,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if special_screen:
+	if special_screen[0]:
 		$Cursor.hide()
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
@@ -40,19 +40,27 @@ func input_values(state: String):
 			# See: https://softwareengineering.stackexchange.com/questions/147111/what-is-wrong-with-the-unlicense
 			# The ingame terminal was licensed under this license
 		"exitgame":
-			if !special_screen:
+			if special_screen[1] != "exitgame":
 				$PauseMenu.show()
-				special_screen = true
+				if special_screen[1].is_empty():
+					special_screen[0] = true
+					special_screen[1] = "exitgame"
 			else:
 				$PauseMenu.hide()
-				special_screen = false
+				if special_screen[1] == "exitgame":
+					special_screen[0] = false
+					special_screen[1] = ""
 		"inventory":
-			if !special_screen:
+			if special_screen[1] != "inventory":
 				get_tree().root.get_node("Game/Player/InventoryUI").show()
-				special_screen = true
+				if special_screen[1].is_empty():
+					special_screen[0] = true
+					special_screen[1] = "inventory"
 			else:
 				get_tree().root.get_node("Game/Player/InventoryUI").hide()
-				special_screen = false
+				if special_screen[1] == "inventory":
+					special_screen[0] = false
+					special_screen[1] = ""
 
 
 func _on_exit_button_pressed():
@@ -67,7 +75,9 @@ func speak(dlg_path: String, dlg_start_id: String, speaker_nodepath: String):
 		var player: PlayerScript = get_tree().root.get_node("Game/Player")
 		player.look_at(Vector3(speaker_prefab.global_position.x, player.global_position.y, speaker_prefab.global_position.z))
 		speaker_prefab.look_at(Vector3(player.global_position.x, speaker_prefab.global_position.y, player.global_position.z))
-		special_screen = true
+		if special_screen[1].is_empty():
+			special_screen[0] = true
+			special_screen[1] = "dialogue"
 		$DialogueBox.start(dlg_start_id)
 		$DialogueBox.show()
 		player.motion_enabled = false
@@ -75,7 +85,9 @@ func speak(dlg_path: String, dlg_start_id: String, speaker_nodepath: String):
 
 
 func _on_dialogue_box_dialogue_ended() -> void:
-	special_screen = false
+	if special_screen[1] == "dialogue":
+		special_screen[0] = false
+		special_screen[1] = ""
 	speaker_prefab = null
 	var player: PlayerScript = get_tree().root.get_node("Game/Player")
 	player.motion_enabled = true
@@ -100,4 +112,3 @@ func _on_dialogue_box_dialogue_signal(value: String) -> void:
 
 func _on_settings_button_pressed() -> void:
 	$Settings.show()
-	special_screen = true

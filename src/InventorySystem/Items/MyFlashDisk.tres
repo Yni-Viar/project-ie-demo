@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_8slle")
-id = 1
+id = 0
 name = "My Flash Disk"
 texture_tiled = ExtResource("2_auvs1")
 texture_slot = ExtResource("2_auvs1")

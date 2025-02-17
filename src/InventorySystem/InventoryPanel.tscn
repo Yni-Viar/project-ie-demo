@@ -47,6 +47,6 @@ offset_right = 65.0
 offset_bottom = 15.2
 grow_horizontal = 2
 grow_vertical = 2
-text = "Your inventory"
+text = "INV_ABOUT"
 horizontal_alignment = 1
 vertical_alignment = 1
