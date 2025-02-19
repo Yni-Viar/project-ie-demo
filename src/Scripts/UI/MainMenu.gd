@@ -12,7 +12,7 @@ func _ready():
 		_:
 			get_node("Background").texture = load("res://Assets/Menu/MainMenuBackgroundIndev.png")
 	
-	get_window().size = Settings.setting_res.window_size[Settings.setting_res.ui_window_size]
+	#get_window().size = Settings.setting_res.window_size[Settings.setting_res.ui_window_size]
 	Settings.region = OS.get_locale()
 	
 	AudioServer.set_bus_volume_db(0, linear_to_db(Settings.setting_res.sound))
@@ -28,7 +28,7 @@ func _ready():
 		AudioServer.set_bus_mute(1, false)
 	
 	
-	TranslationServer.set_locale(Settings.setting_res.available_languages[Settings.setting_res.ui_language])
+	#TranslationServer.set_locale(Settings.setting_res.available_languages[Settings.setting_res.ui_language])
 	Settings.first_start = false
 
 

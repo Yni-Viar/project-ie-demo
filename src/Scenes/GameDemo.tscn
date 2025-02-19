@@ -78,6 +78,7 @@ grow_vertical = 2
 texture = ExtResource("3_lfu1f")
 
 [node name="HealthBarIcon" type="TextureRect" parent="PlayerUI"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.015
@@ -92,6 +93,7 @@ grow_vertical = 0
 texture = ExtResource("4_jrstp")
 
 [node name="HealthBar" type="TextureProgressBar" parent="PlayerUI"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.029
@@ -193,17 +195,6 @@ anchor_bottom = 1.0
 offset_top = -304.0
 offset_right = 448.0
 grow_vertical = 0
-text = "- Stopwatch model by mantledmoon (CC-BY)
-- Chair model (from home hall) - Neil dela Merced (solvalou) (CC-BY)
-- Screen of home computer contains assets, made by Microsoft, that are licensed under CC-BY
-- Robot vacuum cleaner.ogg by Eelke -- https://freesound.org/s/383372/ -- License: Attribution 4.0
-- Music:
-Credit: Alexey Kasyanchuk (DEgITx) (CC BY 4.0)
-Kevin MacLeod (CC-BY 4.0)
-Other assets and code are CC0, or made by me (Yni Viar).
-Check the sources folder for authors information....
-
-Thanks to awesome people from dscrd servers for pointing me on game-design issues!"
 autowrap_mode = 3
 
 [node name="GameOverPanel" type="Control" parent="PlayerUI"]

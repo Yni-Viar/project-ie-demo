@@ -56,6 +56,7 @@ albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 roughness = 0.5
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 2.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_cf5ml"]
 _surfaces = [{
@@ -96,6 +97,7 @@ albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 roughness = 0.5
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 2.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_is5he"]
 _surfaces = [{
@@ -147,7 +149,7 @@ mesh = SubResource("ArrayMesh_00h50")
 skeleton = NodePath("")
 
 [node name="LightSystemOmni" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.311, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.793241, 0)
 light_energy = 0.5
 light_size = 0.3
 shadow_enabled = true

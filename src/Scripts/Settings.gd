@@ -10,7 +10,7 @@ signal settings_saved
 const DATA_COMPATIBILITY: String = "0.0.1"
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
-const CURRENT_STAGE: Stages = Stages.release
+const CURRENT_STAGE: Stages = Stages.dev
 ## If we don't specify regions, which have additional legal requirements, we are in trouble.
 const LEGAL_REQ_REGIONS: PackedStringArray = ["ru_RU"]
 ## Available languages

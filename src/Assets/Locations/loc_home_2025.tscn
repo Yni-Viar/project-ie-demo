@@ -1,4 +1,4 @@
-[gd_scene load_steps=317 format=4 uid="uid://ce8coeohfwec8"]
+[gd_scene load_steps=318 format=4 uid="uid://ce8coeohfwec8"]
 
 [ext_resource type="Texture2D" uid="uid://qd0v8r4ryo7d" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Wallpaper002A_2K-PNG_Color.png" id="1_3orok"]
 [ext_resource type="Texture2D" uid="uid://tcckp504mvfg" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Wallpaper002A_2K-PNG_Roughness.png" id="2_72vi4"]
@@ -50,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://q7sgr1j7yydg" path="res://InventorySystem/Items/Pickup/eledrive.tscn" id="42_phao5"]
 [ext_resource type="PackedScene" uid="uid://rj65na3myb3i" path="res://Assets/HumanModels/MH_Julia/scene_Julia.tscn" id="44_c8mbq"]
 [ext_resource type="PackedScene" uid="uid://d0j01mgnl1tgy" path="res://Assets/ExternalModels/sofa_2.tscn" id="44_j652f"]
+[ext_resource type="AudioStream" uid="uid://csxmtxp812ctm" path="res://Sounds/Interact/moxobna_door-unlock_CC0.ogg" id="45_4by4w"]
 [ext_resource type="PackedScene" uid="uid://btm3yh85og7mm" path="res://Assets/ExternalModels/monitor.tscn" id="50_8bju3"]
 [ext_resource type="AudioStream" uid="uid://dur4rfn0ufek6" path="res://Sounds/Music/DEgITx/Somewhere_on_Glade.wav" id="51_8cocw"]
 [ext_resource type="PackedScene" uid="uid://bu825cm6uv3r2" path="res://DynamicObjects/ActionItems/chair_4.tscn" id="53_nsk5i"]
@@ -3883,6 +3884,7 @@ transform = Transform3D(0.776359, 0, 0, 0, 1, 0, 0, 0, 1, -12.0353, 51.6201, 2.0
 [node name="Door3" parent="SergesHome" instance=ExtResource("36_o1gvq")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.4879, 51.6567, 3.54463)
 keycard = 1049
+unlock_sound = ExtResource("45_4by4w")
 
 [node name="VacuumCleanerPath" type="Path3D" parent="SergesHome"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4794, 51.648, -1.92896)
@@ -4857,6 +4859,7 @@ shape = SubResource("ConcavePolygonShape3D_7mldp")
 
 [node name="Plane_021" type="MeshInstance3D" parent="HouseHall/NavigationRegion3D/StaticBody3D"]
 transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, -17.2009, 28.1278, 0.195207)
+gi_mode = 0
 mesh = SubResource("ArrayMesh_g1klg")
 skeleton = NodePath("")
 
@@ -4866,6 +4869,7 @@ shape = SubResource("ConcavePolygonShape3D_hbi3v")
 
 [node name="Plane_022" type="MeshInstance3D" parent="HouseHall/NavigationRegion3D/StaticBody3D"]
 transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, -17.2009, 28.1278, 0.195207)
+gi_mode = 0
 mesh = SubResource("ArrayMesh_dptum")
 skeleton = NodePath("")
 

@@ -107,7 +107,9 @@ func audio_settings(bus: int, val: float):
 func _on_back_pressed():
 	Settings.save_resource(Settings.setting_res)
 	get_parent().hide()
-	get_tree().root.get_node("Game").load_settings()
+	if get_tree().root.get_node_or_null("Game") != null:
+		get_tree().root.get_node("Game").load_settings()
+		get_tree().root.get_node("Game/PlayerUI").input_values("settings_close")
 
 
 func _on_glow_set_toggled(toggled_on):

@@ -15,7 +15,7 @@ config/description="Public showcase (and a benchmark) for various platforms.
 Contains content for upcoming game."
 config/version="0.0.7"
 config/tags=PackedStringArray("demo", "game", "singleplayer")
-run/main_scene="res://Scenes/GameDemo.tscn"
+run/main_scene="res://Scenes/Main.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="InternalEternal"
 config/features=PackedStringArray("4.3", "Forward Plus")

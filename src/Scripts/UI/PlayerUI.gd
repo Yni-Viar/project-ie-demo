@@ -5,9 +5,10 @@ var speaker_prefab: InteractableNpc
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if OS.get_name() == "Web":
-		$PauseMenu/Panel/ExitButton.hide()
-		$GameOverPanel/MenuButton.hide()
+	#if OS.get_name() == "Web":
+		#$PauseMenu/Panel/ExitButton.hide()
+		#$GameOverPanel/MenuButton.hide()
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -61,6 +62,17 @@ func input_values(state: String):
 				if special_screen[1] == "inventory":
 					special_screen[0] = false
 					special_screen[1] = ""
+		"settings":
+			if special_screen[1] != "settings":
+				$Settings.show()
+				if special_screen[1].is_empty():
+					special_screen[0] = true
+					special_screen[1] = "settings"
+		"settings_close":
+			$Settings.hide()
+			if special_screen[1] == "settings":
+				special_screen[0] = false
+				special_screen[1] = ""
 
 
 func _on_exit_button_pressed():
@@ -111,4 +123,4 @@ func _on_dialogue_box_dialogue_signal(value: String) -> void:
 
 
 func _on_settings_button_pressed() -> void:
-	$Settings.show()
+	input_values("settings")

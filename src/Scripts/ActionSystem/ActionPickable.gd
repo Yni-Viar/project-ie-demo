@@ -42,12 +42,7 @@ func pick(player: String):
 	player_prefab.using_item = get_path()
 	
 	if is_collectable && collectable_first_time:
-		if !get_tree().root.get_node("Game").game_data.collected_items.has(id):
-			var node: CollectableButton = CollectableButton.new()
-			node.icon = icon
-			node.text = public_name
-			player_prefab.get_node("InventoryUI/Inventory/CollectablesPanel/VBoxContainer").add_child(node)
-			get_tree().root.get_node("Game").game_data.collected_items.push_back(id)
+		pass
 
 ## Throws an object
 func throw(player: String):

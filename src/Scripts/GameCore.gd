@@ -52,7 +52,7 @@ func quit():
 	#loading_screen.get_node("MainPanel").previous_path = "Game"
 	#add_child(loading_screen)
 	#loading_screen.get_node("MainPanel").load_game()
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://Scenes/Main.tscn")
 
 func set_background_music(to: String):
 	if current_ambient != to:
@@ -70,6 +70,7 @@ func load_settings():
 	$WorldEnvironment.environment.ssil_enabled = Settings.setting_res.ssil
 	$WorldEnvironment.environment.ssr_enabled = Settings.setting_res.ssr
 	$WorldEnvironment.environment.glow_enabled = Settings.setting_res.glow
+	$WorldEnvironment.environment.sdfgi_enabled = Settings.setting_res.dynamic_gi
 	
 	for node in get_tree().get_nodes_in_group("reflection_probe"):
 		if node is ReflectionProbe:
@@ -78,12 +79,13 @@ func load_settings():
 			else:
 				node.show()
 	
-	for node in get_tree().get_nodes_in_group("voxelgi"):
-		if node is VoxelGI:
-			if !Settings.setting_res.dynamic_gi:
-				node.hide()
-			else:
-				node.show()
+	#for node in get_tree().get_nodes_in_group("voxelgi"):
+		#if node is VoxelGI:
+			#if !Settings.setting_res.dynamic_gi:
+				#node.hide()
+			#else:
+				#node.show()
+	
 
 func load_location(load: String):
 	file_path_to_load = load
