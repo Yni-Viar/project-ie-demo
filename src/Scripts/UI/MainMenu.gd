@@ -27,6 +27,8 @@ func _ready():
 	elif Settings.setting_res.sound >= 0.01 && AudioServer.is_bus_mute(1):
 		AudioServer.set_bus_mute(1, false)
 	
+	if OS.get_name() == "Web":
+		$Title/Exit.hide()
 	
 	#TranslationServer.set_locale(Settings.setting_res.available_languages[Settings.setting_res.ui_language])
 	Settings.first_start = false
