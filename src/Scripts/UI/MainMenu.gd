@@ -29,6 +29,7 @@ func _ready():
 	
 	if OS.get_name() == "Web":
 		$Title/Exit.hide()
+		$Title/Settings.hide()
 	
 	#TranslationServer.set_locale(Settings.setting_res.available_languages[Settings.setting_res.ui_language])
 	Settings.first_start = false

@@ -54,8 +54,9 @@ func load_resource():
 			setting_res = res
 ## Sometimes ago it was a great function. Now it is just a stub, that calls ResourceStorage and saves settings
 func save_resource(res):
-	ResourceStorage.save_resource("user://Settings.bin", res)
-	emit_signal("settings_saved")
+	if OS.get_name() != "Web":
+		ResourceStorage.save_resource("user://Settings.bin", res)
+		emit_signal("settings_saved")
 
 func is_legal_req() -> bool:
 	return LEGAL_REQ_REGIONS.has(region)

@@ -5,10 +5,10 @@ var speaker_prefab: InteractableNpc
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#if OS.get_name() == "Web":
+	if OS.get_name() == "Web":
+		$PauseMenu/Panel/SettingsButton.hide()
 		#$PauseMenu/Panel/ExitButton.hide()
 		#$GameOverPanel/MenuButton.hide()
-	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
