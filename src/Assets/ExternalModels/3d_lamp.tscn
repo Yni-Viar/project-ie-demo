@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bp6ddf30eln41" path="res://Assets/ExternalModels/Lightbulb_CC0_Josh_Dean/textures/lightbulb_01_arm_1k.jpg" id="5_hssaa"]
 [ext_resource type="Texture2D" uid="uid://dwexpnvlmnmde" path="res://Assets/ExternalModels/Lightbulb_CC0_Josh_Dean/textures/lightbulb_01_nor_gl_1k.jpg" id="6_026ot"]
 [ext_resource type="Texture2D" uid="uid://b5egegf508vd4" path="res://Assets/ExternalModels/Lightbulb_CC0_Josh_Dean/textures/lightbulb_01_emissive_1k.jpg" id="7_3yhuo"]
-[ext_resource type="Script" path="res://Scripts/LightSystemOmni.gd" id="8_00hxv"]
+[ext_resource type="Script" uid="uid://c0vyk8pjes2ne" path="res://Scripts/LightSystemOmni.gd" id="8_00hxv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ebklk"]
 resource_name = "Material"

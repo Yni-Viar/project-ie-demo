@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://1vy1n0obgprs" path="res://Assets/OriginalModels/Lamp/lamp_base.png" id="1_d320v"]
 [ext_resource type="Texture2D" uid="uid://c1sb77h0uya8m" path="res://Assets/OriginalModels/Lamp/lamp_metal-lamp_rough.png" id="2_7ya4m"]
 [ext_resource type="Texture2D" uid="uid://cjue664kqeq8k" path="res://Assets/OriginalModels/Lamp/lamp_nor.png" id="3_6v471"]
-[ext_resource type="Script" path="res://Scripts/LightSystemOmni.gd" id="4_oay5n"]
+[ext_resource type="Script" uid="uid://c0vyk8pjes2ne" path="res://Scripts/LightSystemOmni.gd" id="4_oay5n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27svx"]
 resource_name = "Material.002"

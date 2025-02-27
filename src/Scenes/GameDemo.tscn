@@ -1,19 +1,23 @@
-[gd_scene load_steps=24 format=3 uid="uid://dyeqacmwaajfm"]
+[gd_scene load_steps=28 format=3 uid="uid://dyeqacmwaajfm"]
 
-[ext_resource type="Script" path="res://Scripts/GameCore.gd" id="1_hqmbo"]
+[ext_resource type="Script" uid="uid://b3kpus4t1p7wb" path="res://Scripts/GameCore.gd" id="1_hqmbo"]
 [ext_resource type="Resource" uid="uid://dtootndbrxot5" path="res://Scripts/GameData/gamedata.tres" id="2_pv0oa"]
-[ext_resource type="Script" path="res://Scripts/UI/PlayerUI.gd" id="2_rvkrq"]
+[ext_resource type="Script" uid="uid://pd0osfgx4yb3" path="res://Scripts/UI/PlayerUI.gd" id="2_rvkrq"]
 [ext_resource type="Texture2D" uid="uid://bmw4fxmnmwhov" path="res://Assets/HUD/arrow.png" id="3_lfu1f"]
 [ext_resource type="Texture2D" uid="uid://dj66rmlusn18r" path="res://Assets/HUD/healthbar.png" id="4_jrstp"]
 [ext_resource type="Texture2D" uid="uid://dytgmrs4piqfo" path="res://Assets/HUD/healthbar_unfilled.png" id="5_bof60"]
 [ext_resource type="Texture2D" uid="uid://b5pka5jiu0eq6" path="res://Assets/HUD/healthbar_filled.png" id="6_hdu6m"]
-[ext_resource type="Script" path="res://Scripts/FPSCounter.gd" id="7_w6m7r"]
+[ext_resource type="Script" uid="uid://bfy5mr2cqosb4" path="res://Scripts/FPSCounter.gd" id="7_w6m7r"]
 [ext_resource type="FontFile" uid="uid://3ydmlj7unul" path="res://Assets/Fonts/Coming_Soon/ComingSoon-Regular.ttf" id="8_sfslp"]
+[ext_resource type="Script" uid="uid://cr5xyp1e785a1" path="res://Scripts/UI/PhotomodeSelector.gd" id="9_c5w3r"]
+[ext_resource type="Texture2D" uid="uid://cy2xyav126k3y" path="res://Assets/HUD/Photomode/Photomode_Normal.png" id="9_fxl5q"]
 [ext_resource type="Theme" uid="uid://4k2un7nm7xc6" path="res://UITheme.tres" id="9_hs5nv"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="10_wm02x"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="11_kcrab"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="12_wmvxn"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="13_clcop"]
+[ext_resource type="Texture2D" uid="uid://dxflpmkfl4tgx" path="res://Assets/HUD/Photomode/Photomode_Toon.png" id="10_c5w3r"]
+[ext_resource type="Script" uid="uid://d2p44uvd2dsa1" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="10_wm02x"]
+[ext_resource type="Script" uid="uid://b433w3r1hhutv" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="11_kcrab"]
+[ext_resource type="Texture2D" uid="uid://cyhalf2ty4xex" path="res://Assets/HUD/Photomode/Photomode_EdgeDetect.png" id="11_wqkrr"]
+[ext_resource type="Script" uid="uid://dvil74f7w4m8p" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="12_wmvxn"]
+[ext_resource type="Script" uid="uid://dd42qh1cpvys1" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="13_clcop"]
 [ext_resource type="Environment" uid="uid://cpjkvy5s2l8ae" path="res://Assets/Environments/RealVirtualityGraphics.tres" id="14_uvye0"]
 [ext_resource type="PackedScene" uid="uid://bjbe75eis8tu6" path="res://Scenes/Settings.tscn" id="15_85lew"]
 [ext_resource type="PackedScene" uid="uid://ce8coeohfwec8" path="res://Assets/Locations/loc_home_2025.tscn" id="17_yj2b2"]
@@ -46,7 +50,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o7fn3"]
 _data = {
-"music_change": SubResource("Animation_4tulc")
+&"music_change": SubResource("Animation_4tulc")
 }
 
 [node name="Game" type="Node3D"]
@@ -186,6 +190,54 @@ offset_top = -30.32
 offset_right = 192.104
 offset_bottom = 30.68
 text = "SETTINGS"
+
+[node name="PhotomodeButton" type="Button" parent="PlayerUI/PauseMenu/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.491
+anchor_top = 0.267
+anchor_right = 0.491
+anchor_bottom = 0.267
+offset_left = -191.896
+offset_top = -32.36
+offset_right = 192.104
+offset_bottom = 31.64
+text = "PHOTOMODE"
+
+[node name="PhotomodeSelector" type="HBoxContainer" parent="PlayerUI"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -184.0
+offset_right = 256.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+script = ExtResource("9_c5w3r")
+
+[node name="Normal" type="TextureButton" parent="PlayerUI/PhotomodeSelector"]
+layout_mode = 2
+texture_normal = ExtResource("9_fxl5q")
+texture_pressed = ExtResource("9_fxl5q")
+texture_hover = ExtResource("9_fxl5q")
+
+[node name="Toon" type="TextureButton" parent="PlayerUI/PhotomodeSelector"]
+layout_mode = 2
+texture_normal = ExtResource("10_c5w3r")
+texture_pressed = ExtResource("10_c5w3r")
+texture_hover = ExtResource("10_c5w3r")
+
+[node name="EdgeDetect" type="TextureButton" parent="PlayerUI/PhotomodeSelector"]
+layout_mode = 2
+texture_normal = ExtResource("11_wqkrr")
+texture_pressed = ExtResource("11_wqkrr")
+texture_hover = ExtResource("11_wqkrr")
 
 [node name="GameOverPanel" type="Control" parent="PlayerUI"]
 visible = false
@@ -397,7 +449,7 @@ bus = &"Music"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_o7fn3")
+&"": SubResource("AnimationLibrary_o7fn3")
 }
 
 [node name="Loc_Home" parent="." instance=ExtResource("17_yj2b2")]
@@ -408,6 +460,11 @@ text = "CITY_UNDER_SKY"
 
 [connection signal="pressed" from="PlayerUI/PauseMenu/Panel/ExitButton" to="PlayerUI" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="PlayerUI/PauseMenu/Panel/SettingsButton" to="PlayerUI" method="_on_settings_button_pressed"]
+[connection signal="pressed" from="PlayerUI/PauseMenu/Panel/PhotomodeButton" to="PlayerUI" method="_on_photomode_button_pressed"]
+[connection signal="visibility_changed" from="PlayerUI/PhotomodeSelector" to="PlayerUI/PhotomodeSelector" method="_on_visibility_changed"]
+[connection signal="pressed" from="PlayerUI/PhotomodeSelector/Normal" to="PlayerUI/PhotomodeSelector" method="_on_normal_pressed"]
+[connection signal="pressed" from="PlayerUI/PhotomodeSelector/Toon" to="PlayerUI/PhotomodeSelector" method="_on_toon_pressed"]
+[connection signal="pressed" from="PlayerUI/PhotomodeSelector/EdgeDetect" to="PlayerUI/PhotomodeSelector" method="_on_edge_detect_pressed"]
 [connection signal="pressed" from="PlayerUI/GameOverPanel/MenuButton" to="PlayerUI" method="_on_exit_button_pressed"]
 [connection signal="dialogue_ended" from="PlayerUI/DialogueBox" to="PlayerUI" method="_on_dialogue_box_dialogue_ended"]
 [connection signal="dialogue_signal" from="PlayerUI/DialogueBox" to="PlayerUI" method="_on_dialogue_box_dialogue_signal"]

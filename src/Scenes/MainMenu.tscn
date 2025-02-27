@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://b6010fhhdn46b"]
 
-[ext_resource type="Script" path="res://Scripts/UI/MainMenu.gd" id="1_xwo58"]
+[ext_resource type="Script" uid="uid://boqxghub68yps" path="res://Scripts/UI/MainMenu.gd" id="1_xwo58"]
 [ext_resource type="Texture2D" uid="uid://eawgtym0inev" path="res://Assets/Menu/MainMenuForeground.png" id="2_647vp"]
 [ext_resource type="Texture2D" uid="uid://bf4keik5l7nsf" path="res://icon_256.png" id="3_weqit"]
 [ext_resource type="FontFile" uid="uid://3ydmlj7unul" path="res://Assets/Fonts/Coming_Soon/ComingSoon-Regular.ttf" id="4_uofyg"]
@@ -129,12 +129,11 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.7.4[/b] (Demo Pre-Alpha)
-- Major NPC backend overhaul: imported wander support from my SCP game.
-- Added support for game ratings for some countries.
-- Added missing copyright notice.
+text = "[b]v.0.0.8[/b] (Demo Pre-Alpha)
+- Added photo mode.
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
+- Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL
 
 "
 
@@ -296,6 +295,20 @@ bbcode_enabled = true
 text = "[i]Dialogue Nodes (MIT License)[/i]
 
 - Copyright (c) 2020 Bhgt"
+fit_content = true
+
+[node name="CreditsCode4" type="RichTextLabel" parent="CreditsPanel/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1234, 0)
+layout_mode = 2
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[i]Toon Post-Process shader (MIT License)[/i]
+
+- Copyright (c) Hannah \"EMBYR\" Crawford"
 fit_content = true
 
 [node name="CreditsCode2" type="RichTextLabel" parent="CreditsPanel/ScrollContainer/VBoxContainer"]

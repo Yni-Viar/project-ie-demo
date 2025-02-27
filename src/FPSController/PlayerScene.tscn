@@ -1,7 +1,38 @@
-[gd_scene load_steps=6 format=3 uid="uid://cu440emlhve1m"]
+[gd_scene load_steps=12 format=3 uid="uid://cu440emlhve1m"]
 
-[ext_resource type="Script" path="res://FPSController/PlayerScript.gd" id="1_t58vj"]
+[ext_resource type="Script" uid="uid://dnoolbn2plgbe" path="res://FPSController/PlayerScript.gd" id="1_t58vj"]
+[ext_resource type="Shader" uid="uid://c6jocntj7s6yb" path="res://Shaders/ToonShader/ToonPostProcessShader.gdshader" id="2_cowsv"]
+[ext_resource type="Shader" uid="uid://mknm08d75hop" path="res://Shaders/NormalEdgeDetectShader/edgedetect.gdshader" id="3_36bvv"]
 [ext_resource type="PackedScene" uid="uid://de8sgghqvldw3" path="res://InventorySystem/InventoryPanel.tscn" id="4_xovxo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_36bvv"]
+render_priority = 0
+shader = ExtResource("2_cowsv")
+shader_parameter/outlineColor = Color(0, 0, 0, 0.78)
+shader_parameter/depth_threshold = 0.025
+shader_parameter/normal_threshold = 0.75
+shader_parameter/normal_smoothing = 0.25
+shader_parameter/max_thickness = 1.3
+shader_parameter/min_thickness = 0.5
+shader_parameter/max_distance = 75.0
+shader_parameter/min_distance = 2.0
+shader_parameter/grazing_fresnel_power = 5.0
+shader_parameter/grazing_angle_mask_power = 1.0
+shader_parameter/grazing_angle_modulation_factor = 50.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_ib3mq"]
+material = SubResource("ShaderMaterial_36bvv")
+flip_faces = true
+size = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ib3mq"]
+render_priority = 0
+shader = ExtResource("3_36bvv")
+
+[sub_resource type="QuadMesh" id="QuadMesh_1kpcn"]
+material = SubResource("ShaderMaterial_ib3mq")
+flip_faces = true
+size = Vector2(2, 2)
 
 [sub_resource type="CapsuleShape3D" id="1"]
 radius = 0.371158
@@ -26,7 +57,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uiy40"]
 _data = {
-"Walk": SubResource("Animation_i7x7w")
+&"Walk": SubResource("Animation_i7x7w")
 }
 
 [node name="Player" type="CharacterBody3D" groups=["Players"]]
@@ -46,7 +77,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.968611, -0.292869)
 [node name="PlayerRecoil" type="Node3D" parent="PlayerHead"]
 
 [node name="PlayerCamera" type="Camera3D" parent="PlayerHead/PlayerRecoil"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0491205)
 cull_mask = 524287
+
+[node name="ToonShader" type="MeshInstance3D" parent="PlayerHead/PlayerRecoil/PlayerCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.107425)
+visible = false
+mesh = SubResource("QuadMesh_ib3mq")
+
+[node name="EdgeDetectShader" type="MeshInstance3D" parent="PlayerHead/PlayerRecoil/PlayerCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.107425)
+visible = false
+mesh = SubResource("QuadMesh_1kpcn")
 
 [node name="RayCast3D" type="RayCast3D" parent="PlayerHead/PlayerRecoil"]
 target_position = Vector3(0, 0, -3)
@@ -71,7 +113,7 @@ max_distance = 2.3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_uiy40")
+&"": SubResource("AnimationLibrary_uiy40")
 }
 
 [node name="InventoryUI" type="Control" parent="."]

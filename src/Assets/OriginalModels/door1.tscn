@@ -1,11 +1,11 @@
 [gd_scene load_steps=18 format=4 uid="uid://bx85wt5knxtg6"]
 
-[ext_resource type="Script" path="res://Scripts/DoorSystem/LightDoor.gd" id="1_uwyod"]
+[ext_resource type="Script" uid="uid://dd6jjlxp57v08" path="res://Scripts/DoorSystem/LightDoor.gd" id="1_uwyod"]
 [ext_resource type="Texture2D" uid="uid://rb0qbmiwekgn" path="res://Assets/OriginalModels/Doors/Door_Set1/Door_Set1_Cube_001_base.png" id="2_ji4bx"]
 [ext_resource type="Texture2D" uid="uid://bfuj6fiha48wo" path="res://Assets/OriginalModels/Doors/Door_Set1/Door_Set1_Cube_001_metal-Door_Set1_Cube_001_rough.png" id="3_ynjg0"]
 [ext_resource type="Texture2D" uid="uid://c20anqi0kmby2" path="res://Assets/OriginalModels/Doors/Door_Set1/Door_Set1_Cube_001_nor.png" id="4_p4s04"]
 [ext_resource type="Texture2D" uid="uid://df10vsvacjpix" path="res://Assets/OriginalModels/Doors/Door_Set1/Door_Set1_Cube_002_base.png" id="5_jj7k5"]
-[ext_resource type="Texture2D" uid="uid://dpgoufo0dlijp" path="res://Assets/OriginalModels/Doors/Door_Set1/Door_Set1_Cube_002_metal-Door_Set1_Cube_002_rough.png" id="6_507to"]
+[ext_resource type="Texture2D" uid="uid://dsydlknbhj7om" path="res://Assets/OriginalModels/Doors/Door_Set1/Door_Set1_Cube_002_metal-Door_Set1_Cube_002_rough.png" id="6_507to"]
 [ext_resource type="Texture2D" uid="uid://dutrcqjlq3agr" path="res://Assets/OriginalModels/Doors/Door_Set1/Door_Set1_Cube_002_nor.png" id="7_hwe5m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k45hr"]
@@ -117,7 +117,7 @@ tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.5, 1, 0, 0.701855, 0, 0.7
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t8pdu"]
 _data = {
-"door_open": SubResource("Animation_fq4u1")
+&"door_open": SubResource("Animation_fq4u1")
 }
 
 [node name="Door" type="Node3D"]

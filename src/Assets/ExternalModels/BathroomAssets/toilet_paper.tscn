@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://td1xpvtjqbve"]
 
-[ext_resource type="Texture2D" uid="uid://0djb4368itl3" path="res://Assets/ExternalModels/BathroomAssets/GLTF/GrayColor.png" id="1_plxl5"]
+[ext_resource type="Texture2D" uid="uid://b1j3gqaa10h8q" path="res://Assets/ExternalModels/BathroomAssets/GLTF/GrayColor.png" id="1_plxl5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ds87n"]
 resource_name = "Paper"

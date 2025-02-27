@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ctc4ktb6f7sba"]
 
 [ext_resource type="Texture2D" uid="uid://cwdnksovksto4" path="res://Assets/HUD/bossbar_unfilled.png" id="1_fa7ug"]
-[ext_resource type="Script" path="res://Scripts/BossBar.gd" id="1_vsaag"]
+[ext_resource type="Script" uid="uid://cwu46jfukrei1" path="res://Scripts/BossBar.gd" id="1_vsaag"]
 [ext_resource type="Texture2D" uid="uid://dutfkfrp6bikp" path="res://Assets/HUD/bossbar_filled.png" id="2_la0ri"]
 [ext_resource type="FontFile" uid="uid://j45d6xc2rd07" path="res://Assets/Fonts/Home_Video/HomeVideo-Regular.otf" id="3_b64iw"]
 

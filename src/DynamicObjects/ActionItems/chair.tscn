@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://bub0kcwgvaqyn"]
 
-[ext_resource type="Script" path="res://Scripts/ActionSystem/ActionPickable.gd" id="1_5lla5"]
+[ext_resource type="Script" uid="uid://b2ik2ul4xhned" path="res://Scripts/ActionSystem/ActionPickable.gd" id="1_5lla5"]
 [ext_resource type="Texture2D" uid="uid://ddfqoky881p8w" path="res://Assets/ExternalModels/PaintedWoodenChair_KirillSannikov_CC0/textures/painted_wooden_chair_02_diff_2k.jpg" id="2_yxcr1"]
 [ext_resource type="Texture2D" uid="uid://b81ra1i8b7x73" path="res://Assets/ExternalModels/PaintedWoodenChair_KirillSannikov_CC0/textures/painted_wooden_chair_02_arm_2k.jpg" id="3_ipqiq"]
 [ext_resource type="Texture2D" uid="uid://dfwjugvtm7llw" path="res://Assets/ExternalModels/PaintedWoodenChair_KirillSannikov_CC0/textures/painted_wooden_chair_02_nor_gl_2k.jpg" id="4_noiky"]

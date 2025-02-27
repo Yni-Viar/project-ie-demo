@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=4 uid="uid://rvqgrk4cqols"]
 
 [ext_resource type="Texture2D" uid="uid://bilf8u6ibyceo" path="res://Assets/ExternalModels/BathroomAssets/GLTF/WhiteColor.png" id="1_3sunu"]
-[ext_resource type="Texture2D" uid="uid://0djb4368itl3" path="res://Assets/ExternalModels/BathroomAssets/GLTF/GrayColor.png" id="2_e8f7l"]
+[ext_resource type="Texture2D" uid="uid://b1j3gqaa10h8q" path="res://Assets/ExternalModels/BathroomAssets/GLTF/GrayColor.png" id="2_e8f7l"]
 [ext_resource type="Texture2D" uid="uid://kuqqko3bs0d1" path="res://Assets/ExternalModels/BathroomAssets/GLTF/GlassTexture.png" id="3_c6lci"]
-[ext_resource type="Texture2D" uid="uid://l648p1mtn5th" path="res://Assets/ExternalModels/BathroomAssets/GLTF/YellowColor.png" id="4_0ia5r"]
+[ext_resource type="Texture2D" uid="uid://d3ef7lonhmsgx" path="res://Assets/ExternalModels/BathroomAssets/GLTF/YellowColor.png" id="4_0ia5r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mp13"]
 resource_name = "Ceramic.001"

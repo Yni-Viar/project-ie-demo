@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ElevatorFloor" load_steps=2 format=3 uid="uid://ce33hpm43mngo"]
 
-[ext_resource type="Script" path="res://Scripts/ElevatorSystem/ElevatorFloor.gd" id="1_dk1tx"]
+[ext_resource type="Script" uid="uid://dyybt2ydb7vji" path="res://Scripts/ElevatorSystem/ElevatorFloor.gd" id="1_dk1tx"]
 
 [resource]
 script = ExtResource("1_dk1tx")

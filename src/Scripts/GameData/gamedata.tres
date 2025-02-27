@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="GameData" load_steps=4 format=3 uid="uid://dtootndbrxot5"]
 
-[ext_resource type="Script" path="res://Scripts/GameData/GameData.gd" id="1_d6yh1"]
-[ext_resource type="Script" path="res://InventorySystem/Items/Item.gd" id="1_vyrho"]
+[ext_resource type="Script" uid="uid://bq17le0gb5sev" path="res://Scripts/GameData/GameData.gd" id="1_d6yh1"]
+[ext_resource type="Script" uid="uid://btwsipsk5r0g0" path="res://InventorySystem/Items/Item.gd" id="1_vyrho"]
 [ext_resource type="Resource" uid="uid://cjcpb12bymsed" path="res://InventorySystem/Items/MyFlashDisk.tres" id="2_bmd8o"]
 
 [resource]

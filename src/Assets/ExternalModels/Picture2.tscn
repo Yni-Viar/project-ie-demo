@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b6ci1oo8lsx0f" path="res://Assets/ExternalModels/Picture1_JamesRayCock_CC0/hanging_picture_frame_02_artwork2_diff_png.png" id="1_3wppc"]
 [ext_resource type="Texture2D" uid="uid://djv3pn1r7cdpb" path="res://Assets/ExternalModels/Picture1_JamesRayCock_CC0/hanging_picture_frame_02_artwork_roughness.png" id="2_a47fh"]
-[ext_resource type="Texture2D" uid="uid://b124uh2htjqkk" path="res://Assets/ExternalModels/Picture1_JamesRayCock_CC0/hanging_picture_frame_02_artwork_nor_gl_png.png" id="3_g3l7d"]
+[ext_resource type="Texture2D" uid="uid://dyruano5tucok" path="res://Assets/ExternalModels/Picture1_JamesRayCock_CC0/hanging_picture_frame_02_artwork_nor_gl_png.png" id="3_g3l7d"]
 [ext_resource type="Texture2D" uid="uid://cblmat86bwfjf" path="res://Assets/ExternalModels/Picture1_JamesRayCock_CC0/hanging_picture_frame_02_diff.jpg" id="4_i8ba2"]
 [ext_resource type="Texture2D" uid="uid://bfdd4vadsqcuw" path="res://Assets/ExternalModels/Picture1_JamesRayCock_CC0/hanging_picture_frame_02_metallic-hanging_picture_frame_02_roughness.png" id="5_oqjmk"]
 [ext_resource type="Texture2D" uid="uid://doopwgssqulrq" path="res://Assets/ExternalModels/Picture1_JamesRayCock_CC0/hanging_picture_frame_02_nor_gl.png" id="6_3nhfp"]

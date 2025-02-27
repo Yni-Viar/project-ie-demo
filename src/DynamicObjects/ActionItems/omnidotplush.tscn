@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=4 uid="uid://cpihc36m4m4g4"]
 
 [ext_resource type="Texture2D" uid="uid://bjce4y6xcy1ak" path="res://Assets/OriginalModels/OmnidotPlush/Omnidot_Cylinder_base.png" id="1_24sey"]
-[ext_resource type="Script" path="res://Scripts/ActionSystem/ActionPickable.gd" id="1_g36c6"]
+[ext_resource type="Script" uid="uid://b2ik2ul4xhned" path="res://Scripts/ActionSystem/ActionPickable.gd" id="1_g36c6"]
 [ext_resource type="Texture2D" uid="uid://v2m0e14nq2my" path="res://Assets/OriginalModels/OmnidotPlush/Omnidot_Cylinder_rough.png" id="2_g1f7l"]
 [ext_resource type="Texture2D" uid="uid://dewp2isc57gil" path="res://Assets/OriginalModels/OmnidotPlush/Omnidot_Cylinder_nor.png" id="3_qemmr"]
 [ext_resource type="Texture2D" uid="uid://d4bwyi75t5nff" path="res://Assets/OriginalModels/OmnidotPlush/Omnidot_Cylinder_001_base.png" id="4_2tsn4"]

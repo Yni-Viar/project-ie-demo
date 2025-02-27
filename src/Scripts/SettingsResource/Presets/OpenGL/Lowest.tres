@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="SettingsResource" load_steps=2 format=3 uid="uid://bdftvlo16o7wt"]
 
-[ext_resource type="Script" path="res://Scripts/SettingsResource/SettingsResource.gd" id="1_y4xtp"]
+[ext_resource type="Script" uid="uid://dmhkb8xf7ugt1" path="res://Scripts/SettingsResource/SettingsResource.gd" id="1_y4xtp"]
 
 [resource]
 script = ExtResource("1_y4xtp")
@@ -23,3 +23,4 @@ reflection_probes = false
 enable_light_shadows = false
 camera_field_of_view = 75.0
 game_optimizator = 0
+planar_reflections = false

@@ -48,6 +48,10 @@ func input_values(state: String):
 					special_screen[1] = "exitgame"
 			else:
 				$PauseMenu.hide()
+				if $Settings.visible:
+					input_values("settings_close")
+				if $PhotomodeSelector.visible:
+					input_values("photomode_close")
 				if special_screen[1] == "exitgame":
 					special_screen[0] = false
 					special_screen[1] = ""
@@ -71,6 +75,17 @@ func input_values(state: String):
 		"settings_close":
 			$Settings.hide()
 			if special_screen[1] == "settings":
+				special_screen[0] = false
+				special_screen[1] = ""
+		"photomode":
+			if special_screen[1] != "photomode":
+				$PhotomodeSelector.show()
+				if special_screen[1].is_empty():
+					special_screen[0] = true
+					special_screen[1] = "photomode"
+		"photomode_close":
+			$PhotomodeSelector.hide()
+			if special_screen[1] == "photomode":
 				special_screen[0] = false
 				special_screen[1] = ""
 
@@ -129,3 +144,10 @@ func _on_dialogue_box_dialogue_signal(value: String) -> void:
 
 func _on_settings_button_pressed() -> void:
 	input_values("settings")
+
+
+func _on_photomode_button_pressed() -> void:
+	if !$PhotomodeSelector.visible:
+		input_values("photomode")
+	else:
+		input_values("photomode_close")

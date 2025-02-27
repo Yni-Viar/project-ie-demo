@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://de8sgghqvldw3"]
 
-[ext_resource type="Script" path="res://InventorySystem/TileInventory/Inventory.gd" id="2_itdby"]
+[ext_resource type="Script" uid="uid://qx71x1sstg7t" path="res://InventorySystem/TileInventory/Inventory.gd" id="2_itdby"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pln65"]
 bg_color = Color(0.0862745, 0.0862745, 0.0862745, 0.501961)

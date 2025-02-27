@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://duvebkaj518ex"]
 
-[ext_resource type="Script" path="res://Scripts/ButtonSystem/InteractableButton.gd" id="1_jjws8"]
+[ext_resource type="Script" uid="uid://v5dto54ie5nu" path="res://Scripts/ButtonSystem/InteractableButton.gd" id="1_jjws8"]
 [ext_resource type="Material" uid="uid://fo0lvwxp1orq" path="res://Shaders/item_next_pass_material.tres" id="3_fh4by"]
 [ext_resource type="AudioStream" uid="uid://c1fs5i36r3yx6" path="res://Sounds/Interact/button.ogg" id="3_fjopp"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=4 uid="uid://cu3s515m111d0"]
 
-[ext_resource type="Script" path="res://Scripts/DoorSystem/DoorBase.gd" id="1_4ohku"]
+[ext_resource type="Script" uid="uid://eqgk74m6hm65" path="res://Scripts/DoorSystem/DoorBase.gd" id="1_4ohku"]
 [ext_resource type="Texture2D" uid="uid://04jprf0bkjwx" path="res://Assets/OriginalModels/Doors/Door_Lift1/Metal032_2K_Color.png" id="1_kiy5e"]
 [ext_resource type="Texture2D" uid="uid://dallqtx367ene" path="res://Assets/OriginalModels/Doors/Door_Lift1/Metal032_2K_Metalness-Metal032_2K_Roughness.png" id="2_h0c2m"]
 [ext_resource type="Texture2D" uid="uid://3ra2xq0y2nuw" path="res://Assets/OriginalModels/Doors/Door_Lift1/Metal032_2K_NormalGL.png" id="3_ydyb7"]
@@ -151,7 +151,7 @@ tracks/1/keys = PackedFloat32Array(0, 1, 0.489557, 1.60466, 0, 1, 1, 1.44147, 1.
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bvelq"]
 _data = {
-"door_open": SubResource("Animation_8d1ld")
+&"door_open": SubResource("Animation_8d1ld")
 }
 
 [node name="Door" type="Node3D"]

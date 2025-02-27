@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=4 uid="uid://bu825cm6uv3r2"]
 
-[ext_resource type="Script" path="res://Scripts/ActionSystem/ActionPickable.gd" id="1_yjy45"]
-[ext_resource type="Texture2D" uid="uid://du1807485ugwf" path="res://Assets/ExternalModels/Chair_CC0_Taha_Arslan/Chair_4_ Base Color-2K.png" id="2_tdb5e"]
-[ext_resource type="Texture2D" uid="uid://rbynj0js1lhp" path="res://Assets/ExternalModels/Chair_CC0_Taha_Arslan/Chair_4_ Roughness-2K.png" id="3_mb0vp"]
+[ext_resource type="Script" uid="uid://b2ik2ul4xhned" path="res://Scripts/ActionSystem/ActionPickable.gd" id="1_yjy45"]
+[ext_resource type="Texture2D" uid="uid://bwmkx3n71yv08" path="res://Assets/ExternalModels/Chair_CC0_Taha_Arslan/Chair_4_ Base Color-2K.png" id="2_tdb5e"]
+[ext_resource type="Texture2D" uid="uid://ivsxcwiu5ffs" path="res://Assets/ExternalModels/Chair_CC0_Taha_Arslan/Chair_4_ Roughness-2K.png" id="3_mb0vp"]
 [ext_resource type="Texture2D" uid="uid://5ha2e7erx1uo" path="res://Assets/ExternalModels/Chair_CC0_Taha_Arslan/Chair_4_ Normal-2K.png" id="4_8cvk4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xbjoa"]

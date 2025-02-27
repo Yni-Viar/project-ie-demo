@@ -164,7 +164,6 @@ func health_manage(amount: float, type_of_health: int, deplete_reason: String):
 	else:
 		current_health[type_of_health] == health[type_of_health]
 	if current_health[type_of_health] <= 0:
-		get_tree().root.get_node("Main/Game").rpc_id(multiplayer.get_unique_id(), "set_player_class", str(multiplayer.get_unique_id()), 0, deplete_reason, false)
 		pass
 
 ##s Applies shader to the player

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://c4b2phchpwhfg"]
 
-[ext_resource type="Script" path="res://Scripts/ActionSystem/KeyPickable.gd" id="1_1smiv"]
+[ext_resource type="Script" uid="uid://c20rpsbp61rfd" path="res://Scripts/ActionSystem/KeyPickable.gd" id="1_1smiv"]
 [ext_resource type="Material" uid="uid://fo0lvwxp1orq" path="res://Shaders/item_next_pass_material.tres" id="2_6nvge"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6g8ao"]
