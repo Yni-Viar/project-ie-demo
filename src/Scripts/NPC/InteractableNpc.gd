@@ -7,7 +7,7 @@ enum State {
 	RUNNING
 }
 @export var character_speed: float = 4.0
-#@export var armature_name: String = "Armature"
+@export var skeleton_path: NodePath
 @export var can_talk: bool = false
 @export var dialogues: Array[Array]
 @export var state: State = State.IDLE
@@ -38,7 +38,17 @@ var visible_on_screen: bool = false
 
 var current_dialogue: int = 0
 var follow_update_timer: float = 1.0
-var follow_target: String = ""
+var follow_target: String = "":
+	set(val):
+		if !val.is_empty(): 
+			if get_node_or_null(val) != null:
+				# New Godot 4.4 feature - the NPC will actually look at player when following them.
+				get_node(str(skeleton_path) + "/LookAtModifier3D").target_node = NodePath(val + "/LookAtTarget")
+			else:
+				get_node(str(skeleton_path) + "/LookAtModifier3D").target_node = ""
+		else:
+			get_node(str(skeleton_path) + "/LookAtModifier3D").target_node = ""
+		follow_target = val
 var prev_offset: PackedVector3Array = [Vector3.ONE, Vector3.ONE]
 var height_bugfix_applied: bool = false
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()

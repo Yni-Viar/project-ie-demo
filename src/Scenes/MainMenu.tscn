@@ -130,7 +130,9 @@ theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 text = "[b]v.0.0.8[/b] (Demo Pre-Alpha)
+- Upgraded to Godot 4.4.
 - Added photo mode.
+- Speaking with NPC (and following NPC) became more realistic, due to Godot 4.4 new feature - face IK.
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL

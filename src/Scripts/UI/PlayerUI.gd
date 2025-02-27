@@ -98,10 +98,12 @@ func speak(dlg_path: String, dlg_start_id: String, speaker_nodepath: String):
 	if !$DialogueBox.is_running():
 		$DialogueBox.data = load(dlg_path)
 		speaker_prefab = get_node(speaker_nodepath)
-		# Wait until 4.4 face IK solution :-D
 		var player: PlayerScript = get_tree().root.get_node("Game/Player")
 		player.look_at(Vector3(speaker_prefab.global_position.x, player.global_position.y, speaker_prefab.global_position.z))
-		speaker_prefab.look_at(Vector3(player.global_position.x, speaker_prefab.global_position.y, player.global_position.z))
+		# Old Godot 4.3 code.
+		# speaker_prefab.look_at(Vector3(player.global_position.x, speaker_prefab.global_position.y, player.global_position.z))
+		# New Godot 4.4 code.
+		speaker_prefab.get_node(str(speaker_prefab.skeleton_path) + "/LookAtModifier3D").target_node = NodePath(player.get_node("LookAtTarget").get_path())
 		if special_screen[1].is_empty():
 			special_screen[0] = true
 			special_screen[1] = "dialogue"
@@ -115,6 +117,9 @@ func _on_dialogue_box_dialogue_ended() -> void:
 	if special_screen[1] == "dialogue":
 		special_screen[0] = false
 		special_screen[1] = ""
+	# New Godot 4.4 code
+	if speaker_prefab.follow_target.is_empty():
+		speaker_prefab.get_node(str(speaker_prefab.skeleton_path) + "/LookAtModifier3D").target_node = NodePath("")
 	speaker_prefab = null
 	var player: PlayerScript = get_tree().root.get_node("Game/Player")
 	player.motion_enabled = true

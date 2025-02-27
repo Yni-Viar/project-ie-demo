@@ -99,6 +99,9 @@ collision_mask = 13
 [node name="ItemSpawn" type="Marker3D" parent="PlayerHead"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.197413, -0.0797351)
 
+[node name="LookAtTarget" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, 0)
+
 [node name="CollisionBodyCapsule" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0386829, 0)
 shape = SubResource("1")
