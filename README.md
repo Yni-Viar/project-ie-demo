@@ -11,7 +11,7 @@ In this demo the story is NOT leaked, except one character.
 
 ## How to build game.
 
-1. Install Godot Engine 4.3
+1. Install Godot Engine 4.4
 2. Open Godot Engine and click Project -> Export.
 3. Install export templates for Godot.
 4. Choose your *desktop* platform and compile it in your folder.
