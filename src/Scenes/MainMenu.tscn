@@ -132,9 +132,12 @@ bbcode_enabled = true
 text = "[b]v.0.0.8[/b] (Demo Pre-Alpha)
 - Upgraded to Godot 4.4 and switched to Jolt physics.
 - Added photo mode.
+- (Web) Fixed a bug, where Settings manager will still try user's settings, thus requiring cookies.
+- Added no lights setting (except sun) - optimization for Web and low-end devices.
 [i]Godot 4.4+ specific updates:[/i]
 - Added face IK to NPCs - they will look (not rotate) at you when is following you or speaking
 - Julia's hair can wave now - added SpringBone.
+- Increased the default thread limit - needed for Vulkan shader compilation.
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL

@@ -44,3 +44,5 @@ class_name SettingsResource
 @export var game_optimizator: int = 1
 ## Planar reflections
 @export var planar_reflections: bool = false
+## Enable lighting (Only LightSystemOmni and LightSystemSpot)
+@export var enable_lights: bool = true

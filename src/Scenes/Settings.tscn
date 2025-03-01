@@ -165,6 +165,13 @@ theme_override_font_sizes/font_size = 24
 button_pressed = true
 text = "GLOW"
 
+[node name="Lights" type="CheckButton" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
+layout_mode = 2
+theme = ExtResource("3_2qins")
+theme_override_font_sizes/font_size = 24
+button_pressed = true
+text = "LIGHTS"
+
 [node name="LightShadows" type="CheckButton" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
 layout_mode = 2
 theme = ExtResource("3_2qins")
@@ -271,6 +278,7 @@ As for now, \"Save\" button is deprecated."
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/SSRSet" to="SettingsPanel" method="_on_ssr_set_toggled"]
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/FogSet" to="SettingsPanel" method="_on_fog_set_toggled"]
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/GlowSet" to="SettingsPanel" method="_on_glow_set_toggled"]
+[connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/Lights" to="SettingsPanel" method="_on_lights_toggled"]
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/LightShadows" to="SettingsPanel" method="_on_light_shadows_toggled"]
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/ReflectionProbesSet" to="SettingsPanel" method="_on_reflection_probes_set_toggled"]
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/VSyncSet" to="SettingsPanel" method="_on_v_sync_set_toggled"]

@@ -23,6 +23,10 @@
 [ext_resource type="StyleBox" uid="uid://dhj513crv55v4" path="res://UI/Window_Inactive.tres" id="22_5fj3l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25ss1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
 bg_color = Color(0, 0, 0, 0.501961)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
@@ -30,6 +34,10 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7x8vx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 4
 border_width_right = 4
@@ -40,6 +48,10 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_od5hp"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 4
 border_width_right = 4
@@ -49,6 +61,10 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1ivu"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
 bg_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
@@ -56,6 +72,10 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg2v8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
 bg_color = Color(0.129412, 0.129412, 0.129412, 1)
 border_width_left = 4
 border_width_right = 4

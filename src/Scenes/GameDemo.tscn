@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dyeqacmwaajfm"]
+[gd_scene load_steps=27 format=3 uid="uid://dyeqacmwaajfm"]
 
 [ext_resource type="Script" uid="uid://b3kpus4t1p7wb" path="res://Scripts/GameCore.gd" id="1_hqmbo"]
 [ext_resource type="Resource" uid="uid://dtootndbrxot5" path="res://Scripts/GameData/gamedata.tres" id="2_pv0oa"]
@@ -21,9 +21,6 @@
 [ext_resource type="Environment" uid="uid://cpjkvy5s2l8ae" path="res://Assets/Environments/RealVirtualityGraphics.tres" id="14_uvye0"]
 [ext_resource type="PackedScene" uid="uid://bjbe75eis8tu6" path="res://Scenes/Settings.tscn" id="15_85lew"]
 [ext_resource type="PackedScene" uid="uid://ce8coeohfwec8" path="res://Assets/Locations/loc_home_2025.tscn" id="17_yj2b2"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1q0l"]
-bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_2du4k"]
 script = ExtResource("11_kcrab")
@@ -419,7 +416,7 @@ anchor_bottom = 1.0
 offset_top = -0.200073
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_f1q0l")
+theme = ExtResource("9_hs5nv")
 script = ExtResource("10_wm02x")
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_2du4k"), SubResource("RichTextEffect_r3l8j"), SubResource("RichTextEffect_q6nqb")])
 

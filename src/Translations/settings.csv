@@ -19,4 +19,5 @@ MAIN_OPTIMIZATOR_SET,Optimize game functions,Оптимизировать фун
 MAIN_OPTIMIZATOR_DESCR,"0 / left - disable unnecessary objects and unused\nfunctions (performance),\n1 / center - disable only unused objects, \n2 / right - disable nothing","0 / слева - выключить несущественные объекты и\nнеиспользованные функции, (производительность),\n1 / центр - выключить только неиспользованные объекты,\n2 / справа - ничего не выключать"
 REFLECTION_PROBES,Reflection probes,Отражения (кубическая карта)
 LIGHT_SHADOWS,Light shadows,Тени освещения
-LIGHT_SHADOWS_WARNING,"Setting ""Light shadows"" may affect not all lights","Настройка ""Тени освещения"" может затронуть не все источники света"
+LIGHT_SHADOWS_WARNING,"Setting ""Light shadows"" and ""Lights"" may affect not all lights","Настройка ""Тени освещения"" и ""Освещение"" может затронуть не все источники света"
+LIGHTS,Lights,Освещение

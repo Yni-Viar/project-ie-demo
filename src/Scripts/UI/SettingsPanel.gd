@@ -199,3 +199,10 @@ func _on_override_resolution_pressed() -> void:
 
 func add_new_resolution(x: String, y: String):
 	$ScrollContainer/HBoxContainer/Page1/WindowSizeSet.add_item(x + "x" + y)
+
+
+func _on_lights_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		Settings.setting_res.enable_lights = true
+	else:
+		Settings.setting_res.enable_lights = false

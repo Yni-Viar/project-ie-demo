@@ -13,6 +13,10 @@ func turn_lights_on():
 	light_energy = max_light_energy
 
 func _ready():
+	if !Settings.setting_res.enable_lights:
+		hide()
+		set_process(false)
+		set_physics_process(false)
 	if Settings.setting_res.game_optimizator <= 1:
 		set_process(false)
 		set_physics_process(false)
