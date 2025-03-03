@@ -1,3 +1,17 @@
+# v0.0.8
+
+- Upgraded to Godot 4.4 and switched to Jolt physics.
+- Added photo mode.
+- Added SSAO shader for OpenGL Compatibility (useful for old devices and Web)
+- (Web) Fixed a bug, where Settings manager will still try user's settings, thus requiring cookies.
+- Added no lights setting (except sun) - optimization for Web and low-end devices.
+- Tweaked lights in the home hall, so there is no light leak into house
+- Home lamp has now shadows (you can disable or enable in settings)
+Godot 4.4+ specific updates:
+- Added face IK to NPCs - they will look (not rotate) at you when is following you or speaking
+- Julia's hair can wave now - added SpringBone.
+- Increased the default thread limit - needed for Vulkan shader compilation.
+
 # v0.0.7.4
 - Major NPC backend overhaul: imported wander support from my SCP game.
 - Added support for game ratings for some countries.
