@@ -95,6 +95,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.968611, -0.292869)
 [node name="PlayerCamera" type="Camera3D" parent="PlayerHead/PlayerRecoil"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0491205)
 cull_mask = 524287
+near = 0.025
 
 [node name="ToonShader" type="MeshInstance3D" parent="PlayerHead/PlayerRecoil/PlayerCamera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0434726)
