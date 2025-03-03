@@ -122,13 +122,13 @@ func _on_glow_set_toggled(toggled_on):
 func graphic_device_check():
 	if RenderingServer.get_rendering_device() != null:
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.disabled = false
-		$ScrollContainer/HBoxContainer/Page1/SSAOSet.disabled = false
+		#$ScrollContainer/HBoxContainer/Page1/SSAOSet.disabled = false
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.disabled = false
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.disabled = false
 		$ScrollContainer/HBoxContainer/Page1/FogSet.disabled = false
 		$ScrollContainer/HBoxContainer/Page1/VSyncSet.disabled = false
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.show()
-		$ScrollContainer/HBoxContainer/Page1/SSAOSet.show()
+		#$ScrollContainer/HBoxContainer/Page1/SSAOSet.show()
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.show()
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.show()
 		$ScrollContainer/HBoxContainer/Page1/FogSet.show()
@@ -136,19 +136,19 @@ func graphic_device_check():
 		Settings.current_graphic_device = 2
 	else: #ProjectSettings.get_setting("rendering/renderer/rendering_method") == "gl_compatibility":
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.button_pressed = false
-		$ScrollContainer/HBoxContainer/Page1/SSAOSet.button_pressed = false
+		#$ScrollContainer/HBoxContainer/Page1/SSAOSet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/FogSet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/VSyncSet.button_pressed = true
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.disabled = true
-		$ScrollContainer/HBoxContainer/Page1/SSAOSet.disabled = true
+		#$ScrollContainer/HBoxContainer/Page1/SSAOSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/FogSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/VSyncSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.hide()
-		$ScrollContainer/HBoxContainer/Page1/SSAOSet.hide()
+		#$ScrollContainer/HBoxContainer/Page1/SSAOSet.hide()
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.hide()
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.hide()
 		$ScrollContainer/HBoxContainer/Page1/FogSet.hide()

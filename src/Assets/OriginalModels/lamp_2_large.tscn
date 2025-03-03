@@ -150,11 +150,12 @@ skeleton = NodePath("")
 
 [node name="LightSystemOmni" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.793241, 0)
-light_energy = 0.5
+light_indirect_energy = 2.0
 light_size = 0.3
 shadow_enabled = true
 distance_fade_enabled = true
-distance_fade_begin = 20.0
-distance_fade_shadow = 10.0
-omni_range = 15.0
+distance_fade_begin = 16.0
+distance_fade_shadow = 8.0
+distance_fade_length = 8.0
+omni_range = 8.0
 script = ExtResource("4_oay5n")

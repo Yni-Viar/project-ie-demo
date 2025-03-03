@@ -39,6 +39,10 @@ var motion_enabled = true
 
 func _ready() -> void:
 	ray.add_exception(self)
+	
+	if RenderingServer.get_rendering_device() == null:
+		if Settings.setting_res.ssao:
+			apply_shader("SSAOShader", true)
 
 ## Mouse rotation
 func _input(event: InputEvent) -> void:
@@ -167,9 +171,10 @@ func health_manage(amount: float, type_of_health: int, deplete_reason: String):
 		pass
 
 ##s Applies shader to the player
-func apply_shader(res: String):
-	for node in get_node("PlayerHead/PlayerRecoil/PlayerCamera").get_children():
-		if node is MeshInstance3D:
-			node.visible = false
-	if get_node_or_null("PlayerHead/PlayerRecoil/PlayerCamera" + res) != null && !res.is_empty():
-		get_node("PlayerHead/PlayerRecoil/PlayerCamera" + res).visible = true
+func apply_shader(res: String, setting_shader: bool = false):
+	if !setting_shader:
+		for node in get_node("PlayerHead/PlayerRecoil/PlayerCamera").get_children():
+			if node is MeshInstance3D && !node.is_in_group("Setting"):
+				node.visible = false
+	if get_node_or_null("PlayerHead/PlayerRecoil/PlayerCamera/" + res) != null && !res.is_empty():
+		get_node("PlayerHead/PlayerRecoil/PlayerCamera/" + res).visible = true

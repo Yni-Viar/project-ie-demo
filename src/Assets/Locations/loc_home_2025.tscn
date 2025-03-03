@@ -3848,14 +3848,11 @@ skeleton = NodePath("")
 [node name="Stool2" parent="SergesHome" instance=ExtResource("16_pfnai")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2728, 51.6191, 4.364)
 
-[node name="Lamp11" parent="SergesHome" instance=ExtResource("35_w1gvj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4056, 56.0921, -2.08909)
-
 [node name="Lamp14" parent="SergesHome" instance=ExtResource("35_w1gvj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.98384, 56.0921, 2.05579)
 
 [node name="Lamp12" parent="SergesHome" instance=ExtResource("35_w1gvj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3506, 56.0921, -1.92248)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1882, 56.0921, -1.92248)
 
 [node name="Lamp13" parent="SergesHome" instance=ExtResource("35_w1gvj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7091, 56.0921, 1.441)
@@ -3891,7 +3888,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4794, 51.648, -1.92896)
 curve = SubResource("Curve3D_va24a")
 
 [node name="vacuum_cleaner" parent="SergesHome/VacuumCleanerPath" instance=ExtResource("37_kfoh0")]
-transform = Transform3D(-0.836986, 0.00250506, 0.547212, 3.49245e-10, 0.999961, -0.00457789, -0.547219, -0.00383155, -0.836976, 3.11376, 0.0677948, -0.0758035)
+transform = Transform3D(-0.836986, 0.00250506, 0.547212, 3.49245e-10, 0.99996, -0.00457789, -0.547219, -0.00383155, -0.836976, 3.11376, 0.0677948, -0.0758035)
 
 [node name="Key" parent="SergesHome" instance=ExtResource("38_rhiyb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.2803, 52.8284, 0.935227)

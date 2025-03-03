@@ -129,11 +129,14 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.8[/b] (Demo Pre-Alpha)
+text = "[b]v.0.0.8[/b] (Demo)
 - Upgraded to Godot 4.4 and switched to Jolt physics.
 - Added photo mode.
+- Added SSAO shader for OpenGL Compatibility (useful for old devices and Web)
 - (Web) Fixed a bug, where Settings manager will still try user's settings, thus requiring cookies.
 - Added no lights setting (except sun) - optimization for Web and low-end devices.
+- Tweaked lights in the home hall, so there is no light leak into house
+- Home lamp has now shadows (you can disable or enable in settings)
 [i]Godot 4.4+ specific updates:[/i]
 - Added face IK to NPCs - they will look (not rotate) at you when is following you or speaking
 - Julia's hair can wave now - added SpringBone.
@@ -318,6 +321,20 @@ text = "[i]Toon Post-Process shader (MIT License)[/i]
 - Copyright (c) Hannah \"EMBYR\" Crawford"
 fit_content = true
 
+[node name="CreditsCode5" type="RichTextLabel" parent="CreditsPanel/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1234, 0)
+layout_mode = 2
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[i]SSAO Shader for OpenGL Compatibility renderer (MIT License)[/i]
+
+- Copyright © 2014 Inigo Quilez"
+fit_content = true
+
 [node name="CreditsCode2" type="RichTextLabel" parent="CreditsPanel/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(1234, 0)
 layout_mode = 2
@@ -356,7 +373,7 @@ text = "[i]Models[/i]
 
 - Stopwatch model by mantledmoon (CC-BY)
 - Chair model - Neil dela Merced (solvalou) (CC-BY)
-- Screen of home computer contains assets, made by Microsoft, that are licensed under CC-BY
+- Screen of home computer contains assets and some assets in UI design are made by Microsoft, that are licensed under CC-BY
 
 
 Thanks to awesome people from dscrd servers for pointing me on game-design issues!
