@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjue664kqeq8k"
 path.s3tc="res://.godot/imported/lamp_nor.png-1945a43ecb582ac4549927d08d81929f.s3tc.ctex"
+path.etc2="res://.godot/imported/lamp_nor.png-1945a43ecb582ac4549927d08d81929f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/OriginalModels/Lamp/lamp_nor.png"
-dest_files=["res://.godot/imported/lamp_nor.png-1945a43ecb582ac4549927d08d81929f.s3tc.ctex"]
+dest_files=["res://.godot/imported/lamp_nor.png-1945a43ecb582ac4549927d08d81929f.s3tc.ctex", "res://.godot/imported/lamp_nor.png-1945a43ecb582ac4549927d08d81929f.etc2.ctex"]
 
 [params]
 

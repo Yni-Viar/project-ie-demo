@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://e4sxer52k0dw"
 path.s3tc="res://.godot/imported/hanging_picture_frame_02_artwork_diff_png.png-bb0912c8ac83ddf11f477ed911ed5854.s3tc.ctex"
+path.etc2="res://.godot/imported/hanging_picture_frame_02_artwork_diff_png.png-bb0912c8ac83ddf11f477ed911ed5854.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/Picture1_JamesRayCock_CC0/hanging_picture_frame_02_artwork_diff_png.png"
-dest_files=["res://.godot/imported/hanging_picture_frame_02_artwork_diff_png.png-bb0912c8ac83ddf11f477ed911ed5854.s3tc.ctex"]
+dest_files=["res://.godot/imported/hanging_picture_frame_02_artwork_diff_png.png-bb0912c8ac83ddf11f477ed911ed5854.s3tc.ctex", "res://.godot/imported/hanging_picture_frame_02_artwork_diff_png.png-bb0912c8ac83ddf11f477ed911ed5854.etc2.ctex"]
 
 [params]
 

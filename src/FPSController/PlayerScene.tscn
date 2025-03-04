@@ -32,7 +32,6 @@ shader = ExtResource("3_ib3mq")
 
 [sub_resource type="QuadMesh" id="QuadMesh_7pc1p"]
 material = SubResource("ShaderMaterial_1kpcn")
-flip_faces = true
 size = Vector2(2, 2)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_36bvv"]
@@ -103,7 +102,7 @@ visible = false
 mesh = SubResource("QuadMesh_ib3mq")
 
 [node name="EdgeDetectShader" type="MeshInstance3D" parent="PlayerHead/PlayerRecoil/PlayerCamera"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0434726)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0895612)
 visible = false
 mesh = SubResource("QuadMesh_7pc1p")
 

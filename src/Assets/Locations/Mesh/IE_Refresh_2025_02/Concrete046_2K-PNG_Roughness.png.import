@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddbr4wcyik4cc"
 path.s3tc="res://.godot/imported/Concrete046_2K-PNG_Roughness.png-ce0d784676d4a6f46627644481b671ff.s3tc.ctex"
+path.etc2="res://.godot/imported/Concrete046_2K-PNG_Roughness.png-ce0d784676d4a6f46627644481b671ff.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Concrete046_2K-PNG_Roughness.png"
-dest_files=["res://.godot/imported/Concrete046_2K-PNG_Roughness.png-ce0d784676d4a6f46627644481b671ff.s3tc.ctex"]
+dest_files=["res://.godot/imported/Concrete046_2K-PNG_Roughness.png-ce0d784676d4a6f46627644481b671ff.s3tc.ctex", "res://.godot/imported/Concrete046_2K-PNG_Roughness.png-ce0d784676d4a6f46627644481b671ff.etc2.ctex"]
 
 [params]
 

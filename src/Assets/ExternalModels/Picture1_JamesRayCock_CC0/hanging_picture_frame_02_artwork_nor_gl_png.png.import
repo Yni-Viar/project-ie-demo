@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyruano5tucok"
 path.s3tc="res://.godot/imported/hanging_picture_frame_02_artwork_nor_gl_png.png-3fbe1b6cf3ad9b9fdf59df51b6fbdc47.s3tc.ctex"
+path.etc2="res://.godot/imported/hanging_picture_frame_02_artwork_nor_gl_png.png-3fbe1b6cf3ad9b9fdf59df51b6fbdc47.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/Picture1_JamesRayCock_CC0/hanging_picture_frame_02_artwork_nor_gl_png.png"
-dest_files=["res://.godot/imported/hanging_picture_frame_02_artwork_nor_gl_png.png-3fbe1b6cf3ad9b9fdf59df51b6fbdc47.s3tc.ctex"]
+dest_files=["res://.godot/imported/hanging_picture_frame_02_artwork_nor_gl_png.png-3fbe1b6cf3ad9b9fdf59df51b6fbdc47.s3tc.ctex", "res://.godot/imported/hanging_picture_frame_02_artwork_nor_gl_png.png-3fbe1b6cf3ad9b9fdf59df51b6fbdc47.etc2.ctex"]
 
 [params]
 

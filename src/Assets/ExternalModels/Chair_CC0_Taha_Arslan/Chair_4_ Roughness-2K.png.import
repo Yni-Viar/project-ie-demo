@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ivsxcwiu5ffs"
 path.s3tc="res://.godot/imported/Chair_4_ Roughness-2K.png-792ae8d0f8b160fb9e9c048d9082a2a9.s3tc.ctex"
+path.etc2="res://.godot/imported/Chair_4_ Roughness-2K.png-792ae8d0f8b160fb9e9c048d9082a2a9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/Chair_CC0_Taha_Arslan/Chair_4_ Roughness-2K.png"
-dest_files=["res://.godot/imported/Chair_4_ Roughness-2K.png-792ae8d0f8b160fb9e9c048d9082a2a9.s3tc.ctex"]
+dest_files=["res://.godot/imported/Chair_4_ Roughness-2K.png-792ae8d0f8b160fb9e9c048d9082a2a9.s3tc.ctex", "res://.godot/imported/Chair_4_ Roughness-2K.png-792ae8d0f8b160fb9e9c048d9082a2a9.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpq5encq67u2"
 path.s3tc="res://.godot/imported/female_casualsuit01_diffuse.png-efb9d596e5593f6d0a6342613227802c.s3tc.ctex"
+path.etc2="res://.godot/imported/female_casualsuit01_diffuse.png-efb9d596e5593f6d0a6342613227802c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/HumanModels/MH_Julia/Resources/Clothes/female_casualsuit01_diffuse.png"
-dest_files=["res://.godot/imported/female_casualsuit01_diffuse.png-efb9d596e5593f6d0a6342613227802c.s3tc.ctex"]
+dest_files=["res://.godot/imported/female_casualsuit01_diffuse.png-efb9d596e5593f6d0a6342613227802c.s3tc.ctex", "res://.godot/imported/female_casualsuit01_diffuse.png-efb9d596e5593f6d0a6342613227802c.etc2.ctex"]
 
 [params]
 

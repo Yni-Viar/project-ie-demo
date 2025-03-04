@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d22cye2jbim0y"
 path.s3tc="res://.godot/imported/Eledrive_nor.png-69c4d6592dab60f10940a9dff8598ced.s3tc.ctex"
+path.etc2="res://.godot/imported/Eledrive_nor.png-69c4d6592dab60f10940a9dff8598ced.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/OriginalModels/Eledrive/Eledrive_nor.png"
-dest_files=["res://.godot/imported/Eledrive_nor.png-69c4d6592dab60f10940a9dff8598ced.s3tc.ctex"]
+dest_files=["res://.godot/imported/Eledrive_nor.png-69c4d6592dab60f10940a9dff8598ced.s3tc.ctex", "res://.godot/imported/Eledrive_nor.png-69c4d6592dab60f10940a9dff8598ced.etc2.ctex"]
 
 [params]
 

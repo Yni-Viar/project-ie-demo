@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://0rlf8p7giaty"
 path.s3tc="res://.godot/imported/eyebrow001_normal.png-35171eda1425f513b38476cf3a9102ec.s3tc.ctex"
+path.etc2="res://.godot/imported/eyebrow001_normal.png-35171eda1425f513b38476cf3a9102ec.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/HumanModels/MH_Julia/Resources/Eyebrows/eyebrow001_normal.png"
-dest_files=["res://.godot/imported/eyebrow001_normal.png-35171eda1425f513b38476cf3a9102ec.s3tc.ctex"]
+dest_files=["res://.godot/imported/eyebrow001_normal.png-35171eda1425f513b38476cf3a9102ec.s3tc.ctex", "res://.godot/imported/eyebrow001_normal.png-35171eda1425f513b38476cf3a9102ec.etc2.ctex"]
 
 [params]
 

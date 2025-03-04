@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwdu7ryo44bf2"
 path.s3tc="res://.godot/imported/Eledrive_metal-Eledrive_rough.png-5fb97869f8ddb31099b6f7a89a631255.s3tc.ctex"
+path.etc2="res://.godot/imported/Eledrive_metal-Eledrive_rough.png-5fb97869f8ddb31099b6f7a89a631255.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/OriginalModels/Eledrive/Eledrive_metal-Eledrive_rough.png"
-dest_files=["res://.godot/imported/Eledrive_metal-Eledrive_rough.png-5fb97869f8ddb31099b6f7a89a631255.s3tc.ctex"]
+dest_files=["res://.godot/imported/Eledrive_metal-Eledrive_rough.png-5fb97869f8ddb31099b6f7a89a631255.s3tc.ctex", "res://.godot/imported/Eledrive_metal-Eledrive_rough.png-5fb97869f8ddb31099b6f7a89a631255.etc2.ctex"]
 
 [params]
 

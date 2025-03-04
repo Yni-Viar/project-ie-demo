@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c20anqi0kmby2"
 path.s3tc="res://.godot/imported/Door_Set1_Cube_001_nor.png-f04809787af6f0fc06c4ede5c61e4816.s3tc.ctex"
+path.etc2="res://.godot/imported/Door_Set1_Cube_001_nor.png-f04809787af6f0fc06c4ede5c61e4816.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/OriginalModels/Doors/Door_Set1/Door_Set1_Cube_001_nor.png"
-dest_files=["res://.godot/imported/Door_Set1_Cube_001_nor.png-f04809787af6f0fc06c4ede5c61e4816.s3tc.ctex"]
+dest_files=["res://.godot/imported/Door_Set1_Cube_001_nor.png-f04809787af6f0fc06c4ede5c61e4816.s3tc.ctex", "res://.godot/imported/Door_Set1_Cube_001_nor.png-f04809787af6f0fc06c4ede5c61e4816.etc2.ctex"]
 
 [params]
 

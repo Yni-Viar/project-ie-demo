@@ -1,3 +1,8 @@
+# v0.0.8.1
+
+- Added initial Android support
+- Fixed Photomode button translation
+
 # v0.0.8
 
 - Upgraded to Godot 4.4 and switched to Jolt physics.

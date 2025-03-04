@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1kt1iq7y2s8x"
 path.s3tc="res://.godot/imported/potted_plant_04_diff_2k.jpg-699cf2600ac39a2d2abb1ef33a578823.s3tc.ctex"
+path.etc2="res://.godot/imported/potted_plant_04_diff_2k.jpg-699cf2600ac39a2d2abb1ef33a578823.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/PottedPlant_JamesRayCock_CC0/textures/potted_plant_04_diff_2k.jpg"
-dest_files=["res://.godot/imported/potted_plant_04_diff_2k.jpg-699cf2600ac39a2d2abb1ef33a578823.s3tc.ctex"]
+dest_files=["res://.godot/imported/potted_plant_04_diff_2k.jpg-699cf2600ac39a2d2abb1ef33a578823.s3tc.ctex", "res://.godot/imported/potted_plant_04_diff_2k.jpg-699cf2600ac39a2d2abb1ef33a578823.etc2.ctex"]
 
 [params]
 

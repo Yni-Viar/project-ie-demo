@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfxynagmnv7lv"
 path.s3tc="res://.godot/imported/GLASS_metallicRoughness.png-a2e95cfb90013b15e50fa51eec51eaf8.s3tc.ctex"
+path.etc2="res://.godot/imported/GLASS_metallicRoughness.png-a2e95cfb90013b15e50fa51eec51eaf8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/CC_BY_Stopwatch/GLASS_metallicRoughness.png"
-dest_files=["res://.godot/imported/GLASS_metallicRoughness.png-a2e95cfb90013b15e50fa51eec51eaf8.s3tc.ctex"]
+dest_files=["res://.godot/imported/GLASS_metallicRoughness.png-a2e95cfb90013b15e50fa51eec51eaf8.s3tc.ctex", "res://.godot/imported/GLASS_metallicRoughness.png-a2e95cfb90013b15e50fa51eec51eaf8.etc2.ctex"]
 
 [params]
 

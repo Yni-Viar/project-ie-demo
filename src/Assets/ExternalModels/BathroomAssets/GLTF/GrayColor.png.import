@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1j3gqaa10h8q"
 path.s3tc="res://.godot/imported/GrayColor.png-9095cd1b71510dd3aa78cd0a92875dfe.s3tc.ctex"
+path.etc2="res://.godot/imported/GrayColor.png-9095cd1b71510dd3aa78cd0a92875dfe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/BathroomAssets/GLTF/GrayColor.png"
-dest_files=["res://.godot/imported/GrayColor.png-9095cd1b71510dd3aa78cd0a92875dfe.s3tc.ctex"]
+dest_files=["res://.godot/imported/GrayColor.png-9095cd1b71510dd3aa78cd0a92875dfe.s3tc.ctex", "res://.godot/imported/GrayColor.png-9095cd1b71510dd3aa78cd0a92875dfe.etc2.ctex"]
 
 [params]
 

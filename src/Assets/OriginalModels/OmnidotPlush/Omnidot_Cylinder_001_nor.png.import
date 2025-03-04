@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3jbrl1k2aeqc"
 path.s3tc="res://.godot/imported/Omnidot_Cylinder_001_nor.png-50131b8599e7e58484f3360442bb8b87.s3tc.ctex"
+path.etc2="res://.godot/imported/Omnidot_Cylinder_001_nor.png-50131b8599e7e58484f3360442bb8b87.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/OriginalModels/OmnidotPlush/Omnidot_Cylinder_001_nor.png"
-dest_files=["res://.godot/imported/Omnidot_Cylinder_001_nor.png-50131b8599e7e58484f3360442bb8b87.s3tc.ctex"]
+dest_files=["res://.godot/imported/Omnidot_Cylinder_001_nor.png-50131b8599e7e58484f3360442bb8b87.s3tc.ctex", "res://.godot/imported/Omnidot_Cylinder_001_nor.png-50131b8599e7e58484f3360442bb8b87.etc2.ctex"]
 
 [params]
 

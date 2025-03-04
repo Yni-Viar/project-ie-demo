@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnatbfoaemxfo"
 path.s3tc="res://.godot/imported/vacuum_cleaner_rough.png-233000fb19258d705162a81f2983028c.s3tc.ctex"
+path.etc2="res://.godot/imported/vacuum_cleaner_rough.png-233000fb19258d705162a81f2983028c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/OriginalModels/VacuumCleaner/vacuum_cleaner_rough.png"
-dest_files=["res://.godot/imported/vacuum_cleaner_rough.png-233000fb19258d705162a81f2983028c.s3tc.ctex"]
+dest_files=["res://.godot/imported/vacuum_cleaner_rough.png-233000fb19258d705162a81f2983028c.s3tc.ctex", "res://.godot/imported/vacuum_cleaner_rough.png-233000fb19258d705162a81f2983028c.etc2.ctex"]
 
 [params]
 

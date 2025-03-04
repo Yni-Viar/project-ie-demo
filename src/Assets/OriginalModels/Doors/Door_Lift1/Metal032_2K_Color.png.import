@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://04jprf0bkjwx"
 path.s3tc="res://.godot/imported/Metal032_2K_Color.png-93b43a0a23eeaac5b262ca0039217a88.s3tc.ctex"
+path.etc2="res://.godot/imported/Metal032_2K_Color.png-93b43a0a23eeaac5b262ca0039217a88.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/OriginalModels/Doors/Door_Lift1/Metal032_2K_Color.png"
-dest_files=["res://.godot/imported/Metal032_2K_Color.png-93b43a0a23eeaac5b262ca0039217a88.s3tc.ctex"]
+dest_files=["res://.godot/imported/Metal032_2K_Color.png-93b43a0a23eeaac5b262ca0039217a88.s3tc.ctex", "res://.godot/imported/Metal032_2K_Color.png-93b43a0a23eeaac5b262ca0039217a88.etc2.ctex"]
 
 [params]
 

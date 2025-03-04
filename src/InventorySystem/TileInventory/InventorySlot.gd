@@ -14,6 +14,9 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.double_click && event.is_action_pressed("item_use"):
 			get_parent().use_item(self)
+	if event is InputEventScreenTouch:
+		if event.double_tap:
+			get_parent().use_item(self)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

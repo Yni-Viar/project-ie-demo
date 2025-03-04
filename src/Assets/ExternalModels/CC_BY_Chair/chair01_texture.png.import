@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3xdb57wpscrx"
 path.s3tc="res://.godot/imported/chair01_texture.png-ab81e2c4acbcaa6d4cdda1912030fd14.s3tc.ctex"
+path.etc2="res://.godot/imported/chair01_texture.png-ab81e2c4acbcaa6d4cdda1912030fd14.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/CC_BY_Chair/chair01_texture.png"
-dest_files=["res://.godot/imported/chair01_texture.png-ab81e2c4acbcaa6d4cdda1912030fd14.s3tc.ctex"]
+dest_files=["res://.godot/imported/chair01_texture.png-ab81e2c4acbcaa6d4cdda1912030fd14.s3tc.ctex", "res://.godot/imported/chair01_texture.png-ab81e2c4acbcaa6d4cdda1912030fd14.etc2.ctex"]
 
 [params]
 

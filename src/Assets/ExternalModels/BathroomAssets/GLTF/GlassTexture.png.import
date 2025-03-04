@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://kuqqko3bs0d1"
 path.s3tc="res://.godot/imported/GlassTexture.png-3eef197f50e3398a1ad74da68014f42f.s3tc.ctex"
+path.etc2="res://.godot/imported/GlassTexture.png-3eef197f50e3398a1ad74da68014f42f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/BathroomAssets/GLTF/GlassTexture.png"
-dest_files=["res://.godot/imported/GlassTexture.png-3eef197f50e3398a1ad74da68014f42f.s3tc.ctex"]
+dest_files=["res://.godot/imported/GlassTexture.png-3eef197f50e3398a1ad74da68014f42f.s3tc.ctex", "res://.godot/imported/GlassTexture.png-3eef197f50e3398a1ad74da68014f42f.etc2.ctex"]
 
 [params]
 

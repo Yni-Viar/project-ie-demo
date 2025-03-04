@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://25t0kfhv3at6"
 path.s3tc="res://.godot/imported/Sofa_2_Metallic-1K-Sofa_2_Roughness-1K.png-5de80b6bbf30a002dcf6d3fb0e375851.s3tc.ctex"
+path.etc2="res://.godot/imported/Sofa_2_Metallic-1K-Sofa_2_Roughness-1K.png-5de80b6bbf30a002dcf6d3fb0e375851.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/Sofa_CC0_Taha_Arslan/Sofa_2_Metallic-1K-Sofa_2_Roughness-1K.png"
-dest_files=["res://.godot/imported/Sofa_2_Metallic-1K-Sofa_2_Roughness-1K.png-5de80b6bbf30a002dcf6d3fb0e375851.s3tc.ctex"]
+dest_files=["res://.godot/imported/Sofa_2_Metallic-1K-Sofa_2_Roughness-1K.png-5de80b6bbf30a002dcf6d3fb0e375851.s3tc.ctex", "res://.godot/imported/Sofa_2_Metallic-1K-Sofa_2_Roughness-1K.png-5de80b6bbf30a002dcf6d3fb0e375851.etc2.ctex"]
 
 [params]
 

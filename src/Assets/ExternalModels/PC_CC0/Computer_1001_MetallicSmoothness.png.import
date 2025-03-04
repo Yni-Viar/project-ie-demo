@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cafas72acoo6b"
 path.s3tc="res://.godot/imported/Computer_1001_MetallicSmoothness.png-2bca4f63f4709ac2c839860e0e0b8ca6.s3tc.ctex"
+path.etc2="res://.godot/imported/Computer_1001_MetallicSmoothness.png-2bca4f63f4709ac2c839860e0e0b8ca6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/PC_CC0/Computer_1001_MetallicSmoothness.png"
-dest_files=["res://.godot/imported/Computer_1001_MetallicSmoothness.png-2bca4f63f4709ac2c839860e0e0b8ca6.s3tc.ctex"]
+dest_files=["res://.godot/imported/Computer_1001_MetallicSmoothness.png-2bca4f63f4709ac2c839860e0e0b8ca6.s3tc.ctex", "res://.godot/imported/Computer_1001_MetallicSmoothness.png-2bca4f63f4709ac2c839860e0e0b8ca6.etc2.ctex"]
 
 [params]
 

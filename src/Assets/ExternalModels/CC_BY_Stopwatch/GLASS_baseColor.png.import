@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bluhjl8amg74b"
 path.s3tc="res://.godot/imported/GLASS_baseColor.png-4bd26cb81877fea5a0f5ab1bd82f76cf.s3tc.ctex"
+path.etc2="res://.godot/imported/GLASS_baseColor.png-4bd26cb81877fea5a0f5ab1bd82f76cf.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/CC_BY_Stopwatch/GLASS_baseColor.png"
-dest_files=["res://.godot/imported/GLASS_baseColor.png-4bd26cb81877fea5a0f5ab1bd82f76cf.s3tc.ctex"]
+dest_files=["res://.godot/imported/GLASS_baseColor.png-4bd26cb81877fea5a0f5ab1bd82f76cf.s3tc.ctex", "res://.godot/imported/GLASS_baseColor.png-4bd26cb81877fea5a0f5ab1bd82f76cf.etc2.ctex"]
 
 [params]
 

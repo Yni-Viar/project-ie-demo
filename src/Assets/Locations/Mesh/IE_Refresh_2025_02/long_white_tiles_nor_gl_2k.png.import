@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://kygbfbssq4xe"
 path.s3tc="res://.godot/imported/long_white_tiles_nor_gl_2k.png-752a28d9b6f881280c238bd91430c718.s3tc.ctex"
+path.etc2="res://.godot/imported/long_white_tiles_nor_gl_2k.png-752a28d9b6f881280c238bd91430c718.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Locations/Mesh/IE_Refresh_2025_02/long_white_tiles_nor_gl_2k.png"
-dest_files=["res://.godot/imported/long_white_tiles_nor_gl_2k.png-752a28d9b6f881280c238bd91430c718.s3tc.ctex"]
+dest_files=["res://.godot/imported/long_white_tiles_nor_gl_2k.png-752a28d9b6f881280c238bd91430c718.s3tc.ctex", "res://.godot/imported/long_white_tiles_nor_gl_2k.png-752a28d9b6f881280c238bd91430c718.etc2.ctex"]
 
 [params]
 

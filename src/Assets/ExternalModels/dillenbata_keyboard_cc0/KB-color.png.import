@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d04uu42d5faib"
 path.s3tc="res://.godot/imported/KB-color.png-726128d247ca993d2b831941e8640836.s3tc.ctex"
+path.etc2="res://.godot/imported/KB-color.png-726128d247ca993d2b831941e8640836.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/dillenbata_keyboard_cc0/KB-color.png"
-dest_files=["res://.godot/imported/KB-color.png-726128d247ca993d2b831941e8640836.s3tc.ctex"]
+dest_files=["res://.godot/imported/KB-color.png-726128d247ca993d2b831941e8640836.s3tc.ctex", "res://.godot/imported/KB-color.png-726128d247ca993d2b831941e8640836.etc2.ctex"]
 
 [params]
 

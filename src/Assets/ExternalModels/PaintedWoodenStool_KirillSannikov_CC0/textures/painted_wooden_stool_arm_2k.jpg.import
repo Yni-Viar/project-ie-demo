@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxps8v3gw0mdx"
 path.s3tc="res://.godot/imported/painted_wooden_stool_arm_2k.jpg-0e761076d8aecb744a95cc82bdee9760.s3tc.ctex"
+path.etc2="res://.godot/imported/painted_wooden_stool_arm_2k.jpg-0e761076d8aecb744a95cc82bdee9760.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/PaintedWoodenStool_KirillSannikov_CC0/textures/painted_wooden_stool_arm_2k.jpg"
-dest_files=["res://.godot/imported/painted_wooden_stool_arm_2k.jpg-0e761076d8aecb744a95cc82bdee9760.s3tc.ctex"]
+dest_files=["res://.godot/imported/painted_wooden_stool_arm_2k.jpg-0e761076d8aecb744a95cc82bdee9760.s3tc.ctex", "res://.godot/imported/painted_wooden_stool_arm_2k.jpg-0e761076d8aecb744a95cc82bdee9760.etc2.ctex"]
 
 [params]
 

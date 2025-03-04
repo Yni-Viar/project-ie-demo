@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://2477wfci8n6a"
 path.s3tc="res://.godot/imported/Home_Generic.svg-f33e5a839d0ca9d21bda521bcd034aae.s3tc.ctex"
+path.etc2="res://.godot/imported/Home_Generic.svg-f33e5a839d0ca9d21bda521bcd034aae.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/HUD/Screens/Home_Generic.svg"
-dest_files=["res://.godot/imported/Home_Generic.svg-f33e5a839d0ca9d21bda521bcd034aae.s3tc.ctex"]
+dest_files=["res://.godot/imported/Home_Generic.svg-f33e5a839d0ca9d21bda521bcd034aae.s3tc.ctex", "res://.godot/imported/Home_Generic.svg-f33e5a839d0ca9d21bda521bcd034aae.etc2.ctex"]
 
 [params]
 

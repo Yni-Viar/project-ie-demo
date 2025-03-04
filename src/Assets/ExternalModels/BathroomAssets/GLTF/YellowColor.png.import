@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3ef7lonhmsgx"
 path.s3tc="res://.godot/imported/YellowColor.png-154816045363264f2ec619252a2facd3.s3tc.ctex"
+path.etc2="res://.godot/imported/YellowColor.png-154816045363264f2ec619252a2facd3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/BathroomAssets/GLTF/YellowColor.png"
-dest_files=["res://.godot/imported/YellowColor.png-154816045363264f2ec619252a2facd3.s3tc.ctex"]
+dest_files=["res://.godot/imported/YellowColor.png-154816045363264f2ec619252a2facd3.s3tc.ctex", "res://.godot/imported/YellowColor.png-154816045363264f2ec619252a2facd3.etc2.ctex"]
 
 [params]
 

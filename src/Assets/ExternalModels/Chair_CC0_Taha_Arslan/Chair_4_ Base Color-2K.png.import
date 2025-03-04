@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwmkx3n71yv08"
 path.s3tc="res://.godot/imported/Chair_4_ Base Color-2K.png-cd43973769d8b75089f1279777e85b6b.s3tc.ctex"
+path.etc2="res://.godot/imported/Chair_4_ Base Color-2K.png-cd43973769d8b75089f1279777e85b6b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/Chair_CC0_Taha_Arslan/Chair_4_ Base Color-2K.png"
-dest_files=["res://.godot/imported/Chair_4_ Base Color-2K.png-cd43973769d8b75089f1279777e85b6b.s3tc.ctex"]
+dest_files=["res://.godot/imported/Chair_4_ Base Color-2K.png-cd43973769d8b75089f1279777e85b6b.s3tc.ctex", "res://.godot/imported/Chair_4_ Base Color-2K.png-cd43973769d8b75089f1279777e85b6b.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3xcmwjh2alit"
 path.s3tc="res://.godot/imported/electric_stove_nor_gl_2k.jpg-7189d33b32bb419ec86361e7fb3a9c83.s3tc.ctex"
+path.etc2="res://.godot/imported/electric_stove_nor_gl_2k.jpg-7189d33b32bb419ec86361e7fb3a9c83.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/ElectricStove_KuuttiSiitonen_CC0/textures/electric_stove_nor_gl_2k.jpg"
-dest_files=["res://.godot/imported/electric_stove_nor_gl_2k.jpg-7189d33b32bb419ec86361e7fb3a9c83.s3tc.ctex"]
+dest_files=["res://.godot/imported/electric_stove_nor_gl_2k.jpg-7189d33b32bb419ec86361e7fb3a9c83.s3tc.ctex", "res://.godot/imported/electric_stove_nor_gl_2k.jpg-7189d33b32bb419ec86361e7fb3a9c83.etc2.ctex"]
 
 [params]
 

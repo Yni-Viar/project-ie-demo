@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2mjo7ixoxwmo"
 path.s3tc="res://.godot/imported/Tiles003_2K-PNG_Roughness.png-ec316f5c2dd0a8b123c93f3bd7fa1dcb.s3tc.ctex"
+path.etc2="res://.godot/imported/Tiles003_2K-PNG_Roughness.png-ec316f5c2dd0a8b123c93f3bd7fa1dcb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Tiles003_2K-PNG_Roughness.png"
-dest_files=["res://.godot/imported/Tiles003_2K-PNG_Roughness.png-ec316f5c2dd0a8b123c93f3bd7fa1dcb.s3tc.ctex"]
+dest_files=["res://.godot/imported/Tiles003_2K-PNG_Roughness.png-ec316f5c2dd0a8b123c93f3bd7fa1dcb.s3tc.ctex", "res://.godot/imported/Tiles003_2K-PNG_Roughness.png-ec316f5c2dd0a8b123c93f3bd7fa1dcb.etc2.ctex"]
 
 [params]
 

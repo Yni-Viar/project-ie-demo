@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://doopwgssqulrq"
 path.s3tc="res://.godot/imported/hanging_picture_frame_02_nor_gl.png-ef76200fe169849ab6f19f336eff73a8.s3tc.ctex"
+path.etc2="res://.godot/imported/hanging_picture_frame_02_nor_gl.png-ef76200fe169849ab6f19f336eff73a8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/Picture1_JamesRayCock_CC0/hanging_picture_frame_02_nor_gl.png"
-dest_files=["res://.godot/imported/hanging_picture_frame_02_nor_gl.png-ef76200fe169849ab6f19f336eff73a8.s3tc.ctex"]
+dest_files=["res://.godot/imported/hanging_picture_frame_02_nor_gl.png-ef76200fe169849ab6f19f336eff73a8.s3tc.ctex", "res://.godot/imported/hanging_picture_frame_02_nor_gl.png-ef76200fe169849ab6f19f336eff73a8.etc2.ctex"]
 
 [params]
 

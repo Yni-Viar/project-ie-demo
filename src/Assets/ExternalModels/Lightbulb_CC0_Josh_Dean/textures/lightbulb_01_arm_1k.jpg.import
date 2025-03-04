@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp6ddf30eln41"
 path.s3tc="res://.godot/imported/lightbulb_01_arm_1k.jpg-ca344c0157f401139e890e127f01a95e.s3tc.ctex"
+path.etc2="res://.godot/imported/lightbulb_01_arm_1k.jpg-ca344c0157f401139e890e127f01a95e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/Lightbulb_CC0_Josh_Dean/textures/lightbulb_01_arm_1k.jpg"
-dest_files=["res://.godot/imported/lightbulb_01_arm_1k.jpg-ca344c0157f401139e890e127f01a95e.s3tc.ctex"]
+dest_files=["res://.godot/imported/lightbulb_01_arm_1k.jpg-ca344c0157f401139e890e127f01a95e.s3tc.ctex", "res://.godot/imported/lightbulb_01_arm_1k.jpg-ca344c0157f401139e890e127f01a95e.etc2.ctex"]
 
 [params]
 

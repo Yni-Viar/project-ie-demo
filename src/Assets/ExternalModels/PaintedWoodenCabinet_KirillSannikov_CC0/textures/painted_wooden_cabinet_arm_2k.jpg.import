@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ug2kx0xee7v0"
 path.s3tc="res://.godot/imported/painted_wooden_cabinet_arm_2k.jpg-83a354f7ab74480ad58d0afcd4e12bad.s3tc.ctex"
+path.etc2="res://.godot/imported/painted_wooden_cabinet_arm_2k.jpg-83a354f7ab74480ad58d0afcd4e12bad.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/ExternalModels/PaintedWoodenCabinet_KirillSannikov_CC0/textures/painted_wooden_cabinet_arm_2k.jpg"
-dest_files=["res://.godot/imported/painted_wooden_cabinet_arm_2k.jpg-83a354f7ab74480ad58d0afcd4e12bad.s3tc.ctex"]
+dest_files=["res://.godot/imported/painted_wooden_cabinet_arm_2k.jpg-83a354f7ab74480ad58d0afcd4e12bad.s3tc.ctex", "res://.godot/imported/painted_wooden_cabinet_arm_2k.jpg-83a354f7ab74480ad58d0afcd4e12bad.etc2.ctex"]
 
 [params]
 

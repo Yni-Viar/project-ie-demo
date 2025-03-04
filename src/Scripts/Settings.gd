@@ -18,6 +18,8 @@ var available_languages: Array[String] = ["en", "ru"]
 ## Necessary for overriding Godot bug.
 ## Checks when settings would be loaded.
 var first_start: bool = true
+## Touchscreen check
+var touchscreen = false
 ## Settings resource
 var setting_res: SettingsResource
 ## Default windows sizes.
@@ -54,7 +56,7 @@ func load_default_settings():
 		var res = load("res://Scripts/SettingsResource/Presets/RD/Medium.tres")
 		save_resource(res)
 		setting_res = res
-	elif OS.get_name() != "Web":
+	elif OS.get_name() != "Web" && OS.get_name() != "Android":
 		var res = load("res://Scripts/SettingsResource/Presets/OpenGL/Low.tres")
 		save_resource(res)
 		setting_res = res

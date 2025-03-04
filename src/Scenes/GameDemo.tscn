@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dyeqacmwaajfm"]
+[gd_scene load_steps=37 format=3 uid="uid://dyeqacmwaajfm"]
 
 [ext_resource type="Script" uid="uid://b3kpus4t1p7wb" path="res://Scripts/GameCore.gd" id="1_hqmbo"]
 [ext_resource type="Resource" uid="uid://dtootndbrxot5" path="res://Scripts/GameData/gamedata.tres" id="2_pv0oa"]
@@ -20,7 +20,18 @@
 [ext_resource type="Script" uid="uid://dd42qh1cpvys1" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="13_clcop"]
 [ext_resource type="Environment" uid="uid://cpjkvy5s2l8ae" path="res://Assets/Environments/RealVirtualityGraphics.tres" id="14_uvye0"]
 [ext_resource type="PackedScene" uid="uid://bjbe75eis8tu6" path="res://Scenes/Settings.tscn" id="15_85lew"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="15_k6ic8"]
+[ext_resource type="Script" uid="uid://b42l63cbcuxa7" path="res://Scripts/UI/TouchButtons.gd" id="16_4yv14"]
+[ext_resource type="Texture2D" uid="uid://cuk8urelab3gs" path="res://Assets/HUD/Touch/interact_with_item.png" id="16_5e2rq"]
+[ext_resource type="Texture2D" uid="uid://b7dx6fx42lptt" path="res://Assets/HUD/Touch/interact_with_item_click.png" id="17_c0a4b"]
 [ext_resource type="PackedScene" uid="uid://ce8coeohfwec8" path="res://Assets/Locations/loc_home_2025.tscn" id="17_yj2b2"]
+[ext_resource type="Texture2D" uid="uid://dbuli3lw4wfbv" path="res://Assets/HUD/Touch/interact_with_item_disabled.png" id="18_pfem7"]
+[ext_resource type="Texture2D" uid="uid://bb2n2d6wuhc44" path="res://Assets/HUD/Touch/inventory.png" id="20_o63h1"]
+[ext_resource type="Texture2D" uid="uid://cban3527gkxep" path="res://Assets/HUD/Touch/inventory_click.png" id="21_eaiiv"]
+[ext_resource type="Texture2D" uid="uid://dmtbadda5r5ql" path="res://Assets/HUD/Touch/inventory_disabled.png" id="22_8m35i"]
+[ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://Assets/HUD/Touch/back_button.png" id="23_o63h1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4yv14"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_2du4k"]
 script = ExtResource("11_kcrab")
@@ -124,11 +135,12 @@ script = ExtResource("7_w6m7r")
 
 [node name="help" type="Label" parent="PlayerUI"]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 26.0
+anchors_preset = -1
+anchor_left = 0.945
+anchor_right = 0.945
+offset_left = -160.0
+offset_right = -0.00012207
+offset_bottom = 28.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 20
 text = "QUICK_MANUAL"
@@ -144,7 +156,7 @@ offset_right = 320.0
 offset_bottom = 256.0
 grow_horizontal = 2
 
-[node name="PauseMenu" type="Control" parent="PlayerUI"]
+[node name="TouchUI" type="Control" parent="PlayerUI"]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -152,89 +164,68 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
-[node name="Panel" type="Panel" parent="PlayerUI/PauseMenu"]
+[node name="Panel" type="Panel" parent="PlayerUI/TouchUI"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.237
-anchor_bottom = 1.0
-offset_right = 0.959961
-grow_horizontal = 2
+anchor_left = 0.24
+anchor_right = 0.95
+anchor_bottom = 0.853
+offset_right = -0.00012207
+offset_bottom = 0.299988
+grow_horizontal = 0
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4yv14")
 
-[node name="ExitButton" type="Button" parent="PlayerUI/PauseMenu/Panel"]
+[node name="Virtual joystick left" parent="PlayerUI/TouchUI" instance=ExtResource("15_k6ic8")]
+layout_mode = 1
+joystick_mode = 1
+visibility_mode = 1
+action_left = "move_left"
+action_right = "move_right"
+action_up = "move_forward"
+action_down = "move_backward"
+
+[node name="UIPanel" type="HBoxContainer" parent="PlayerUI/TouchUI"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.491
-anchor_top = 0.089
-anchor_right = 0.491
-anchor_bottom = 0.089
-offset_left = -191.896
-offset_top = -32.12
-offset_right = 192.104
-offset_bottom = 31.88
-text = "EXIT"
-
-[node name="SettingsButton" type="Button" parent="PlayerUI/PauseMenu/Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.491
-anchor_top = 0.179
-anchor_right = 0.491
-anchor_bottom = 0.179
-offset_left = -191.896
-offset_top = -30.32
-offset_right = 192.104
-offset_bottom = 30.68
-text = "SETTINGS"
-
-[node name="PhotomodeButton" type="Button" parent="PlayerUI/PauseMenu/Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.491
-anchor_top = 0.267
-anchor_right = 0.491
-anchor_bottom = 0.267
-offset_left = -191.896
-offset_top = -32.36
-offset_right = 192.104
-offset_bottom = 31.64
-text = "PHOTOMODE"
-
-[node name="PhotomodeSelector" type="HBoxContainer" parent="PlayerUI"]
-visible = false
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchor_left = 0.2
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 0.68
 anchor_bottom = 1.0
-offset_left = -256.0
-offset_top = -184.0
-offset_right = 256.0
-offset_bottom = -56.0
+offset_top = -128.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
-script = ExtResource("9_c5w3r")
+script = ExtResource("16_4yv14")
 
-[node name="Normal" type="TextureButton" parent="PlayerUI/PhotomodeSelector"]
+[node name="Tap" type="TextureButton" parent="PlayerUI/TouchUI/UIPanel"]
 layout_mode = 2
-texture_normal = ExtResource("9_fxl5q")
-texture_pressed = ExtResource("9_fxl5q")
-texture_hover = ExtResource("9_fxl5q")
+texture_normal = ExtResource("16_5e2rq")
+texture_pressed = ExtResource("17_c0a4b")
+texture_hover = ExtResource("16_5e2rq")
+texture_disabled = ExtResource("18_pfem7")
+texture_focused = ExtResource("16_5e2rq")
 
-[node name="Toon" type="TextureButton" parent="PlayerUI/PhotomodeSelector"]
+[node name="Inventory" type="TextureButton" parent="PlayerUI/TouchUI/UIPanel"]
 layout_mode = 2
-texture_normal = ExtResource("10_c5w3r")
-texture_pressed = ExtResource("10_c5w3r")
-texture_hover = ExtResource("10_c5w3r")
+texture_normal = ExtResource("20_o63h1")
+texture_pressed = ExtResource("21_eaiiv")
+texture_hover = ExtResource("20_o63h1")
+texture_disabled = ExtResource("22_8m35i")
+texture_focused = ExtResource("20_o63h1")
 
-[node name="EdgeDetect" type="TextureButton" parent="PlayerUI/PhotomodeSelector"]
-layout_mode = 2
-texture_normal = ExtResource("11_wqkrr")
-texture_pressed = ExtResource("11_wqkrr")
-texture_hover = ExtResource("11_wqkrr")
+[node name="Back" type="TextureButton" parent="PlayerUI/TouchUI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_bottom = 80.0
+grow_horizontal = 0
+texture_normal = ExtResource("23_o63h1")
+stretch_mode = 0
 
 [node name="GameOverPanel" type="Control" parent="PlayerUI"]
 visible = false
@@ -347,6 +338,98 @@ grow_vertical = 0
 theme = ExtResource("9_hs5nv")
 text = "GIVE_UP"
 
+[node name="PauseMenu" type="Control" parent="PlayerUI"]
+visible = false
+layout_mode = 1
+anchor_right = 0.945
+anchor_bottom = 1.0
+offset_right = -0.00012207
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="PlayerUI/PauseMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.27
+anchor_bottom = 1.0
+offset_right = -0.240021
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ExitButton" type="Button" parent="PlayerUI/PauseMenu/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.491
+anchor_top = 0.089
+anchor_right = 0.491
+anchor_bottom = 0.089
+offset_left = -191.896
+offset_top = -32.12
+offset_right = 192.104
+offset_bottom = 31.88
+text = "EXIT"
+
+[node name="SettingsButton" type="Button" parent="PlayerUI/PauseMenu/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.491
+anchor_top = 0.179
+anchor_right = 0.491
+anchor_bottom = 0.179
+offset_left = -191.896
+offset_top = -30.32
+offset_right = 192.104
+offset_bottom = 30.68
+text = "SETTINGS"
+
+[node name="PhotomodeButton" type="Button" parent="PlayerUI/PauseMenu/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.491
+anchor_top = 0.267
+anchor_right = 0.491
+anchor_bottom = 0.267
+offset_left = -191.896
+offset_top = -32.36
+offset_right = 192.104
+offset_bottom = 31.64
+text = "PHOTOMODE"
+
+[node name="PhotomodeSelector" type="HBoxContainer" parent="PlayerUI"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -184.0
+offset_right = 256.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+script = ExtResource("9_c5w3r")
+
+[node name="Normal" type="TextureButton" parent="PlayerUI/PhotomodeSelector"]
+layout_mode = 2
+texture_normal = ExtResource("9_fxl5q")
+texture_pressed = ExtResource("9_fxl5q")
+texture_hover = ExtResource("9_fxl5q")
+
+[node name="Toon" type="TextureButton" parent="PlayerUI/PhotomodeSelector"]
+layout_mode = 2
+texture_normal = ExtResource("10_c5w3r")
+texture_pressed = ExtResource("10_c5w3r")
+texture_hover = ExtResource("10_c5w3r")
+
+[node name="EdgeDetect" type="TextureButton" parent="PlayerUI/PhotomodeSelector"]
+layout_mode = 2
+texture_normal = ExtResource("11_wqkrr")
+texture_pressed = ExtResource("11_wqkrr")
+texture_hover = ExtResource("11_wqkrr")
+
 [node name="DevWarning" type="Label" parent="PlayerUI"]
 visible = false
 layout_mode = 1
@@ -365,55 +448,14 @@ theme_override_font_sizes/font_size = 32
 text = "PRERELEASE_WARN"
 horizontal_alignment = 1
 
-[node name="LoadingNewLocation" type="Panel" parent="PlayerUI"]
-visible = false
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -144.5
-offset_top = -40.0
-offset_right = 144.5
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="LoadingLabel" type="Label" parent="PlayerUI/LoadingNewLocation"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -102.5
-offset_right = 102.5
-offset_bottom = 23.0
-grow_horizontal = 2
-text = "LOADING_NEW_LOCATION"
-
-[node name="LoadProgress" type="TextureProgressBar" parent="PlayerUI/LoadingNewLocation"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -128.0
-offset_top = -16.0
-offset_right = 128.0
-grow_horizontal = 2
-grow_vertical = 0
-texture_under = ExtResource("5_bof60")
-texture_progress = ExtResource("6_hdu6m")
-tint_progress = Color(1, 1, 0, 1)
-
 [node name="DialogueBox" type="Panel" parent="PlayerUI"]
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.865
+anchor_top = 0.809
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -0.200073
+offset_top = -0.100037
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("9_hs5nv")
@@ -455,13 +497,23 @@ libraries = {
 transform = Transform3D(-0.0146777, 0, 0.999892, 0, 1, 0, -0.999892, 0, -0.0146777, -18.248, 54.5015, -2.26259)
 text = "CITY_UNDER_SKY"
 
-[connection signal="pressed" from="PlayerUI/PauseMenu/Panel/ExitButton" to="PlayerUI" method="_on_exit_button_pressed"]
-[connection signal="pressed" from="PlayerUI/PauseMenu/Panel/SettingsButton" to="PlayerUI" method="_on_settings_button_pressed"]
-[connection signal="pressed" from="PlayerUI/PauseMenu/Panel/PhotomodeButton" to="PlayerUI" method="_on_photomode_button_pressed"]
-[connection signal="visibility_changed" from="PlayerUI/PhotomodeSelector" to="PlayerUI/PhotomodeSelector" method="_on_visibility_changed"]
-[connection signal="pressed" from="PlayerUI/PhotomodeSelector/Normal" to="PlayerUI/PhotomodeSelector" method="_on_normal_pressed"]
-[connection signal="pressed" from="PlayerUI/PhotomodeSelector/Toon" to="PlayerUI/PhotomodeSelector" method="_on_toon_pressed"]
-[connection signal="pressed" from="PlayerUI/PhotomodeSelector/EdgeDetect" to="PlayerUI/PhotomodeSelector" method="_on_edge_detect_pressed"]
+[connection signal="button_down" from="PlayerUI/TouchUI/UIPanel/Tap" to="PlayerUI/TouchUI/UIPanel" method="_on_tap_button_down"]
+[connection signal="button_up" from="PlayerUI/TouchUI/UIPanel/Tap" to="PlayerUI/TouchUI/UIPanel" method="_on_tap_button_up"]
+[connection signal="button_down" from="PlayerUI/TouchUI/UIPanel/Inventory" to="PlayerUI/TouchUI/UIPanel" method="_on_inventory_button_down"]
+[connection signal="button_up" from="PlayerUI/TouchUI/UIPanel/Inventory" to="PlayerUI/TouchUI/UIPanel" method="_on_inventory_button_up"]
+[connection signal="button_down" from="PlayerUI/TouchUI/Back" to="PlayerUI" method="_on_back_button_down"]
+[connection signal="button_up" from="PlayerUI/TouchUI/Back" to="PlayerUI" method="_on_back_button_up"]
 [connection signal="pressed" from="PlayerUI/GameOverPanel/MenuButton" to="PlayerUI" method="_on_exit_button_pressed"]
+[connection signal="button_down" from="PlayerUI/PauseMenu/Panel/ExitButton" to="PlayerUI" method="_on_exit_button_button_down"]
+[connection signal="button_down" from="PlayerUI/PauseMenu/Panel/SettingsButton" to="PlayerUI" method="_on_settings_button_button_down"]
+[connection signal="button_down" from="PlayerUI/PauseMenu/Panel/PhotomodeButton" to="PlayerUI" method="_on_photomode_button_button_down"]
+[connection signal="button_up" from="PlayerUI/PauseMenu/Panel/PhotomodeButton" to="PlayerUI" method="_on_photomode_button_button_up"]
+[connection signal="visibility_changed" from="PlayerUI/PhotomodeSelector" to="PlayerUI/PhotomodeSelector" method="_on_visibility_changed"]
+[connection signal="button_down" from="PlayerUI/PhotomodeSelector/Normal" to="PlayerUI/PhotomodeSelector" method="_on_normal_button_down"]
+[connection signal="button_up" from="PlayerUI/PhotomodeSelector/Normal" to="PlayerUI/PhotomodeSelector" method="_on_normal_button_up"]
+[connection signal="button_down" from="PlayerUI/PhotomodeSelector/Toon" to="PlayerUI/PhotomodeSelector" method="_on_toon_button_down"]
+[connection signal="button_up" from="PlayerUI/PhotomodeSelector/Toon" to="PlayerUI/PhotomodeSelector" method="_on_toon_button_up"]
+[connection signal="button_down" from="PlayerUI/PhotomodeSelector/EdgeDetect" to="PlayerUI/PhotomodeSelector" method="_on_edge_detect_button_down"]
+[connection signal="button_up" from="PlayerUI/PhotomodeSelector/EdgeDetect" to="PlayerUI/PhotomodeSelector" method="_on_edge_detect_button_up"]
 [connection signal="dialogue_ended" from="PlayerUI/DialogueBox" to="PlayerUI" method="_on_dialogue_box_dialogue_ended"]
 [connection signal="dialogue_signal" from="PlayerUI/DialogueBox" to="PlayerUI" method="_on_dialogue_box_dialogue_signal"]
