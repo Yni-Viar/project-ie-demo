@@ -130,9 +130,10 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.8.1[/b] (Demo)
-- Added initial Android support
-- Fixed Photomode button translation
+text = "[b]v.0.0.8.2[/b] (Demo)
+- Added new in-game console (old console was deleted earlier in older versions, because of license issues).
+- Fixed [ REDACTED ] not popping out
+- Removed unnecessary check in touch controls.
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL
@@ -204,12 +205,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -640.0
-offset_top = -476.0
-offset_right = 640.0
-offset_bottom = 484.0
+offset_left = -576.0
+offset_top = -434.0
+offset_right = 776.0
+offset_bottom = 430.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("5_gi3lh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CreditsPanel/ScrollContainer"]
 layout_mode = 2
@@ -296,7 +298,9 @@ theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 text = "[i]Dialogue Nodes (MIT License)[/i]
 
-- Copyright (c) 2020 Bhgt"
+- Copyright (c) 2020 Bhgt
+
+"
 fit_content = true
 
 [node name="CreditsCode4" type="RichTextLabel" parent="CreditsPanel/ScrollContainer/VBoxContainer"]
@@ -310,7 +314,9 @@ theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 text = "[i]Toon Post-Process shader (MIT License)[/i]
 
-- Copyright (c) Hannah \"EMBYR\" Crawford"
+- Copyright (c) Hannah \"EMBYR\" Crawford
+
+"
 fit_content = true
 
 [node name="CreditsCode5" type="RichTextLabel" parent="CreditsPanel/ScrollContainer/VBoxContainer"]
@@ -324,7 +330,9 @@ theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 text = "[i]SSAO Shader for OpenGL Compatibility renderer (MIT License)[/i]
 
-- Copyright © 2014 Inigo Quilez"
+- Copyright © 2014 Inigo Quilez
+
+"
 fit_content = true
 
 [node name="CreditsCode6" type="RichTextLabel" parent="CreditsPanel/ScrollContainer/VBoxContainer"]
@@ -338,7 +346,25 @@ theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 text = "[i]Virtual joystick (MIT License)[/i]
 
-- Copyright (c) 2019 Marco Fazio"
+- Copyright (c) 2019 Marco Fazio
+
+"
+fit_content = true
+
+[node name="CreditsCode7" type="RichTextLabel" parent="CreditsPanel/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1234, 0)
+layout_mode = 2
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[i]Limbo console (MIT License)[/i]
+
+- Copyright (c) 2024 Serhii Snitsaruk
+
+"
 fit_content = true
 
 [node name="CreditsCode2" type="RichTextLabel" parent="CreditsPanel/ScrollContainer/VBoxContainer"]
@@ -350,8 +376,11 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "- All other third-party assets are licensed under CC0.
-- Check https://github.com/Yni-Viar/project-ie-demo (game source code) for information about the authors."
+text = "- Full license texts are available at https://github.com/Yni-Viar/project-ie-demo/blob/main/THIRD_PARTY_CREDITS.md
+- All other third-party code are licensed under CC0.
+- Check https://github.com/Yni-Viar/project-ie-demo (game source code) for information about the authors.
+
+"
 fit_content = true
 
 [node name="CreditsArt" type="RichTextLabel" parent="CreditsPanel/ScrollContainer/VBoxContainer"]

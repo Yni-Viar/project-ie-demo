@@ -97,6 +97,8 @@ func _physics_process(delta: float) -> void:
 				collided_with.call("interact")
 			elif collided_with is PathWalkerHelper:
 				collided_with.call("interact")
+			elif collided_with is InteractableMovable:
+				collided_with.call("interact", self)
 		elif Input.is_action_just_pressed("interact_alt"):
 			var collided_with = ray.get_collider()
 			if collided_with is InteractableStatic:

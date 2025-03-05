@@ -3689,10 +3689,12 @@ mesh = SubResource("ArrayMesh_14pxo")
 skeleton = NodePath("")
 script = ExtResource("20_qw3vx")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SergesHome/NavigationRegion3D/Shelves/wooden_display_shelves_01_drawer_02"]
+[node name="StaticBody3D" type="AnimatableBody3D" parent="SergesHome/NavigationRegion3D/Shelves/wooden_display_shelves_01_drawer_02"]
 collision_layer = 9
+sync_to_physics = false
 script = ExtResource("21_anrgb")
 door_path = NodePath("..")
+metadata/_custom_type_script = "uid://cfw1flq1cda0a"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SergesHome/NavigationRegion3D/Shelves/wooden_display_shelves_01_drawer_02/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0)
@@ -3711,8 +3713,9 @@ mesh = SubResource("ArrayMesh_vxkik")
 skeleton = NodePath("")
 script = ExtResource("20_qw3vx")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SergesHome/NavigationRegion3D/Shelves/wooden_display_shelves_01_drawer_01"]
+[node name="StaticBody3D" type="AnimatableBody3D" parent="SergesHome/NavigationRegion3D/Shelves/wooden_display_shelves_01_drawer_01"]
 collision_layer = 9
+sync_to_physics = false
 script = ExtResource("21_anrgb")
 door_path = NodePath("..")
 

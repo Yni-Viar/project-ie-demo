@@ -63,8 +63,8 @@ func _ready() -> void:
 		anim.advance_expression_base_node = get_path()
 		anim.active = true
 	#state = State.IDLE
-	while wandering_rotator == 0:
-		wandering_rotator = rng.randi_range(-15, 15)
+	wandering_rotator = rng.randi_range(-15, 15)
+	
 
 func _physics_process(delta: float) -> void:
 	if anim != null:

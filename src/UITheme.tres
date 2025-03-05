@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=47 format=4 uid="uid://4k2un7nm7xc6"]
+[gd_resource type="Theme" load_steps=50 format=4 uid="uid://4k2un7nm7xc6"]
 
 [ext_resource type="Texture2D" uid="uid://bekswppq1xt0q" path="res://UI/checkbox_checked.png" id="1_87lyl"]
 [ext_resource type="Texture2D" uid="uid://p1j6j64jc3wd" path="res://UI/toggle_on.png" id="1_nhrs4"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bjmlp1vq3373v" path="res://UI/slider_toggle_disabled.png" id="17_yryu7"]
 [ext_resource type="Texture2D" uid="uid://cq5n1u204g70j" path="res://UI/slider_toggle_highlight.png" id="18_8bltl"]
 [ext_resource type="Texture2D" uid="uid://bbu36ma7nmlge" path="res://UI/Close/close.png" id="19_81cfk"]
+[ext_resource type="StyleBox" uid="uid://bms7ema3mduoe" path="res://UI/scrollbar_toggle.tres" id="19_wlkkr"]
 [ext_resource type="StyleBox" uid="uid://bwjl6h1n783gn" path="res://UI/Window.tres" id="21_8ee4j"]
 [ext_resource type="StyleBox" uid="uid://dhj513crv55v4" path="res://UI/Window_Inactive.tres" id="22_5fj3l"]
 
@@ -2142,6 +2143,24 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mefmv"]
+bg_color = Color(0.724643, 0.724643, 0.724642, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kymd0"]
+bg_color = Color(0.513233, 0.513233, 0.513233, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
 [resource]
 Button/font_sizes/font_size = 18
 Button/styles/disabled = SubResource("StyleBoxFlat_25ss1")
@@ -2193,6 +2212,9 @@ LineEdit/styles/read_only = SubResource("StyleBoxFlat_dmk8g")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_5s71f")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_71f55")
 TextEdit/styles/normal = SubResource("StyleBoxFlat_qdlr4")
+VScrollBar/styles/grabber = ExtResource("19_wlkkr")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_mefmv")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_kymd0")
 Window/constants/close_h_offset = 23
 Window/constants/close_v_offset = 25
 Window/icons/close = ExtResource("19_81cfk")

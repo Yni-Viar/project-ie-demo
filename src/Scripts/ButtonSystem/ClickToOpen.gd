@@ -1,4 +1,4 @@
-extends InteractableStatic
+extends InteractableMovable
 
 @export var door_path: NodePath
 
