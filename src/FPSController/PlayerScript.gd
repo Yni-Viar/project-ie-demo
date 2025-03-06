@@ -40,7 +40,7 @@ var motion_enabled = true
 func _ready() -> void:
 	ray.add_exception(self)
 	
-	if RenderingServer.get_rendering_device() == null:
+	if RenderingServer.get_current_rendering_method() != "forward_plus":
 		if Settings.setting_res.ssao:
 			apply_shader("SSAOShader", true)
 

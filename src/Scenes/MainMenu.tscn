@@ -130,10 +130,8 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.8.2[/b] (Demo)
-- Added new in-game console (old console was deleted earlier in older versions, because of license issues).
-- Fixed [ REDACTED ] not popping out
-- Removed unnecessary check in touch controls.
+text = "[b]v.0.0.8.3[/b] (Demo)
+- (Backend) Updated renderer check by using new Godot 4.4 function.
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL
