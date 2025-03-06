@@ -28,11 +28,15 @@ func set_health(amount_of_health: float, health_type: int = 0):
 		#return "Unknown item. Cannot spawn. Did you input the number of item?"
 
 func spawn(path: String):
+	if OS.get_name() == "Web":
+		LimboConsole.error("It is not supported to call this command on the Web platform...")
+		return
 	if path.contains("user://"):
 		LimboConsole.error("It is NOT supported spawning from user:// folder for security reasons.")
 		return
 	if !ResourceLoader.exists("res://" + path):
 		LimboConsole.error("This prefab does not exist in the game. Tip: Do NOT write res:// prefix - it is already included")
+		return
 	var res = load("res://" + path)
 	if res is PackedScene:
 		var node = res.instantiate()

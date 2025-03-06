@@ -77,6 +77,8 @@ func _init() -> void:
 
 	if _options.disable_in_release_build:
 		enabled = OS.is_debug_build()
+	else:
+		enabled = OS.get_name() != "Web"
 
 	_entry.text_submitted.connect(_on_entry_text_submitted)
 	_entry.text_changed.connect(_on_entry_text_changed)

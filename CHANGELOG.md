@@ -1,7 +1,7 @@
 # v0.0.8.2
 
 - Added new in-game console (old console was deleted earlier in older versions, because of license issues).
-- Fixed [ REDACTED ] not popping out
+- Fixed easter eggs not popping out
 - Removed unnecessary check in touch controls.
 
 # v0.0.8.1
