@@ -28,10 +28,12 @@ func _process(delta):
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
 		input_values("exitgame")
+		button_busy = false
 	#if Input.is_action_just_pressed("console"):
 		#input_values("console")
 	if Input.is_action_just_pressed("human_inventory"):
 		input_values("inventory")
+		button_busy = false
 
 func input_values(state: String):
 	button_busy = true

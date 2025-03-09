@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cu440emlhve1m"]
+[gd_scene load_steps=21 format=3 uid="uid://cu440emlhve1m"]
 
 [ext_resource type="Script" uid="uid://dnoolbn2plgbe" path="res://FPSController/PlayerScript.gd" id="1_t58vj"]
 [ext_resource type="Script" uid="uid://uu6p2v0dr427" path="res://FPSController/Commands.gd" id="2_1kpcn"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shader" uid="uid://bjmvvola6t0oj" path="res://Shaders/CustomSSAOShader/ssao_iq.gdshader" id="3_36bvv"]
 [ext_resource type="Shader" uid="uid://mknm08d75hop" path="res://Shaders/NormalEdgeDetectShader/edgedetect.gdshader" id="3_ib3mq"]
 [ext_resource type="PackedScene" uid="uid://de8sgghqvldw3" path="res://InventorySystem/InventoryPanel.tscn" id="4_xovxo"]
+[ext_resource type="Shader" uid="uid://c6o73s61ecqfw" path="res://Shaders/BlackAndWhiteShader/blackandwhite.gdshader" id="5_7pc1p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_36bvv"]
 render_priority = 0
@@ -33,6 +34,17 @@ shader = ExtResource("3_ib3mq")
 
 [sub_resource type="QuadMesh" id="QuadMesh_7pc1p"]
 material = SubResource("ShaderMaterial_1kpcn")
+size = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7pc1p"]
+render_priority = 0
+shader = ExtResource("5_7pc1p")
+shader_parameter/white = Color(0.5, 0.5, 0.5, 1)
+shader_parameter/black = Color(0, 0, 0, 1)
+shader_parameter/transition = 0.125
+
+[sub_resource type="QuadMesh" id="QuadMesh_rpdev"]
+material = SubResource("ShaderMaterial_7pc1p")
 size = Vector2(2, 2)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_36bvv"]
@@ -101,17 +113,22 @@ cull_mask = 524287
 near = 0.025
 
 [node name="ToonShader" type="MeshInstance3D" parent="PlayerHead/PlayerRecoil/PlayerCamera"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0434726)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05)
 visible = false
 mesh = SubResource("QuadMesh_ib3mq")
 
 [node name="EdgeDetectShader" type="MeshInstance3D" parent="PlayerHead/PlayerRecoil/PlayerCamera"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0895612)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.028)
 visible = false
 mesh = SubResource("QuadMesh_7pc1p")
 
+[node name="BWShader" type="MeshInstance3D" parent="PlayerHead/PlayerRecoil/PlayerCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.028)
+visible = false
+mesh = SubResource("QuadMesh_rpdev")
+
 [node name="SSAOShader" type="MeshInstance3D" parent="PlayerHead/PlayerRecoil/PlayerCamera" groups=["Setting"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0646918)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.027)
 visible = false
 mesh = SubResource("QuadMesh_1kpcn")
 

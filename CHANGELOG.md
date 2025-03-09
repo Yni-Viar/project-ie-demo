@@ -1,5 +1,13 @@
 # ⚠️ VERSIONS BELOW v0.0.7.4 ARE REMOVED ENTIRELY (and became lost media), DUE TO POSSIBLE COPYRIGHT PROBLEMS.
 
+# v0.0.8.3
+
+- (Backend) Updated renderer check by using new Godot 4.4 function.
+- Workaround a navigation bug, where Julia could pass through bathroom door.
+- Player can now remove items from inventory!
+- Added footstep sounds (they are quiet, but still can be heared (especially in house hall))
+- Added my own 2-color shader as a photomode.
+
 # v0.0.8.2
 
 - Added new in-game console (old console was deleted earlier in older versions, because of license issues).
@@ -16,7 +24,7 @@
 - Upgraded to Godot 4.4 and switched to Jolt physics.
 - Added photo mode.
 - Added SSAO shader for OpenGL Compatibility (useful for old devices and Web)
-- (Web) Fixed a bug, where Settings manager will still try user's settings, thus requiring cookies.
+- (Web) Fixed a bug, where Settings manager will still try user's settings, thus requiring cookies. **(later edit: it is impossible to disable cookies in Godot Web game due to checking user:// availability!!!)**
 - Added no lights setting (except sun) - optimization for Web and low-end devices.
 - Tweaked lights in the home hall, so there is no light leak into house
 - Home lamp has now shadows (you can disable or enable in settings)
@@ -31,7 +39,7 @@ Godot 4.4+ specific updates:
 - Added missing copyright notice, removed previous git history due to possible copyright violation.
 
 # v0.0.7.3
-- Disable cookies in the Web build
+- Disable cookies in the Web build **(later edit: it is impossible to disable cookies in Godot Web game due to checking user:// availability!!!)**
 
 # v0.0.7.2
 - Re-added main menu + door unlock sound.

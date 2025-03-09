@@ -1,5 +1,6 @@
 # Project "I.E." showcase
 ## Info.
+### ⚠️ **The project is NOT actively maintained.**
 This project is a public showcase for a upcoming game.
 It may have non-critical bugs.
 

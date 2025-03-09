@@ -38,3 +38,13 @@ func _on_toon_button_up() -> void:
 
 func _on_edge_detect_button_up() -> void:
 	button_busy = false
+
+
+func _on_two_colors_button_down() -> void:
+	if !button_busy:
+		player.apply_shader("BWShader")
+		button_busy = true
+
+
+func _on_two_colors_button_up() -> void:
+	button_busy = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dyeqacmwaajfm"]
+[gd_scene load_steps=38 format=3 uid="uid://dyeqacmwaajfm"]
 
 [ext_resource type="Script" uid="uid://b3kpus4t1p7wb" path="res://Scripts/GameCore.gd" id="1_hqmbo"]
 [ext_resource type="Resource" uid="uid://dtootndbrxot5" path="res://Scripts/GameData/gamedata.tres" id="2_pv0oa"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://cban3527gkxep" path="res://Assets/HUD/Touch/inventory_click.png" id="21_eaiiv"]
 [ext_resource type="Texture2D" uid="uid://dmtbadda5r5ql" path="res://Assets/HUD/Touch/inventory_disabled.png" id="22_8m35i"]
 [ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://Assets/HUD/Touch/back_button.png" id="23_o63h1"]
+[ext_resource type="Texture2D" uid="uid://1rwjks2gsupq" path="res://Assets/HUD/Photomode/Photomode_BW.png" id="24_eaiiv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4yv14"]
 
@@ -403,9 +404,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -256.0
+offset_left = -264.0
 offset_top = -184.0
-offset_right = 256.0
+offset_right = 264.0
 offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -429,6 +430,12 @@ layout_mode = 2
 texture_normal = ExtResource("11_wqkrr")
 texture_pressed = ExtResource("11_wqkrr")
 texture_hover = ExtResource("11_wqkrr")
+
+[node name="TwoColors" type="TextureButton" parent="PlayerUI/PhotomodeSelector"]
+layout_mode = 2
+texture_normal = ExtResource("24_eaiiv")
+texture_pressed = ExtResource("24_eaiiv")
+texture_hover = ExtResource("24_eaiiv")
 
 [node name="DevWarning" type="Label" parent="PlayerUI"]
 visible = false
@@ -515,5 +522,7 @@ text = "CITY_UNDER_SKY"
 [connection signal="button_up" from="PlayerUI/PhotomodeSelector/Toon" to="PlayerUI/PhotomodeSelector" method="_on_toon_button_up"]
 [connection signal="button_down" from="PlayerUI/PhotomodeSelector/EdgeDetect" to="PlayerUI/PhotomodeSelector" method="_on_edge_detect_button_down"]
 [connection signal="button_up" from="PlayerUI/PhotomodeSelector/EdgeDetect" to="PlayerUI/PhotomodeSelector" method="_on_edge_detect_button_up"]
+[connection signal="button_down" from="PlayerUI/PhotomodeSelector/TwoColors" to="PlayerUI/PhotomodeSelector" method="_on_two_colors_button_down"]
+[connection signal="button_up" from="PlayerUI/PhotomodeSelector/TwoColors" to="PlayerUI/PhotomodeSelector" method="_on_two_colors_button_up"]
 [connection signal="dialogue_ended" from="PlayerUI/DialogueBox" to="PlayerUI" method="_on_dialogue_box_dialogue_ended"]
 [connection signal="dialogue_signal" from="PlayerUI/DialogueBox" to="PlayerUI" method="_on_dialogue_box_dialogue_signal"]
