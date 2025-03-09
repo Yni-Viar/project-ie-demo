@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://de8sgghqvldw3"]
+[gd_scene load_steps=5 format=3 uid="uid://de8sgghqvldw3"]
 
+[ext_resource type="Texture2D" uid="uid://bvx4skgf61hco" path="res://Assets/HUD/Touch/delete.png" id="2_2q7fl"]
 [ext_resource type="Script" uid="uid://qx71x1sstg7t" path="res://InventorySystem/TileInventory/Inventory.gd" id="2_itdby"]
+[ext_resource type="Script" uid="uid://cvd8dat16rme3" path="res://InventorySystem/TileInventory/DeleteHelper.gd" id="3_nrxg5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pln65"]
 bg_color = Color(0.0862745, 0.0862745, 0.0862745, 0.501961)
@@ -33,6 +35,22 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pln65")
 script = ExtResource("2_itdby")
+
+[node name="Delete" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -196.0
+offset_right = -64.0
+offset_bottom = -68.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_2q7fl")
+script = ExtResource("3_nrxg5")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

@@ -1,4 +1,6 @@
 extends BaseTrigger
+## Made by Yni, licensed under CC0.
+## Dialogue trigger. Used only on the ground floor on this demo.
 
 @export var character_path: String
 var interacted: bool = false

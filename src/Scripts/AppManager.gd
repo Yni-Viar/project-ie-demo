@@ -1,5 +1,7 @@
 extends Node
 class_name AppManager
+## Made by Yni, licensed under CC0.
+## This script is remnant of TGPY and SCP: Site Online.
 
 ## Called when the node enters the scene tree for the first time.
 #func _ready():

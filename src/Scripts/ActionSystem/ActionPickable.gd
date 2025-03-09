@@ -1,11 +1,21 @@
 extends InteractableRigidBody
 class_name ActionPickable
+## Made by Yni, licensed under MIT license
+## Unlike Key or Inventory item, this pickable just holds in your hand.
+
 
 var player_prefab: PlayerScript
+## Is collectable
+## (In older closed-source version of Internal Eternal there was collectable mechanic, 
+## which was eventually removed. Only references still exists)
 @export var is_collectable: bool = false
+## ID (unused, probably related for spawn usage)
 @export var id: int
+## Public name (unused)
 @export var public_name: String
+## Collectable icon (unused)
 @export var icon: Texture2D
+## Mouse sensitivity(used for rotating item (not testing, maybe works on PC))
 @export var mouse_sensitivity = 0.05
 var collectable_first_time: bool = true
 func _input(event):
@@ -17,6 +27,7 @@ func _input(event):
 func _process(delta):
 	if player_prefab != null:
 		if player_prefab.using_item == str(get_path()):
+			# Follow player's position
 			global_position = get_tree().root.get_node("Game/Player/PlayerHead/PlayerRecoil/PlayerHand").global_position
 
 func interact(player: Node3D):
@@ -31,7 +42,7 @@ func interact_alt(player: Node3D):
 			queue_free()
 		else:
 			call("throw", player.get_path())
-
+## Item usage. Left for inherited functions.
 func use(player: Node3D):
 	pass
 

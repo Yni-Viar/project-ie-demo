@@ -1,5 +1,5 @@
 extends DoorBase
-
+## Made by Yni, licensed under CC0.
 
 #func door_controller(keycard: int):
 	#super.door_controller(keycard)
@@ -10,7 +10,7 @@ extends DoorBase
 
 
 func _on_area_3d_body_entered(body):
-	if (body is PlayerScript || body is InteractableNpc) && can_open:
+	if (body is PlayerScript || body is InteractableNpc) && can_open && NavigationServer3D:
 		door_open()
 
 

@@ -132,6 +132,9 @@ theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 text = "[b]v.0.0.8.3[/b] (Demo)
 - (Backend) Updated renderer check by using new Godot 4.4 function.
+- Workaround a navigation bug, where Julia could pass through bathroom door.
+- Player can now remove items from inventory!
+- Added footstep sounds (they are quiet, but still can be heared (especially in house hall))
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL

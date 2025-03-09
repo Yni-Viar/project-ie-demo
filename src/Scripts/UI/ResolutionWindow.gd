@@ -1,5 +1,7 @@
 extends IngameWindow
 class_name AddResolutionSetting
+## Made by Yni, licensed under MIT License
+## Unused for this demo.
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,5 +1,7 @@
 extends RigidBody3D
 class_name InteractableRigidBody
+## Made by Yni, licensed under CC0.
+## A RigidBody, that can be interacted.
 
 @export var has_sound: bool
 @export var sound_path: String

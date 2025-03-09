@@ -1,5 +1,6 @@
 extends Object
 class_name TxtParser
+## Made by Yni, licensed under CC0.
 
 ## Saves TXT file
 func save(path: String, content: String):

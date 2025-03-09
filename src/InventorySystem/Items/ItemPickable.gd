@@ -1,5 +1,7 @@
 extends InteractableRigidBody
 class_name ItemPickable
+## Made by Yni, licensed under CC0.
+## Inventory item.
 
 @export var item: Item
 

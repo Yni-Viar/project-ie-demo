@@ -1,4 +1,6 @@
 extends Node3D
+# Made by Yni, licensed under CC0
+# Legacy SCP:SO code, handles ragdolls, death anim, and no action.
 
 enum ObjectType {static_prefab, animated, ragdoll}
 @export var state: String

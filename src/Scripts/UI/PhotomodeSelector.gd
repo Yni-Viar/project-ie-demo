@@ -1,4 +1,5 @@
 extends HBoxContainer
+## Made by Yni, licensed under CC0.
 
 var player: PlayerScript
 var button_busy = false

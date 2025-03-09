@@ -1,5 +1,6 @@
 extends Resource
 class_name SettingsResource
+## Made by Yni, licensed under MIT License.
 
 ## Available languages
 @export var available_languages: Array[String] = ["en", "ru"]

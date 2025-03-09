@@ -1,5 +1,7 @@
 extends Node
-
+## Made by Yni, licensed under CC0
+## LimboConsole commands.
+## Available only in PC platforms directly, and Android platform (only with physicsl keyboard (probably))
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,20 +15,12 @@ func _ready():
 func _process(delta):
 	pass
 
+# Set health
 func set_health(amount_of_health: float, health_type: int = 0):
 	get_parent().call("health_manage", amount_of_health, health_type, "Forced health change")
 	LimboConsole.info("Given " + str(amount_of_health) + " to your health " + str(health_type))
 
-#func give(args: Array):
-	#if args.size() == 1:
-		#if int(args[0]) < get_tree().root.get_node("Main/Game/").game_data.map_objects.size() && int(args[0]) >= 0:
-			##give_cmd(int(args[0]), 0)
-			#return "An item was given"
-		#else:
-			#return "Unknown item. Cannot spawn. E.g. to spawn an item, you need to write \"give <number>\""
-	#else:
-		#return "Unknown item. Cannot spawn. Did you input the number of item?"
-
+# Spawn ANYTHING inside the game.
 func spawn(path: String):
 	if OS.get_name() == "Web":
 		LimboConsole.error("It is not supported to call this command on the Web platform...")

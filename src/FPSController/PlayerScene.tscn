@@ -67,7 +67,7 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
-"method": &"FootstepAnimate"
+"method": &"footstep_animate"
 }]
 }
 
@@ -81,6 +81,8 @@ collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_t58vj")
 sprint_enabled = true
+move_sounds_enabled = true
+footstep_sounds = Array[String](["res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg"])
 enable_inventory = true
 
 [node name="Commands" type="Node" parent="."]
@@ -118,12 +120,16 @@ target_position = Vector3(0, 0, -3)
 collision_mask = 13
 
 [node name="PlayerHand" type="Marker3D" parent="PlayerHead/PlayerRecoil"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.335298, -0.205243, -0.605841)
 
 [node name="LookAtTarget" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, 0)
 
 [node name="SpawnerMarker" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.91886, -0.818888)
+
+[node name="ItemMarker" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53463, -0.453807)
 
 [node name="CollisionBodyCapsule" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0386829, 0)

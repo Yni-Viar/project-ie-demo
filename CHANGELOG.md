@@ -1,3 +1,5 @@
+# ⚠️ VERSIONS BELOW v0.0.7.4 ARE REMOVED ENTIRELY (and became lost media), DUE TO POSSIBLE COPYRIGHT PROBLEMS.
+
 # v0.0.8.2
 
 - Added new in-game console (old console was deleted earlier in older versions, because of license issues).

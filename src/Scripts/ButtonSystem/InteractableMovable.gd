@@ -1,5 +1,7 @@
 extends AnimatableBody3D
 class_name InteractableMovable
+## Made by Yni, licensed under CC0.
+## A AnimatableBody, that can be interacted.
 
 @export var has_sound: bool
 @export var sound_path: String

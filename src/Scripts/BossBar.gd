@@ -1,5 +1,6 @@
 extends Control
 class_name BossBar
+## Made by Yni, licensed under CC0.
 
 var id: int = -1
 

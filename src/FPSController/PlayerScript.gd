@@ -1,5 +1,6 @@
 extends CharacterBody3D
 ## Made by Yni, licensed under CC0
+## First-person player script.
 class_name PlayerScript
 
 const SPEED = 4.5
@@ -30,6 +31,7 @@ const JUMP_VELOCITY = 4
 @onready var ray = $PlayerHead/PlayerRecoil/RayCast3D
 @onready var walk_sounds = $WalkSounds
 @onready var interact_sound = $InteractSound
+var anim_player: AnimationPlayer
 
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var is_sprinting: bool = false
@@ -39,10 +41,12 @@ var motion_enabled = true
 
 func _ready() -> void:
 	ray.add_exception(self)
-	
+	# Apply custom SSAO, if the renderer is not Forward Plus
 	if RenderingServer.get_current_rendering_method() != "forward_plus":
 		if Settings.setting_res.ssao:
 			apply_shader("SSAOShader", true)
+	if get_node_or_null("AnimationPlayer") != null:
+		anim_player = $AnimationPlayer
 
 ## Mouse rotation
 func _input(event: InputEvent) -> void:
@@ -53,9 +57,10 @@ func _input(event: InputEvent) -> void:
 		var player_rotation = $PlayerHead.rotation_degrees
 		player_rotation.x = clamp($PlayerHead.rotation_degrees.x, -85, 85)
 		$PlayerHead.rotation_degrees = player_rotation
-	
+	# Legacy code
 	if Input.is_action_just_pressed("mode_kinematic"):
 		get_parent().get_node("PlayerUI").visible = !get_parent().get_node("PlayerUI").visible
+	# End legacy code
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -67,20 +72,34 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction && can_move && motion_enabled:
 		if Input.is_action_pressed("move_sprint"):
 			velocity.x = direction.x * SPEED * 2
 			velocity.z = direction.z * SPEED * 2
+			is_sprinting = true
+			is_walking = false
+			if anim_player != null:
+				if !anim_player.is_playing():
+					anim_player.play("Walk", -1, 2)
 		else:
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
+			is_sprinting = false
+			is_walking = true
+			if anim_player != null:
+				if !anim_player.is_playing():
+					anim_player.play("Walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-	
+		is_sprinting = false
+		is_walking = false
+		if anim_player != null:
+			if anim_player.is_playing():
+				anim_player.stop()
+	# Interactions
 	if Input.is_action_just_pressed("interact_alt") && !using_item.is_empty():
 		var check = get_node_or_null(using_item)
 		if check != null:
@@ -105,44 +124,45 @@ func _physics_process(delta: float) -> void:
 				collided_with.call("interact_alt", self)
 			elif collided_with is InteractableRigidBody:
 				collided_with.call("interact_alt", self)
-	
+	# Healthbar value set. Currently, it is useless feature, since v0.0.7.2 hided the healthbar.
 	get_parent().get_node("PlayerUI/HealthBar").value = ceil(current_health[0])
-
+	
 	move_and_slide()
 
-func hold_item(item_id: int):
-	if item_id >= 0 && item_id < get_tree().root.get_node("Game").game_data.items.size():
-		var check = get_node("PlayerModel").get_child(0)
-		if check == null:
-			return
-		#var path = str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand"
-		#if check.get_node_or_null(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand") != null && !is_multiplayer_authority():
-			#$PlayerHead/PlayerRecoil/PlayerHand.hide()
+#unused
+#func hold_item(item_id: int):
+	#if item_id >= 0 && item_id < get_tree().root.get_node("Game").game_data.items.size():
+		#var check = get_node("PlayerModel").get_child(0)
+		#if check == null:
+			#return
+		##var path = str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand"
+		##if check.get_node_or_null(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand") != null && !is_multiplayer_authority():
+			##$PlayerHead/PlayerRecoil/PlayerHand.hide()
+			##var path_to_item_hold: Marker3D = check.get_node(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand")
+			##for node in path_to_item_hold.get_children():
+				##node.queue_free()
+			##var pickable: ItemPickable = load(get_tree().root.get_node("Main/Game").game_data.items[item_id].pickable).instantiate()
+			##pickable.freeze = true
+			##path_to_item_hold.add_child(pickable)
+		##else:
+			##$PlayerHead/PlayerRecoil/PlayerHand.show()
+		#if $PlayerHead/PlayerRecoil/PlayerHand.visible:
+			#for node in $PlayerHead/PlayerRecoil/PlayerHand.get_children():
+				#node.queue_free()
+			#var item_use: ItemUse = load(get_tree().root.get_node("Game").game_data.items[item_id].first_person_prefab_path).instantiate()
+			#item_use.one_time_use = get_tree().root.get_node("Game").game_data.items[item_id].one_time_use
+			#item_use.index = item_id
+			#$PlayerHead/PlayerRecoil/PlayerHand.add_child(item_use)
+	#else:
+		#var check = get_node("PlayerModel").get_child(0)
+		#if check == null:
+			#return
+		#if check.get_node_or_null(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand") != null:
 			#var path_to_item_hold: Marker3D = check.get_node(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand")
 			#for node in path_to_item_hold.get_children():
 				#node.queue_free()
-			#var pickable: ItemPickable = load(get_tree().root.get_node("Main/Game").game_data.items[item_id].pickable).instantiate()
-			#pickable.freeze = true
-			#path_to_item_hold.add_child(pickable)
-		#else:
-			#$PlayerHead/PlayerRecoil/PlayerHand.show()
-		if $PlayerHead/PlayerRecoil/PlayerHand.visible:
-			for node in $PlayerHead/PlayerRecoil/PlayerHand.get_children():
-				node.queue_free()
-			var item_use: ItemUse = load(get_tree().root.get_node("Game").game_data.items[item_id].first_person_prefab_path).instantiate()
-			item_use.one_time_use = get_tree().root.get_node("Game").game_data.items[item_id].one_time_use
-			item_use.index = item_id
-			$PlayerHead/PlayerRecoil/PlayerHand.add_child(item_use)
-	else:
-		var check = get_node("PlayerModel").get_child(0)
-		if check == null:
-			return
-		if check.get_node_or_null(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand") != null:
-			var path_to_item_hold: Marker3D = check.get_node(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand")
-			for node in path_to_item_hold.get_children():
-				node.queue_free()
-		for node in $PlayerHead/PlayerRecoil/PlayerHand.get_children():
-			node.queue_free()
+		#for node in $PlayerHead/PlayerRecoil/PlayerHand.get_children():
+			#node.queue_free()
 
 ## Animation-based footstep system.
 func footstep_animate():
@@ -155,7 +175,10 @@ func footstep_animate():
 ## Make footstep sounds audible to all.
 func play_footstep_sound(sprinting: bool):
 	if sprinting:
-		walk_sounds.stream = load(sprint_sounds[rng.randi_range(0, sprint_sounds.size() - 1)])
+		if sprint_sounds.size() == 0:
+			walk_sounds.stream = load(footstep_sounds[rng.randi_range(0, footstep_sounds.size() - 1)])
+		else:
+			walk_sounds.stream = load(sprint_sounds[rng.randi_range(0, sprint_sounds.size() - 1)])
 		walk_sounds.play()
 	else:
 		walk_sounds.stream = load(footstep_sounds[rng.randi_range(0, footstep_sounds.size() - 1)])
@@ -170,6 +193,7 @@ func health_manage(amount: float, type_of_health: int, deplete_reason: String):
 	else:
 		current_health[type_of_health] == health[type_of_health]
 	if current_health[type_of_health] <= 0:
+		get_tree().root.get_node("Game").game_over(0)
 		pass
 
 ##s Applies shader to the player

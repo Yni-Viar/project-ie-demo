@@ -1,5 +1,7 @@
 extends PathFollow3D
 class_name PathWalker
+## Made by Yni, licensed under MIT License.
+## Vacuum cleaner function.
 
 @export var enable_interact: bool = true
 var enabled: bool = true
@@ -22,14 +24,17 @@ func _physics_process(delta):
 		progress_ratio += 0.005 * delta
 	if transition:
 		if enabled:
+			# stop moving
 			progress_ratio += move_toward(0.005, 0, delta) * delta
 			$Sound.volume_db = move_toward(0, -10, delta) * delta
 			counter += 1
 		else:
+			# start moving
 			progress_ratio += move_toward(0, 0.005, delta) * delta
 			$Sound.volume_db = move_toward(-10, 0, delta) * delta
 			counter += 1
 		if counter == 5:
+			# change values on stopping/starting
 			enabled = !enabled
 			$Sound.playing = !$Sound.playing
 			counter = 0

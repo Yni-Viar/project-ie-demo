@@ -1,6 +1,7 @@
 extends StaticBody3D
 class_name PathWalkerHelper
-
+## Made by Yni, licensed under MIT License.
+## Vacuum cleaner toggle.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -17,6 +17,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+## Adds item
 func add_item(item_id: int):
 	var item_prefab: InventorySlot = InventorySlot.new()
 	item_prefab.item_id = item_id
@@ -32,6 +33,7 @@ func add_item(item_id: int):
 	# If there is no place - no item will be picked
 	item_remove(item_prefab, true)
 
+## Move item
 func item_move(prefab: InventorySlot, pos: Vector2) -> bool:
 	pos = pos.snappedf(tile_size)
 	var prev_pos = prefab.position
@@ -45,11 +47,14 @@ func item_move(prefab: InventorySlot, pos: Vector2) -> bool:
 			return false
 	return true
 
+## Removes item
 func item_remove(item: InventorySlot, drop: bool) -> bool:
 	for i in _items:
 		if i == item:
 			if drop:
-				# Create drop item mechanic
+				var pickable: Node3D = load(game_data.items[i.item_id].pickable_path).instantiate()
+				pickable.position = get_tree().root.get_node("Game/Player/ItemMarker").global_position
+				get_tree().root.get_node("Game/MapObjects").add_child(pickable)
 				pass
 			_items.erase(i)
 			i.queue_free()
@@ -63,8 +68,8 @@ func use_item(item: InventorySlot):
 	# write usage mechanic
 
 ## the item could be dropped only inside inventory
-func _can_drop_data(at_position, data):
+func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	return true
 
-func _drop_data(at_position, data):
+func _drop_data(at_position: Vector2, data: Variant) -> void:
 	item_move(data, at_position)

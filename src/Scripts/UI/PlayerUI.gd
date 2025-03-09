@@ -1,4 +1,5 @@
 extends Control
+## Made by Yni, licensed under MIT License.
 
 var special_screen: Array = [false, ""]
 var speaker_prefab: InteractableNpc
@@ -35,16 +36,6 @@ func _input(event):
 func input_values(state: String):
 	button_busy = true
 	match state:
-		#"console":
-			#if !special_screen:
-				#get_tree().root.get_node("Game/InGameConsole").visible = true
-				#special_screen = true
-			#else:
-				#get_tree().root.get_node("Game/InGameConsole").visible = false
-				#special_screen = false
-			
-			# See: https://softwareengineering.stackexchange.com/questions/147111/what-is-wrong-with-the-unlicense
-			# The ingame terminal was licensed under this license
 		"exitgame":
 			if special_screen[1] != "exitgame":
 				$PauseMenu.show()

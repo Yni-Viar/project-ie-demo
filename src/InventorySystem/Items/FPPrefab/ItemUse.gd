@@ -1,5 +1,7 @@
 extends Node3D
 class_name ItemUse
+## Made by Yni, licensed under CC0
+## Generic first-person items. They are not present in this demo.
 
 var enable_using = true
 @export var one_time_use: bool

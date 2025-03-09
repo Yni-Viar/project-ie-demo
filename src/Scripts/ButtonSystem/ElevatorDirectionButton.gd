@@ -1,4 +1,6 @@
 extends InteractableStatic
+## Made by Yni, licensed under CC0.
+## Unused in this demo. This is a legacy code, dating back to TGPY and SCP: Site Online
 
 enum Direction {down, up}
 @export var elevator_direction: Direction = Direction.up

@@ -1,11 +1,18 @@
 extends Node3D
 class_name DoorBase
+## Made by Yni, licensed under MIT License.
 
+## The player can open the door.
 @export var can_open: bool = true
+## The door is actually opened.
 @export var is_opened: bool = false
-@export var can_manual_open: bool = true
+# WTF? Why I duplicated the can_open function?
+#@export var can_manual_open: bool = true
+## Enables door sound
 @export var enable_sound: bool = true
+## Door open sound variations
 @export var open_door_sounds: Array[String]
+## Door close sound variations
 @export var close_door_sounds: Array[String]
 
 # Called when the node enters the scene tree for the first time.
@@ -22,8 +29,8 @@ func _ready():
 	#pass
 
 ## Main control method, which checks - is the door opened.
-func door_control(player_path: String, keycard: int, check_key: bool = false, manual: bool = false):
-	if can_open && (manual && can_manual_open != !manual):
+func door_control(player_path: String, keycard: int, check_key: bool = false): #, manual: bool = false):
+	if can_open: # && (manual && can_manual_open != !manual):
 		if (check_key && check_keycard(player_path, keycard)) != !check_key:
 			door_controller(keycard)
 	#else:

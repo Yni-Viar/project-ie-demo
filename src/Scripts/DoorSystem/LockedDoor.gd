@@ -1,4 +1,5 @@
 extends DoorBase
+## Made by Yni, licensed under CC0.
 
 @export var keycard: int
 @export var unlock_sound: AudioStream

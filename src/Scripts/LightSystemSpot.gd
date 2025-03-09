@@ -1,5 +1,6 @@
 extends SpotLight3D
 class_name LightSystemSpot
+## Made by Yni, licensed under MIT License.
 
 @export var min_light_energy: float = 0.2
 @export var max_light_energy: float = 1
@@ -13,8 +14,14 @@ func turn_lights_on():
 	light_energy = max_light_energy
 
 func _ready():
+	# Hide, if lights are disabled
+	if !Settings.setting_res.enable_lights:
+		hide()
+		set_process(false)
+		set_physics_process(false)
 	if Settings.setting_res.game_optimizator <= 1:
 		set_process(false)
 		set_physics_process(false)
+	# Disable shadows, if they exist and the relevant setting is off.
 	if !Settings.setting_res.enable_light_shadows && shadow_enabled:
 		shadow_enabled = false

@@ -119,6 +119,7 @@ func _on_glow_set_toggled(toggled_on):
 		Settings.setting_res.glow = false
 	#Settings.save_setting("glow", Settings.fullscreen)
 
+## Check the availability of render functions.
 func graphic_device_check():
 	if RenderingServer.get_current_rendering_method() == "forward_plus":
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.disabled = false

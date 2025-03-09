@@ -1,4 +1,5 @@
 extends InteractableRigidBody
+## Made by Yni, licensed under CC0.
 
 @export var keycard: int
 

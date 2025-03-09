@@ -1,6 +1,8 @@
 @icon("res://Scripts/ElevatorSystem/elevator_node.svg")
 extends Node3D
 class_name ElevatorSystem
+## Made by Yni, licensed under MIT License.
+## Elevator system
 
 ## Launch or stop
 signal changed_launch_state(start: bool)

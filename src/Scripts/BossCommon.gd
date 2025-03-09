@@ -1,19 +1,29 @@
 extends CharacterBody3D
 class_name BossCommon
+## Made by Yni, licensed under MIT License.
+## Unused. This is modified TGPY code.
 
 signal defeated
 signal health_changed(current_health: int)
 
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
+## Boss name
 @export var boss_name: String = ""
+## Boss health
 @export var health: float
+## Check if boss has abilities.
 @export var has_abilities: bool = false
+## Abilities cooldown.
 @export var abilities_cooldown: float
-@export var target: Array[String]
-@export var current_target: String = ""
+# TGPY multiplayer remnants
+#@export var target: Array[String]
+#@export var current_target: String = ""
+## Check if the boss is inactive (NOT defeated)
 @export var dormant: bool = true
-@export var boss_music_id: int = -1
-@export var after_boss_music_id: int = -1
+# Old removed API.
+# @export var boss_music_id: int = -1
+# @export var after_boss_music_id: int = -1
+## Boss id.
 @export var boss_id: int = -1
 
 
@@ -37,7 +47,7 @@ func boss_appear(body):
 	#get_tree().root.get_node("Game/PlayerUI/BossContainer/ProgressBar").max_value = health
 	#get_tree().root.get_node("Game/PlayerUI/BossContainer/ProgressBar").value = health
 	#get_tree().root.get_node("Game/PlayerUI/BossContainer").show()
-	get_tree().root.get_node("Game").set_background_music(get_tree().root.get_node("Main/Game").music_to_play[boss_music_id])
+	#get_tree().root.get_node("Game").set_background_music(get_tree().root.get_node("Main/Game").music_to_play[boss_music_id])
 	
 
 func boss_dissapear(body):
@@ -46,4 +56,4 @@ func boss_dissapear(body):
 		if "id" in node:
 			if node.id == boss_id:
 				node.queue_free()
-	get_tree().root.get_node("Game").set_background_music(get_tree().root.get_node("Main/Game").music_to_play[after_boss_music_id])
+	#get_tree().root.get_node("Game").set_background_music(get_tree().root.get_node("Main/Game").music_to_play[after_boss_music_id])

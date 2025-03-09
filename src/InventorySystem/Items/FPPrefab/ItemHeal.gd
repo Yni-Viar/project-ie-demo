@@ -1,4 +1,6 @@
 extends ItemUse
+## Made by Yni, licensed under CC0
+## Unused script. Used for healing items.
 
 @export var amount: float = 20
 @export var type_of_health: int = 0

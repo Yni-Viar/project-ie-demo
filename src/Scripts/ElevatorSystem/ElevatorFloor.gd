@@ -1,6 +1,7 @@
 @icon("res://Scripts/ElevatorSystem/elevator_resource.svg")
 extends Resource
 class_name ElevatorFloor
+## Made by Yni, licensed under MIT License.
 
 @export var destination_point: String
 @export var up_helper_point: String

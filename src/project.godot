@@ -203,7 +203,10 @@ locale/translations=PackedStringArray("res://Translations/mainmenu.en.translatio
 
 [physics]
 
+common/physics_ticks_per_second=30
+common/physics_jitter_fix=0.0
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
 
 [rendering]
 

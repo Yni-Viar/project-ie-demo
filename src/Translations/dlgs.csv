@@ -9,7 +9,7 @@ DLG_TEST_1_5,Okay... Maybe in a spare time?,Хорошо... Может быть 
 DLG_TEST_1_5a,Of course!,Конечно!
 DLG_TEST_1_6,... you hear an strange voice...,... ты слышишь странный голос ...
 DLG_TEST_1_7,"You won't go for a work today.\nYou are in unstable real virtuality, you cannot go out from you home...","К сожалению, ты не пойдешь сегодня на работу.\nТы в нестабильной реальной виртуальности, так что ты не можешь выйти из дома..."
-DLG_TEST_1_8,Yni Viar just wanted to showcase this demo...,Ини Виар хотел показать тебе это демо...
+DLG_TEST_1_8,Yni Viar just wanted to showcase this demo...,Yni Viar хотел показать тебе это демо...
 DLG_TEST_1_9,What was that?,Что это было?
 DLG_TEST_2_1,Did you hear that voice?,Ты слышала этот голос?
 DLG_TEST_2_2,Yes... I feel strange.,Да... Я чувствую себя странно...
@@ -18,8 +18,8 @@ DLG_TEST_3_1,"Very strange... We did not find the voice source, also the exit is
 DLG_TEST_3_2,"You cannot find me, since I live... in other world.","Вы не сможете найти меня, так как я... в другом мире."
 DLG_TEST_3_2a,Who are you?,Кто ты?
 DLG_TEST_3_2b,How can you speak in our world? (continue),Как ты можешь говорить в наш мир?
-DLG_TEST_3_3,Yni Viar told me to not spoil my name (as for now),"Ини Виар не хотел бы, чтобы я сейчас раскрыла своё имя (пока что)"
+DLG_TEST_3_3,Yni Viar told me to not spoil my name (as for now),"Yni Viar не хотел бы, чтобы я сейчас раскрыла своё имя (пока что)"
 DLG_TEST_3_4,I live in the center of all available worlds... And I can retranslate my voice to any world.,Я живу в центре всех доступных миров... И я могу ретранслировать мой голос в любой из этих миров.
 DLG_TEST_3_5,"As you can see, you cannot go out...","Как вы можете заметить, вы не сможете отсюда выйти."
-DLG_TEST_3_6,"But you don't need in energy now, since I created this virtual reality by Yni's request.","Но зато вы теперь не нуждаетесь в энергии, поскольку я специально создала этот мир по просьбе Ини."
+DLG_TEST_3_6,"But you don't need in energy now, since I created this virtual reality by Yni's request.","Но зато вы теперь не нуждаетесь в энергии, поскольку я специально создала этот мир по просьбе Yni."
 DLG_TEST_3_7,"I can say, that you completed this demo (since there is no win screen)","Я хочу сказать, что вы прошли это демо (так как нет экрана победы)"

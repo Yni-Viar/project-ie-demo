@@ -1,11 +1,15 @@
 extends Control
+## Made by Yni, licensed under MIT License.
 
 var play_info_toggle: bool
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# Release the mouse!
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	# If NOT Web platform - check for touchscreen.
 	if OS.get_name() != "Web":
 		Settings.touchscreen = DisplayServer.is_touchscreen_available()
+	# Set the background
 	match Settings.CURRENT_STAGE:
 		Settings.Stages.release:
 			get_node("Background").texture = load("res://Assets/Menu/MainMenuBackground.png")
@@ -15,8 +19,10 @@ func _ready():
 			get_node("Background").texture = load("res://Assets/Menu/MainMenuBackgroundIndev.png")
 	
 	#get_window().size = Settings.setting_res.window_size[Settings.setting_res.ui_window_size]
+	# Set the region (needed for obeying contries' laws)
 	Settings.region = OS.get_locale()
 	
+	# Settings
 	AudioServer.set_bus_volume_db(0, linear_to_db(Settings.setting_res.sound))
 	if Settings.setting_res.sound < 0.01:
 		AudioServer.set_bus_mute(0, true)
@@ -29,6 +35,7 @@ func _ready():
 	elif Settings.setting_res.sound >= 0.01 && AudioServer.is_bus_mute(1):
 		AudioServer.set_bus_mute(1, false)
 	
+	# Hide the Exit and Settings buttons on the Web
 	if OS.get_name() == "Web":
 		$Title/Exit.hide()
 		$Title/Settings.hide()
