@@ -21,7 +21,7 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material",
+			"name":"Material.001",
 			"normalTexture":{
 				"index":0
 			},
@@ -86,61 +86,61 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":15672,
+			"count":4673,
 			"max":[
-				0.1810055524110794,
+				0.18091703951358795,
 				-1.9209180379675672e-07,
-				0.1810055673122406
+				0.18091705441474915
 			],
 			"min":[
-				-0.18100552260875702,
+				-0.18091702461242676,
 				-0.5960491299629211,
-				-0.1810055375099182
+				-0.18091708421707153
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":15672,
+			"count":4673,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":15672,
+			"count":4673,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":88488,
+			"count":24441,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":188064,
+			"byteLength":56076,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":188064,
-			"byteOffset":188064,
+			"byteLength":56076,
+			"byteOffset":56076,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":125376,
-			"byteOffset":376128,
+			"byteLength":37384,
+			"byteOffset":112152,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":176976,
-			"byteOffset":501504,
+			"byteLength":48882,
+			"byteOffset":149536,
 			"target":34963
 		}
 	],
@@ -152,7 +152,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":678480,
+			"byteLength":198420,
 			"uri":"3D_lamp_11-kwi.bin"
 		}
 	]

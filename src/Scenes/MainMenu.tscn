@@ -130,16 +130,15 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.8.3[/b] (Demo)
-- (Backend) Updated renderer check by using new Godot 4.4 function.
-- Workaround a navigation bug, where Julia could pass through bathroom door.
-- Player can now remove items from inventory!
-- Added footstep sounds (they are quiet, but still can be heared (especially in house hall))
-- Added my own 2-color shader as a photomode.
+text = "[b]v.0.0.8.4[/b] (Demo)
+- Added [ REDACTED ].
+- (Android) Player can now use alternative interaction (such as dropping a toy on the floor) as long touch.
+- Fix missing keymap action.
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL
 - Photomode can glitch out, if the player goes too close to the wall.
+- If player is holding ActionPickable-derived items (Inventory FPS items are not implemented), going close to the wall make items clip through walls
 "
 
 [node name="Logo" type="TextureRect" parent="."]
