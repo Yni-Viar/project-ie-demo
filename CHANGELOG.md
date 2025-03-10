@@ -1,5 +1,11 @@
 # ⚠️ VERSIONS BELOW v0.0.7.4 ARE REMOVED ENTIRELY (and became lost media), DUE TO POSSIBLE COPYRIGHT PROBLEMS.
 
+# v0.0.8.4
+
+- Added 3rd easter egg.
+- (Android) Player can now use alternative interaction (such as dropping a toy on the floor) as long touch.
+- Fix missing keymap action.
+
 # v0.0.8.3
 
 - (Backend) Updated renderer check by using new Godot 4.4 function.
