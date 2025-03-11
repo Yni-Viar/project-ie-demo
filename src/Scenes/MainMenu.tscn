@@ -130,10 +130,9 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.8.4[/b] (Demo)
-- Added [ REDACTED ].
-- (Android) Player can now use alternative interaction (such as dropping a toy on the floor) as long touch.
-- Fix missing keymap action.
+text = "[b]v.0.0.8.5[/b] (Demo)
+- (Android) fixed SSAO removing hair from Julia (:D)
+- Renamed the app to the actual name.
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL

@@ -140,6 +140,12 @@ theme = ExtResource("3_2qins")
 theme_override_font_sizes/font_size = 24
 text = "SSAO"
 
+[node name="SSAOAndroidWarning" type="Label" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "SSAO_ANDROID_WARNING"
+
 [node name="SSILSet" type="CheckButton" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
 layout_mode = 2
 theme = ExtResource("3_2qins")

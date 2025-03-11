@@ -135,7 +135,9 @@ func graphic_device_check():
 		$ScrollContainer/HBoxContainer/Page1/FogSet.show()
 		$ScrollContainer/HBoxContainer/Page1/VSyncSet.show()
 		Settings.current_graphic_device = 2
-	else: #ProjectSettings.get_setting("rendering/renderer/rendering_method") == "gl_compatibility":
+	else: #ProjectSettings.get_setting("rendering/renderer/rendering_method") == "gl_compatibility":\
+		if OS.get_name() == "Android":
+			$ScrollContainer/HBoxContainer/Page1/SSAOAndroidWarning.show()
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.button_pressed = false
 		#$ScrollContainer/HBoxContainer/Page1/SSAOSet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.button_pressed = false

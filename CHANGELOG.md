@@ -1,5 +1,10 @@
 # ⚠️ VERSIONS BELOW v0.0.7.4 ARE REMOVED ENTIRELY (and became lost media), DUE TO POSSIBLE COPYRIGHT PROBLEMS.
 
+# v0.0.8.5
+
+- (Android) fixed SSAO removing hair from Julia (:D)
+- Renamed the app to the actual name.
+
 # v0.0.8.4
 
 - Added 3rd easter egg.
