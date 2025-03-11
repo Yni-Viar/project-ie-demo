@@ -55,6 +55,7 @@ height = 0.784504
 radius = 0.451349
 
 [node name="3D_chair_4" type="RigidBody3D"]
+collision_layer = 8
 script = ExtResource("1_yjy45")
 
 [node name="Chair_4" type="MeshInstance3D" parent="."]

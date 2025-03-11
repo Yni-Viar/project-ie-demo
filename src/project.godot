@@ -13,7 +13,7 @@ config_version=5
 config/name="Internal Eternal Demo"
 config/description="Public showcase (and a benchmark) for various platforms.
 Contains content for upcoming game."
-config/version="0.0.8.5"
+config/version="0.0.8.6"
 config/tags=PackedStringArray("demo", "game", "singleplayer")
 run/main_scene="res://Scenes/Main.tscn"
 config/use_custom_user_dir=true

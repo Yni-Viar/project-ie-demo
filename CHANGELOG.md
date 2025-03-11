@@ -1,5 +1,9 @@
 # ⚠️ VERSIONS BELOW v0.0.7.4 ARE REMOVED ENTIRELY (and became lost media), DUE TO POSSIBLE COPYRIGHT PROBLEMS.
 
+# v0.0.8.6
+
+- Fixed chance of falling out of bounds when holding chair.
+
 # v0.0.8.5
 
 - (Android) fixed SSAO removing hair from Julia (:D)
