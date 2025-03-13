@@ -1,5 +1,12 @@
 # ⚠️ VERSIONS BELOW v0.0.7.4 ARE REMOVED ENTIRELY (and became lost media), DUE TO POSSIBLE COPYRIGHT PROBLEMS.
 
+# v0.0.8.7
+
+- Added MSAA toggle-off, also disabled MSAA on Android
+- Added resolution scaling.
+- Added ability to make screnshots (PC only).
+- Player now holds ActionItems with left hand.
+
 # v0.0.8.6
 
 - Fixed chance of falling out of bounds when holding chair.

@@ -136,8 +136,11 @@ mesh = SubResource("QuadMesh_1kpcn")
 target_position = Vector3(0, 0, -3)
 collision_mask = 13
 
-[node name="PlayerHand" type="Marker3D" parent="PlayerHead/PlayerRecoil"]
+[node name="PlayerRightHand" type="Marker3D" parent="PlayerHead/PlayerRecoil"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.335298, -0.205243, -0.605841)
+
+[node name="PlayerLeftHand" type="Marker3D" parent="PlayerHead/PlayerRecoil"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.327505, -0.205243, -0.605841)
 
 [node name="LookAtTarget" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, 0)

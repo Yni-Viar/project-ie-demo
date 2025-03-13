@@ -47,3 +47,7 @@ class_name SettingsResource
 @export var planar_reflections: bool = false
 ## Enable lighting (Only LightSystemOmni and LightSystemSpot)
 @export var enable_lights: bool = true
+## Enable or disable MSAA.
+@export var msaa: bool = false
+## Resolution scale
+@export var resolution_scale: float = 1.0

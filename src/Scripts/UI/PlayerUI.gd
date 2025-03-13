@@ -34,6 +34,9 @@ func _input(event):
 	if Input.is_action_just_pressed("human_inventory"):
 		input_values("inventory")
 		button_busy = false
+	if Input.is_action_just_pressed("save_screenshot"):
+		input_values("screenshot")
+		button_busy = false
 
 func input_values(state: String):
 	button_busy = true
@@ -87,6 +90,14 @@ func input_values(state: String):
 			if special_screen[1] == "photomode":
 				special_screen[0] = false
 				special_screen[1] = ""
+		"screenshot":
+			#saving in Web... I think, it is unsafe.
+			#saving in Android is useless, since no one except this app can read these screenshots...
+			if OS.get_name() != "Web" || OS.get_name() != "Android":
+				var time: String = Time.get_datetime_string_from_system().replace(":", "-")
+				var image = get_viewport().get_texture().get_image()
+				var path: String = "user://" + time + ".png"
+				image.save_png(path)
 
 func speak(dlg_path: String, dlg_start_id: String, speaker_nodepath: String):
 	if !$DialogueBox.is_running():

@@ -25,3 +25,4 @@ camera_field_of_view = 75.0
 game_optimizator = 0
 planar_reflections = false
 enable_lights = false
+msaa = false

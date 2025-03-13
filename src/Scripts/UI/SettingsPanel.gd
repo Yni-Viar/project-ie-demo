@@ -12,12 +12,17 @@ func _ready():
 	$ScrollContainer/HBoxContainer/Page1/FogSet.button_pressed = Settings.setting_res.fog
 	$ScrollContainer/HBoxContainer/Page2/MusicSet.value = Settings.setting_res.music
 	$ScrollContainer/HBoxContainer/Page2/SoundSet.value = Settings.setting_res.sound
+	$ScrollContainer/HBoxContainer/Page1/MSAA.button_pressed = Settings.setting_res.msaa
+	$ScrollContainer/HBoxContainer/Page1/Lights.button_pressed = Settings.setting_res.enable_lights
+	$ScrollContainer/HBoxContainer/Page1/LightShadows.button_pressed = Settings.setting_res.enable_light_shadows
+	$ScrollContainer/HBoxContainer/Page1/ReflectionProbesSet.button_pressed = Settings.setting_res.reflection_probes
 	$ScrollContainer/HBoxContainer/Page1/FullscreenSet.button_pressed = Settings.setting_res.fullscreen
 	$ScrollContainer/HBoxContainer/Page2/MouseSensSet.value = Settings.setting_res.mouse_sensitivity
+	$ScrollContainer/HBoxContainer/Page1/VSyncSet.button_pressed = Settings.setting_res.vsync
 	# 9 is Window Size in pixels
 	$ScrollContainer/HBoxContainer/Page1/LanguageSet.selected = Settings.setting_res.ui_language
 	$ScrollContainer/HBoxContainer/Page1/GlowSet.button_pressed = Settings.setting_res.glow
-	
+	$ScrollContainer/HBoxContainer/Page1/ResolutionScale.value = Settings.setting_res.resolution_scale
 	$ScrollContainer/HBoxContainer/Page1/WindowSizeSet.selected = Settings.setting_res.ui_window_size
 	#$ScrollContainer/VBoxContainer/GraphicDeviceSet.selected = Settings.renderer
 	graphic_device_check()
@@ -138,6 +143,10 @@ func graphic_device_check():
 	else: #ProjectSettings.get_setting("rendering/renderer/rendering_method") == "gl_compatibility":\
 		if OS.get_name() == "Android":
 			$ScrollContainer/HBoxContainer/Page1/SSAOAndroidWarning.show()
+			# disable MSAA on Android, due to lower-end devices not supporting it.
+			$ScrollContainer/HBoxContainer/Page1/MSAA.button_pressed = false
+			$ScrollContainer/HBoxContainer/Page1/MSAA.disabled = true
+			$ScrollContainer/HBoxContainer/Page1/MSAA.hide()
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.button_pressed = false
 		#$ScrollContainer/HBoxContainer/Page1/SSAOSet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.button_pressed = false
@@ -209,3 +218,18 @@ func _on_lights_toggled(toggled_on: bool) -> void:
 		Settings.setting_res.enable_lights = true
 	else:
 		Settings.setting_res.enable_lights = false
+
+
+func _on_msaa_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		Settings.setting_res.msaa = true
+		get_viewport().msaa_3d = Viewport.MSAA_2X
+	else:
+		Settings.setting_res.msaa = false
+		get_viewport().msaa_3d = Viewport.MSAA_DISABLED
+
+
+func _on_resolution_scale_drag_ended(value_changed: bool) -> void:
+	if value_changed:
+		Settings.setting_res.resolution_scale = $ScrollContainer/HBoxContainer/Page1/ResolutionScale.value
+		get_viewport().scaling_3d_scale = Settings.setting_res.resolution_scale

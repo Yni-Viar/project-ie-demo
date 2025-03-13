@@ -28,7 +28,7 @@ func _process(delta):
 	if player_prefab != null:
 		if player_prefab.using_item == str(get_path()):
 			# Follow player's position
-			global_position = get_tree().root.get_node("Game/Player/PlayerHead/PlayerRecoil/PlayerHand").global_position
+			global_position = get_tree().root.get_node("Game/Player/PlayerHead/PlayerRecoil/PlayerLeftHand").global_position
 
 func interact(player: Node3D):
 	if player.using_item != str(get_path()):

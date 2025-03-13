@@ -130,14 +130,17 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.8.6[/b] (Demo)
-- Fixed chance of falling out of bounds when holding chair.
+text = "[b]v.0.0.8.7[/b] (Demo)
+- Added MSAA toggle-off, also disabled MSAA on Android
+- Added resolution scaling.
+- Added ability to make screnshots (PC only).
+- Player now holds ActionItems with left hand.
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL
 - Photomode can glitch out, if the player goes too close to the wall.
 - If player is holding ActionPickable-derived items (Inventory FPS items are not implemented), going close to the wall make items clip through walls
-"
+- Some photomode effects may have glitches on some mobile devices."
 
 [node name="Logo" type="TextureRect" parent="."]
 layout_mode = 1

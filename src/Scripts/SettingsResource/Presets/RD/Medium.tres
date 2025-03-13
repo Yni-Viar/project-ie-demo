@@ -24,3 +24,5 @@ enable_light_shadows = true
 camera_field_of_view = 75.0
 game_optimizator = 1
 planar_reflections = true
+enable_lights = true
+msaa = true

@@ -43,6 +43,7 @@ func _ready():
 	#TranslationServer.set_locale(Settings.setting_res.available_languages[Settings.setting_res.ui_language])
 	Settings.first_start = false
 	
+	
 	# Display game ratings in main menu in some countries, this will replace the game logo.
 	if Settings.legal_req:
 		match Settings.region:

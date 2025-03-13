@@ -21,4 +21,5 @@ REFLECTION_PROBES,Reflection probes,Отражения (кубическая к�
 LIGHT_SHADOWS,Light shadows,Тени освещения
 LIGHT_SHADOWS_WARNING,"Setting ""Light shadows"" and ""Lights"" may affect not all lights","Настройка ""Тени освещения"" и ""Освещение"" может затронуть не все источники света"
 LIGHTS,Lights,Освещение
-SSAO_ANDROID_WARNING,Enabling SSAO on mobile devices may result in visual glitches.,Включение SSAO на мобильных устройствах может привести к визуальным глюкам.
+SSAO_ANDROID_WARNING,Enabling SSAO on some mobile devices may result in visual glitches.,Включение SSAO на некоторых мобильных устройствах может привести к визуальным глюкам.
+DYNAMIC_GI,Dynamic GI,Динамическое освещение.

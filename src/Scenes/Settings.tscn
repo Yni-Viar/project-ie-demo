@@ -171,6 +171,12 @@ theme_override_font_sizes/font_size = 24
 button_pressed = true
 text = "GLOW"
 
+[node name="MSAA" type="CheckButton" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
+layout_mode = 2
+theme = ExtResource("3_2qins")
+theme_override_font_sizes/font_size = 24
+text = "MSAA"
+
 [node name="Lights" type="CheckButton" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
 layout_mode = 2
 theme = ExtResource("3_2qins")
@@ -184,7 +190,7 @@ theme = ExtResource("3_2qins")
 theme_override_font_sizes/font_size = 24
 text = "LIGHT_SHADOWS"
 
-[node name="Label" type="Label" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
+[node name="LightSahdowWarning" type="Label" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 text = "LIGHT_SHADOWS_WARNING"
@@ -201,6 +207,19 @@ layout_mode = 2
 theme = ExtResource("3_2qins")
 theme_override_font_sizes/font_size = 24
 text = "VSYNC"
+
+[node name="ResolutionScaleLabel" type="Label" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "RESOLUTION_SCALING"
+
+[node name="ResolutionScale" type="HSlider" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
+layout_mode = 2
+theme = ExtResource("3_2qins")
+min_value = 0.25
+max_value = 1.0
+step = 0.25
+value = 1.0
 
 [node name="Page2" type="VBoxContainer" parent="SettingsPanel/ScrollContainer/HBoxContainer"]
 layout_mode = 2
@@ -284,10 +303,12 @@ As for now, \"Save\" button is deprecated."
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/SSRSet" to="SettingsPanel" method="_on_ssr_set_toggled"]
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/FogSet" to="SettingsPanel" method="_on_fog_set_toggled"]
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/GlowSet" to="SettingsPanel" method="_on_glow_set_toggled"]
+[connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/MSAA" to="SettingsPanel" method="_on_msaa_toggled"]
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/Lights" to="SettingsPanel" method="_on_lights_toggled"]
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/LightShadows" to="SettingsPanel" method="_on_light_shadows_toggled"]
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/ReflectionProbesSet" to="SettingsPanel" method="_on_reflection_probes_set_toggled"]
 [connection signal="toggled" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/VSyncSet" to="SettingsPanel" method="_on_v_sync_set_toggled"]
+[connection signal="drag_ended" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/ResolutionScale" to="SettingsPanel" method="_on_resolution_scale_drag_ended"]
 [connection signal="drag_ended" from="SettingsPanel/ScrollContainer/HBoxContainer/Page2/MusicSet" to="SettingsPanel" method="_on_music_set_drag_ended"]
 [connection signal="drag_ended" from="SettingsPanel/ScrollContainer/HBoxContainer/Page2/SoundSet" to="SettingsPanel" method="_on_sound_set_drag_ended"]
 [connection signal="drag_ended" from="SettingsPanel/ScrollContainer/HBoxContainer/Page2/MouseSensSet" to="SettingsPanel" method="_on_mouse_sens_set_drag_ended"]
