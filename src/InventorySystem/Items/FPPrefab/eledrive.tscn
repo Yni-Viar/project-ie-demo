@@ -53,10 +53,9 @@ shadow_mesh = SubResource("ArrayMesh_526ht")
 
 [node name="UsbDisk" type="Node3D"]
 script = ExtResource("1_bpcyi")
-index = 1
 
 [node name="Cube_001" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0539368, -0.0445585, 0.0274782, 0.0500948, 0.0324765, -0.045667, 0.0151994, 0.0510833, 0.0530015, 0.410763, 0.0129633, 0.00675088)
+transform = Transform3D(0.0539368, -0.0445585, 0.0274782, 0.0500948, 0.0324765, -0.045667, 0.0151994, 0.0510833, 0.0530015, 0, 0, 0)
 visibility_range_end = 256.0
 mesh = SubResource("ArrayMesh_jjabj")
 skeleton = NodePath("")

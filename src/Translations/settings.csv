@@ -7,11 +7,10 @@ INPUT,Input:,Ввод:
 MUSIC_SET,Music volume,Громкость музыки
 SOUND_SET,Sound volume (affects ALL sounds),Общая громкость
 SENS_SET,Mouse sensivity,Чувствительность мыши
-DYNAMIC_GI_SET,Dynamic GI,Динамичная графика (например свечение текстур)
 FOG_SET,"Volumetric fog toggle\n(if disabled, then standard fog appears instead of volumetric)","Объемная дымка\n(если отключено, применяется обычная дымка)"
-FULLSCREEN_SET,Fullscreen," Полный экран"
+FULLSCREEN_SET,Fullscreen,"Полный экран"
 GRAPHICS_DEFAULT_ENV,Default environment graphics,Графика окружения по умолчанию
-LANGUAGE_WARNING," ""The in-game text may be not translated if there is no translation file coming with the game"""," ""Если внутри игры не задан файл перевода то текст будет на изначальном языке!"""
+LANGUAGE_WARNING,"The in-game text may be not translated if there is no translation file coming with the game","Если внутри игры не задан файл перевода то текст будет на изначальном языке!"
 GLOW,Glow effect,Эффект свечения
 RESOLUTION,Screen resolution,Разрешение экрана
 GAMEPLAY,Gameplay,Геймплей
@@ -22,4 +21,7 @@ LIGHT_SHADOWS,Light shadows,Тени освещения
 LIGHT_SHADOWS_WARNING,"Setting ""Light shadows"" and ""Lights"" may affect not all lights","Настройка ""Тени освещения"" и ""Освещение"" может затронуть не все источники света"
 LIGHTS,Lights,Освещение
 SSAO_ANDROID_WARNING,Enabling SSAO on some mobile devices may result in visual glitches.,Включение SSAO на некоторых мобильных устройствах может привести к визуальным глюкам.
-DYNAMIC_GI,Dynamic GI,Динамическое освещение.
+DYNAMIC_GI,Dynamic GI,Динамическое освещение
+RESOLUTION_SCALING,Content resolution scaling,Настройка разрешения контента
+RESOLUTION_SCALING_INFO,The highest value is original quality.\nLower value will increase performance at the cost of render quality.,Наивысшее значение - оригинальное качество.\nЕсли установить значение ниже - производительность улучшится за счет качества рендера.
+VSYNC,V-Sync,Вертикальная синхронизация

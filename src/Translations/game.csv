@@ -2,7 +2,7 @@ keys,en,ru
 RETURN_TO_MENU,Exit to menu,Выход в меню
 RETURN_TO_GAME,Exit to game,Возврат к игре
 GIVE_UP,Give up,Сдаться
-QUICK_MANUAL,WASD - move\nE - interact/talk\nESC/F3 - Settings/Credits/Exit/Unfocus mouse\nF12 - Ingame screenshot (not available on Web version),WASD - двигаться\nE - взаимодействовать/говорить с NPC\nESC/F3 - Настройки/Титры/Выйти/Расфокусировать мышь\nF12 - Снимок экрана игры (недоступно в Web-версии)
+QUICK_MANUAL,WASD - move\nE - interact/talk\nESC/F3 - Settings/Credits/Exit/Unfocus mouse\nF12 - Ingame screenshot (PC only),WASD - двигаться\nE - взаимодействовать/говорить с NPC\nESC/F3 - Настройки/Титры/Выйти/Расфокусировать мышь\nF12 - Снимок экрана игры (только ПК)
 CITY_UNDER_SKY,The city will return... someday.,Город вернется... когда-нибудь.
 EXIT,Exit,Выход
 SETTINGS,Settings,Настройки

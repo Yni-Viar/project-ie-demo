@@ -1,5 +1,13 @@
 # ⚠️ VERSIONS BELOW v0.0.7.4 ARE REMOVED ENTIRELY (and became lost media), DUE TO POSSIBLE COPYRIGHT PROBLEMS.
 
+# v0.0.8.10
+
+- Changed to AgX tonemap, instead of Filmic.
+- Improved translation.
+- Inventory: items can be viewed in first-person!
+- Fog setting is hidden, due to uselessness.
+- Added 4rd easter egg.
+
 # v0.0.8.7
 
 - Added MSAA toggle-off, also disabled MSAA on Android

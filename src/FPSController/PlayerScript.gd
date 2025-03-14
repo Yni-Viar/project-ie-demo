@@ -129,40 +129,19 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-#unused
-#func hold_item(item_id: int):
-	#if item_id >= 0 && item_id < get_tree().root.get_node("Game").game_data.items.size():
-		#var check = get_node("PlayerModel").get_child(0)
-		#if check == null:
-			#return
-		##var path = str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand"
-		##if check.get_node_or_null(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand") != null && !is_multiplayer_authority():
-			##$PlayerHead/PlayerRecoil/PlayerHand.hide()
-			##var path_to_item_hold: Marker3D = check.get_node(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand")
-			##for node in path_to_item_hold.get_children():
-				##node.queue_free()
-			##var pickable: ItemPickable = load(get_tree().root.get_node("Main/Game").game_data.items[item_id].pickable).instantiate()
-			##pickable.freeze = true
-			##path_to_item_hold.add_child(pickable)
-		##else:
-			##$PlayerHead/PlayerRecoil/PlayerHand.show()
-		#if $PlayerHead/PlayerRecoil/PlayerHand.visible:
-			#for node in $PlayerHead/PlayerRecoil/PlayerHand.get_children():
-				#node.queue_free()
-			#var item_use: ItemUse = load(get_tree().root.get_node("Game").game_data.items[item_id].first_person_prefab_path).instantiate()
-			#item_use.one_time_use = get_tree().root.get_node("Game").game_data.items[item_id].one_time_use
-			#item_use.index = item_id
-			#$PlayerHead/PlayerRecoil/PlayerHand.add_child(item_use)
-	#else:
-		#var check = get_node("PlayerModel").get_child(0)
-		#if check == null:
-			#return
-		#if check.get_node_or_null(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand") != null:
-			#var path_to_item_hold: Marker3D = check.get_node(str(check.get_path()) + "/" + check.armature_name + "/Skeleton3D/ItemAttachment/ItemInHand")
-			#for node in path_to_item_hold.get_children():
-				#node.queue_free()
-		#for node in $PlayerHead/PlayerRecoil/PlayerHand.get_children():
-			#node.queue_free()
+## FPS inventory items.
+func hold_item(item_id: int):
+	if item_id >= 0 && item_id < get_tree().root.get_node("Game").game_data.items.size():
+		if $PlayerHead/PlayerRecoil/PlayerRightHand.visible:
+			for node in $PlayerHead/PlayerRecoil/PlayerRightHand.get_children():
+				node.queue_free()
+			var item_use: ItemUse = load(get_tree().root.get_node("Game").game_data.items[item_id].first_person_prefab_path).instantiate()
+			item_use.one_time_use = get_tree().root.get_node("Game").game_data.items[item_id].one_time_use
+			item_use.index = item_id
+			$PlayerHead/PlayerRecoil/PlayerRightHand.add_child(item_use)
+	else:
+		for node in $PlayerHead/PlayerRecoil/PlayerRightHand.get_children():
+			node.queue_free()
 
 ## Animation-based footstep system.
 func footstep_animate():

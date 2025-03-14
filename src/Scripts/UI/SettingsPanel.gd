@@ -2,29 +2,29 @@ extends Panel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for v in Settings.window_size:
-		$ScrollContainer/HBoxContainer/Page1/WindowSizeSet.add_item(str(v.x) + "x" + str(v.y))
-	
-	$ScrollContainer/HBoxContainer/Page1/VoxelGISet.button_pressed = Settings.setting_res.dynamic_gi
-	$ScrollContainer/HBoxContainer/Page1/SSAOSet.button_pressed = Settings.setting_res.ssao
-	$ScrollContainer/HBoxContainer/Page1/SSILSet.button_pressed = Settings.setting_res.ssil
-	$ScrollContainer/HBoxContainer/Page1/SSRSet.button_pressed = Settings.setting_res.ssr
-	$ScrollContainer/HBoxContainer/Page1/FogSet.button_pressed = Settings.setting_res.fog
-	$ScrollContainer/HBoxContainer/Page2/MusicSet.value = Settings.setting_res.music
-	$ScrollContainer/HBoxContainer/Page2/SoundSet.value = Settings.setting_res.sound
-	$ScrollContainer/HBoxContainer/Page1/MSAA.button_pressed = Settings.setting_res.msaa
-	$ScrollContainer/HBoxContainer/Page1/Lights.button_pressed = Settings.setting_res.enable_lights
-	$ScrollContainer/HBoxContainer/Page1/LightShadows.button_pressed = Settings.setting_res.enable_light_shadows
-	$ScrollContainer/HBoxContainer/Page1/ReflectionProbesSet.button_pressed = Settings.setting_res.reflection_probes
-	$ScrollContainer/HBoxContainer/Page1/FullscreenSet.button_pressed = Settings.setting_res.fullscreen
-	$ScrollContainer/HBoxContainer/Page2/MouseSensSet.value = Settings.setting_res.mouse_sensitivity
-	$ScrollContainer/HBoxContainer/Page1/VSyncSet.button_pressed = Settings.setting_res.vsync
-	# 9 is Window Size in pixels
-	$ScrollContainer/HBoxContainer/Page1/LanguageSet.selected = Settings.setting_res.ui_language
-	$ScrollContainer/HBoxContainer/Page1/GlowSet.button_pressed = Settings.setting_res.glow
-	$ScrollContainer/HBoxContainer/Page1/ResolutionScale.value = Settings.setting_res.resolution_scale
-	$ScrollContainer/HBoxContainer/Page1/WindowSizeSet.selected = Settings.setting_res.ui_window_size
-	#$ScrollContainer/VBoxContainer/GraphicDeviceSet.selected = Settings.renderer
+	if OS.get_name() != "Web":
+		for v in Settings.window_size:
+			$ScrollContainer/HBoxContainer/Page1/WindowSizeSet.add_item(str(v.x) + "x" + str(v.y))
+		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.button_pressed = Settings.setting_res.dynamic_gi
+		$ScrollContainer/HBoxContainer/Page1/SSAOSet.button_pressed = Settings.setting_res.ssao
+		$ScrollContainer/HBoxContainer/Page1/SSILSet.button_pressed = Settings.setting_res.ssil
+		$ScrollContainer/HBoxContainer/Page1/SSRSet.button_pressed = Settings.setting_res.ssr
+		#$ScrollContainer/HBoxContainer/Page1/FogSet.button_pressed = Settings.setting_res.fog
+		$ScrollContainer/HBoxContainer/Page2/MusicSet.value = Settings.setting_res.music
+		$ScrollContainer/HBoxContainer/Page2/SoundSet.value = Settings.setting_res.sound
+		$ScrollContainer/HBoxContainer/Page1/MSAA.button_pressed = Settings.setting_res.msaa
+		$ScrollContainer/HBoxContainer/Page1/Lights.button_pressed = Settings.setting_res.enable_lights
+		$ScrollContainer/HBoxContainer/Page1/LightShadows.button_pressed = Settings.setting_res.enable_light_shadows
+		$ScrollContainer/HBoxContainer/Page1/ReflectionProbesSet.button_pressed = Settings.setting_res.reflection_probes
+		$ScrollContainer/HBoxContainer/Page1/FullscreenSet.button_pressed = Settings.setting_res.fullscreen
+		$ScrollContainer/HBoxContainer/Page2/MouseSensSet.value = Settings.setting_res.mouse_sensitivity
+		$ScrollContainer/HBoxContainer/Page1/VSyncSet.button_pressed = Settings.setting_res.vsync
+		# 9 is Window Size in pixels
+		$ScrollContainer/HBoxContainer/Page1/LanguageSet.selected = Settings.setting_res.ui_language
+		$ScrollContainer/HBoxContainer/Page1/GlowSet.button_pressed = Settings.setting_res.glow
+		$ScrollContainer/HBoxContainer/Page1/ResolutionScale.value = Settings.setting_res.resolution_scale
+		$ScrollContainer/HBoxContainer/Page1/WindowSizeSet.selected = Settings.setting_res.ui_window_size
+		#$ScrollContainer/VBoxContainer/GraphicDeviceSet.selected = Settings.renderer
 	graphic_device_check()
 
 func _on_language_set_item_selected(index):
@@ -131,13 +131,13 @@ func graphic_device_check():
 		#$ScrollContainer/HBoxContainer/Page1/SSAOSet.disabled = false
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.disabled = false
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.disabled = false
-		$ScrollContainer/HBoxContainer/Page1/FogSet.disabled = false
+		#$ScrollContainer/HBoxContainer/Page1/FogSet.disabled = false
 		$ScrollContainer/HBoxContainer/Page1/VSyncSet.disabled = false
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.show()
 		#$ScrollContainer/HBoxContainer/Page1/SSAOSet.show()
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.show()
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.show()
-		$ScrollContainer/HBoxContainer/Page1/FogSet.show()
+		#$ScrollContainer/HBoxContainer/Page1/FogSet.show()
 		$ScrollContainer/HBoxContainer/Page1/VSyncSet.show()
 		Settings.current_graphic_device = 2
 	else: #ProjectSettings.get_setting("rendering/renderer/rendering_method") == "gl_compatibility":\
@@ -151,19 +151,19 @@ func graphic_device_check():
 		#$ScrollContainer/HBoxContainer/Page1/SSAOSet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.button_pressed = false
-		$ScrollContainer/HBoxContainer/Page1/FogSet.button_pressed = false
+		#$ScrollContainer/HBoxContainer/Page1/FogSet.button_pressed = false
 		$ScrollContainer/HBoxContainer/Page1/VSyncSet.button_pressed = true
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.disabled = true
 		#$ScrollContainer/HBoxContainer/Page1/SSAOSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.disabled = true
-		$ScrollContainer/HBoxContainer/Page1/FogSet.disabled = true
+		#$ScrollContainer/HBoxContainer/Page1/FogSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/VSyncSet.disabled = true
 		$ScrollContainer/HBoxContainer/Page1/VoxelGISet.hide()
 		#$ScrollContainer/HBoxContainer/Page1/SSAOSet.hide()
 		$ScrollContainer/HBoxContainer/Page1/SSILSet.hide()
 		$ScrollContainer/HBoxContainer/Page1/SSRSet.hide()
-		$ScrollContainer/HBoxContainer/Page1/FogSet.hide()
+		#$ScrollContainer/HBoxContainer/Page1/FogSet.hide()
 		$ScrollContainer/HBoxContainer/Page1/VSyncSet.hide()
 		Settings.current_graphic_device = 1
 

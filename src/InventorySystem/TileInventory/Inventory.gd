@@ -51,6 +51,7 @@ func item_move(prefab: InventorySlot, pos: Vector2) -> bool:
 func item_remove(item: InventorySlot, drop: bool) -> bool:
 	for i in _items:
 		if i == item:
+			get_tree().root.get_node("Game/Player").hold_item(-1)
 			if drop:
 				var pickable: Node3D = load(game_data.items[i.item_id].pickable_path).instantiate()
 				pickable.position = get_tree().root.get_node("Game/Player/ItemMarker").global_position
@@ -63,9 +64,9 @@ func item_remove(item: InventorySlot, drop: bool) -> bool:
 	return false
 
 func use_item(item: InventorySlot):
-	if game_data.items[item.item_id].usage != 0:
-		item_remove(item, game_data.items[item.item_id].usage == 2)
-	# write usage mechanic
+	#if game_data.items[item.item_id].usage != 0:
+		#item_remove(item, game_data.items[item.item_id].usage == 2)
+	get_tree().root.get_node("Game/Player").hold_item(item.item_id)
 
 ## the item could be dropped only inside inventory
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:

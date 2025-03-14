@@ -1,0 +1,13 @@
+/!\ I AM NOT A LAWYER, IANAL.
+
+Sanity system was a patented mechanic by Nintendo.
+As I thought, this patent was active only in US and Australia.
+
+2021-11-05
+Adjusted expiration
+Status
+Expired - Lifetime (https://patents.google.com/patent/US6935954B2/en)
+
+So, I think you can use this mechanic without any troubles, because patent was expired in 2021.
+(through this demo does not use this mechanic, this sanitybar.png was left from TGPY code, 
+I left this as a reminder (mostly for myself))
