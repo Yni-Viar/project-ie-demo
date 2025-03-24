@@ -130,12 +130,8 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.8.10[/b] (Demo)
-- Changed to AgX tonemap, instead of Filmic.
-- Improved translation.
-- Inventory: items can be viewed in first-person!
-- Fog setting is hidden, due to uselessness.
-- Added [REDACTED].
+text = "[b]v.0.0.8.11[/b] (Demo)
+- Fix wooden table jiggle.
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL

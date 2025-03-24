@@ -1,6 +1,6 @@
 extends PathFollow3D
 ## Transport system
-## Made by Yni, licensed under BSD-2 with Patent Exception license
+## Made by Yni, licensed under MIT license
 class_name TransportSystem
 
 ## Launch or stop

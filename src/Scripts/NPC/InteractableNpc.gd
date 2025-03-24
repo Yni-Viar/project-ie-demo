@@ -1,6 +1,6 @@
 extends CharacterBody3D
 class_name InteractableNpc
-## Mostly made by Yni, licensed under BSD-2 with patent exception.
+## Mostly made by Yni, licensed under MIT license.
 ## ------------------------------------------
 ## Contains third-party code from Godot demos. 
 ## Copyright (c) 2014-present Godot Engine contributors.
