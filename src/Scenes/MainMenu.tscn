@@ -130,8 +130,11 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.8.11[/b] (Demo)
+text = "[b]v.0.0.9[/b] (Demo)
 - Fix wooden table jiggle.
+- Replaced something.
+- Added more realistic display (spoiler - it isn't, just it is a once-time rendered 2D image)
+- Added game seed support (map generator is an example of this mechanic)
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL

@@ -13,7 +13,7 @@ config_version=5
 config/name="Internal Eternal Demo"
 config/description="Public showcase (and a benchmark) for various platforms.
 Contains content for upcoming game."
-config/version="0.0.8.10"
+config/version="0.0.9"
 config/tags=PackedStringArray("demo", "game", "singleplayer")
 run/main_scene="res://Scenes/Main.tscn"
 config/use_custom_user_dir=true
@@ -201,7 +201,7 @@ pointing/android/enable_long_press_as_right_click=true
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Translations/mainmenu.en.translation", "res://Translations/mainmenu.ru.translation", "res://Translations/settings.en.translation", "res://Translations/settings.ru.translation", "res://Translations/loading_screen.en.translation", "res://Translations/loading_screen.ru.translation", "res://Translations/game.en.translation", "res://Translations/game.ru.translation", "res://Translations/gameover.en.translation", "res://Translations/gameover.ru.translation", "res://Translations/dlgs.en.translation", "res://Translations/dlgs.ru.translation", "res://Translations/npcs.en.translation", "res://Translations/npcs.ru.translation")
+locale/translations=PackedStringArray("res://Translations/mainmenu.en.translation", "res://Translations/mainmenu.ru.translation", "res://Translations/settings.en.translation", "res://Translations/settings.ru.translation", "res://Translations/loading_screen.en.translation", "res://Translations/loading_screen.ru.translation", "res://Translations/game.en.translation", "res://Translations/game.ru.translation", "res://Translations/gameover.en.translation", "res://Translations/gameover.ru.translation", "res://Translations/dlgs.en.translation", "res://Translations/dlgs.ru.translation", "res://Translations/npcs.en.translation", "res://Translations/npcs.ru.translation", "res://Translations/hud.en.translation", "res://Translations/hud.ru.translation")
 
 [layer_names]
 

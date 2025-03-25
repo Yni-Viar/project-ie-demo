@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MapGenRoom" load_steps=4 format=3 uid="uid://cjkhvveue1tae"]
+
+[ext_resource type="Texture2D" uid="uid://8etimuikkbyb" path="res://Assets/HUD/MapGen/room2.png" id="1_o71um"]
+[ext_resource type="Script" uid="uid://cpb2k0vdpllc0" path="res://Scripts/MapGen/MapGenRoom.gd" id="2_ejil1"]
+[ext_resource type="Texture2D" uid="uid://bdohqm7yw00if" path="res://Assets/HUD/MapGen/room2_90.png" id="2_o8bha"]
+
+[resource]
+script = ExtResource("2_ejil1")
+name = "lc_room2"
+icon_0_degrees = ExtResource("2_o8bha")
+icon_90_degrees = ExtResource("1_o71um")
+icon_180_degrees = ExtResource("2_o8bha")
+icon_270_degrees = ExtResource("1_o71um")
+spawn_chance = 50.0

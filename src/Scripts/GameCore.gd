@@ -10,11 +10,13 @@ extends Node3D
 # Unused in this demo.
 #var loading_location = false
 #var file_path_to_load: String = ""
+var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	load_settings()
 	load_save()
+	rng.randomize()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

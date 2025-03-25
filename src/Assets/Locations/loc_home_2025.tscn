@@ -1,4 +1,4 @@
-[gd_scene load_steps=341 format=4 uid="uid://ce8coeohfwec8"]
+[gd_scene load_steps=354 format=4 uid="uid://ce8coeohfwec8"]
 
 [ext_resource type="Texture2D" uid="uid://qd0v8r4ryo7d" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Wallpaper002A_2K-PNG_Color.png" id="1_3orok"]
 [ext_resource type="Texture2D" uid="uid://tcckp504mvfg" path="res://Assets/Locations/Mesh/IE_Refresh_2025_02/Wallpaper002A_2K-PNG_Roughness.png" id="2_72vi4"]
@@ -32,7 +32,6 @@
 [ext_resource type="Material" uid="uid://j8grikic1eyc" path="res://Assets/Materials/table_black.tres" id="28_sr065"]
 [ext_resource type="PackedScene" uid="uid://dwvjvm78gm8b" path="res://Assets/OriginalModels/closet.tscn" id="29_1ihit"]
 [ext_resource type="PackedScene" uid="uid://rvqgrk4cqols" path="res://Assets/ExternalModels/BathroomAssets/shower.tscn" id="29_1lijb"]
-[ext_resource type="Texture2D" uid="uid://2477wfci8n6a" path="res://Assets/HUD/Screens/Home_Generic.svg" id="29_4cplc"]
 [ext_resource type="PackedScene" uid="uid://c4rcgko61cqdi" path="res://Assets/ExternalModels/BathroomAssets/hand_washer.tscn" id="30_h0mno"]
 [ext_resource type="Texture2D" uid="uid://cfy7pklnytnjb" path="res://Assets/ExternalModels/Monitor_WetNeon_CC0/Smudges_01_2K.png" id="30_x5axs"]
 [ext_resource type="PackedScene" uid="uid://ccn606edn4ylv" path="res://Assets/OriginalModels/boot_holder.tscn" id="30_yjx1o"]
@@ -41,18 +40,29 @@
 [ext_resource type="Script" uid="uid://c0vyk8pjes2ne" path="res://Scripts/LightSystemOmni.gd" id="33_cfuef"]
 [ext_resource type="PackedScene" uid="uid://c2ykxe63xhb3e" path="res://Assets/ExternalModels/3d_lamp.tscn" id="35_w1gvj"]
 [ext_resource type="PackedScene" uid="uid://b2b0ph8o2wtkm" path="res://Assets/OriginalModels/door2.tscn" id="36_o1gvq"]
+[ext_resource type="Theme" uid="uid://kn6ecrhutiam" path="res://UI/FluentUI/godot_fluent.tres" id="36_u1skq"]
 [ext_resource type="PackedScene" uid="uid://bvpq7p8vsx8ur" path="res://DynamicObjects/NPC/vacuum_cleaner.tscn" id="37_kfoh0"]
+[ext_resource type="Script" uid="uid://s52op65y0iej" path="res://Scripts/IngameWindow.gd" id="37_qd23q"]
+[ext_resource type="Script" uid="uid://crn83ohig8520" path="res://Scripts/MapGen/MapGen2D.gd" id="38_2rod3"]
 [ext_resource type="PackedScene" uid="uid://c4b2phchpwhfg" path="res://DynamicObjects/Keys/key_home.tscn" id="38_rhiyb"]
+[ext_resource type="Script" uid="uid://cwbrreagm3uij" path="res://Scripts/YourFuture.gd" id="38_tcqr1"]
 [ext_resource type="PackedScene" uid="uid://3uxnw561tlh4" path="res://Assets/ExternalModels/plant.tscn" id="39_hwgfx"]
+[ext_resource type="Script" uid="uid://b4rrdwx5ack7c" path="res://Scripts/MapGen/MapGenZone.gd" id="39_tcqr1"]
 [ext_resource type="PackedScene" uid="uid://dtiewo3uj60g0" path="res://Assets/ExternalModels/computer_2.tscn" id="40_pb4wv"]
+[ext_resource type="Script" uid="uid://cpb2k0vdpllc0" path="res://Scripts/MapGen/MapGenRoom.gd" id="40_yhbak"]
+[ext_resource type="Resource" uid="uid://dkax2pgmsnpbr" path="res://Scripts/MapGen/room2C.tres" id="41_5ypn2"]
 [ext_resource type="PackedScene" uid="uid://dllklb0hh5g7y" path="res://Assets/ExternalModels/keyboard.tscn" id="41_him17"]
+[ext_resource type="Resource" uid="uid://defw3e0yk60rh" path="res://Scripts/MapGen/room4.tres" id="42_mjxna"]
 [ext_resource type="PackedScene" uid="uid://q7sgr1j7yydg" path="res://InventorySystem/Items/Pickup/eledrive.tscn" id="42_phao5"]
 [ext_resource type="PackedScene" uid="uid://cwdjg1cmbvj8f" path="res://DynamicObjects/ActionItems/metrowagon_anka_toy.tscn" id="42_rv8r1"]
+[ext_resource type="Resource" uid="uid://djlh4pej75w62" path="res://Scripts/MapGen/room1.tres" id="43_cdmpj"]
 [ext_resource type="Script" uid="uid://dd6jjlxp57v08" path="res://Scripts/DoorSystem/LightDoor.gd" id="43_u4kjh"]
 [ext_resource type="PackedScene" uid="uid://rj65na3myb3i" path="res://Assets/HumanModels/MH_Julia/scene_Julia.tscn" id="44_c8mbq"]
 [ext_resource type="PackedScene" uid="uid://d0j01mgnl1tgy" path="res://Assets/ExternalModels/sofa_2.tscn" id="44_j652f"]
+[ext_resource type="Resource" uid="uid://cjkhvveue1tae" path="res://Scripts/MapGen/room2.tres" id="44_rsm8q"]
 [ext_resource type="Texture2D" uid="uid://rb0qbmiwekgn" path="res://Assets/OriginalModels/Doors/Door_Set1/Door_Set1_Cube_001_base.png" id="44_rv8r1"]
 [ext_resource type="AudioStream" uid="uid://csxmtxp812ctm" path="res://Sounds/Interact/moxobna_door-unlock_CC0.ogg" id="45_4by4w"]
+[ext_resource type="Resource" uid="uid://bx5nj144uqlqs" path="res://Scripts/MapGen/room3.tres" id="45_m6px4"]
 [ext_resource type="Texture2D" uid="uid://bfuj6fiha48wo" path="res://Assets/OriginalModels/Doors/Door_Set1/Door_Set1_Cube_001_metal-Door_Set1_Cube_001_rough.png" id="45_t5g2m"]
 [ext_resource type="Texture2D" uid="uid://c20anqi0kmby2" path="res://Assets/OriginalModels/Doors/Door_Set1/Door_Set1_Cube_001_nor.png" id="46_u1skq"]
 [ext_resource type="Texture2D" uid="uid://df10vsvacjpix" path="res://Assets/OriginalModels/Doors/Door_Set1/Door_Set1_Cube_002_base.png" id="47_qd23q"]
@@ -111,7 +121,7 @@
 [ext_resource type="PackedScene" uid="uid://ben12lgq6uamw" path="res://Assets/ExternalModels/chair_old.tscn" id="103_kwrxk"]
 [ext_resource type="PackedScene" uid="uid://64r52pbcjj41" path="res://Assets/ExternalModels/stopwatch.tscn" id="104_a8n8s"]
 [ext_resource type="Script" uid="uid://15dwk5lc8jhj" path="res://Scripts/Triggers/DlgTrigger.gd" id="104_t1moa"]
-[ext_resource type="PackedScene" uid="uid://cluwngumuu8dp" path="res://Assets/OriginalModels/statue.tscn" id="112_t5g2m"]
+[ext_resource type="PackedScene" uid="uid://ddffyhacl7rk8" path="res://DynamicObjects/ActionItems/ball.tscn" id="121_2rod3"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_w46io"]
 vertices = PackedVector3Array(-16.4945, 56.5584, -3.98454, -16.4945, 56.5584, 4.26546, -7.9945, 56.5584, 4.26546, -7.9945, 56.5584, -3.98454, -11.9945, 52.0584, 2.76546, -11.4945, 52.0584, 4.01546, -11.2445, 52.0584, 2.51546, -11.7445, 52.0584, 2.26546, -11.7445, 52.0584, 1.51546, -10.2445, 52.0584, 1.26546, -8.7445, 52.0584, 0.515459, -9.7445, 52.0584, 0.765459, -12.2445, 52.0584, 1.51546, -12.7445, 52.0584, 2.76546, -13.9945, 52.0584, -2.48454, -14.2445, 52.0584, -3.23454, -16.2445, 52.0584, -3.23454, -16.2445, 52.0584, -1.73454, -9.4945, 52.0584, -1.23454, -8.2445, 52.0584, -2.48454, -15.2445, 52.0584, 2.26546, -16.2445, 52.0584, 2.51546, -16.2445, 52.0584, 3.01546, -15.2445, 52.0584, 3.26546, -8.7445, 52.0584, -0.234541, -8.2445, 52.0584, -0.484541, -15.2445, 52.0584, 4.26546, -14.4945, 52.0584, 4.26546, -14.7445, 52.0584, 1.76546, -15.2445, 52.0584, 0.765459, -13.7445, 52.0584, 1.26546, -8.9945, 52.0584, 2.76546, -8.9945, 52.0584, 4.26546, -7.9945, 52.0584, 4.26546, -8.2445, 52.0584, 0.765459, -9.9945, 52.0584, 2.51546)
@@ -1126,16 +1136,23 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yhoxb")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_p6lpc"]
+viewport_path = NodePath("SergesHome/27-inch-monitor-with-movable-mount/SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_k0npg"]
+viewport_path = NodePath("SergesHome/27-inch-monitor-with-movable-mount/SubViewport")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gs4mh"]
+resource_local_to_scene = true
 resource_name = "monitor-27in-zg-screen"
 cull_mode = 2
-albedo_texture = ExtResource("29_4cplc")
+albedo_texture = SubResource("ViewportTexture_p6lpc")
 metallic_texture = ExtResource("30_x5axs")
 metallic_texture_channel = 2
 roughness_texture = ExtResource("30_x5axs")
 roughness_texture_channel = 1
 emission_enabled = true
-emission_texture = ExtResource("29_4cplc")
+emission_texture = SubResource("ViewportTexture_k0npg")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gimyi"]
 resource_name = "monitor-27in-zg-light_blue"
@@ -1182,6 +1199,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_4tqsm"]
+resource_local_to_scene = true
 resource_name = "27-inch-monitor-with-movable-mount_Cube_003"
 _surfaces = [{
 "aabb": AABB(-0.310149, -0.179738, -0.0231511, 0.620061, 0.359475, 0.0347088),
@@ -1224,6 +1242,25 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_khpg8")
+
+[sub_resource type="Resource" id="Resource_pqqbq"]
+script = ExtResource("39_tcqr1")
+endrooms = Array[ExtResource("40_yhbak")]([ExtResource("43_cdmpj")])
+endrooms_single = Array[ExtResource("40_yhbak")]([])
+endrooms_single_large = Array[ExtResource("40_yhbak")]([])
+hallways = Array[ExtResource("40_yhbak")]([ExtResource("44_rsm8q")])
+hallways_single = Array[ExtResource("40_yhbak")]([])
+hallways_single_large = Array[ExtResource("40_yhbak")]([])
+corners = Array[ExtResource("40_yhbak")]([ExtResource("41_5ypn2")])
+corners_single = Array[ExtResource("40_yhbak")]([])
+corners_single_large = Array[ExtResource("40_yhbak")]([])
+trooms = Array[ExtResource("40_yhbak")]([ExtResource("45_m6px4")])
+trooms_single = Array[ExtResource("40_yhbak")]([])
+trooms_single_large = Array[ExtResource("40_yhbak")]([])
+crossrooms = Array[ExtResource("40_yhbak")]([ExtResource("42_mjxna")])
+crossrooms_single = Array[ExtResource("40_yhbak")]([])
+door_frames = Array[PackedScene]([])
+metadata/_custom_type_script = "uid://b4rrdwx5ack7c"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k45hr"]
 resource_name = "DoorFrame"
@@ -3767,7 +3804,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_jf24f")
 
 [node name="WoodenTable2" parent="SergesHome/NavigationRegion3D" instance=ExtResource("17_8jxot")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16.4154, 51.6245, 1.08465)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16.4154, 51.6245, 1.11435)
 
 [node name="Cabinet" type="StaticBody3D" parent="SergesHome/NavigationRegion3D"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.7369, 51.6228, 2.76069)
@@ -4009,6 +4046,43 @@ ignore_occlusion_culling = true
 visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_4tqsm")
 skeleton = NodePath("")
+
+[node name="SubViewport" type="SubViewport" parent="SergesHome/27-inch-monitor-with-movable-mount"]
+disable_3d = true
+gui_embed_subwindows = true
+size = Vector2i(768, 768)
+render_target_update_mode = 1
+
+[node name="IngameWindow" type="Window" parent="SergesHome/27-inch-monitor-with-movable-mount/SubViewport"]
+disable_3d = true
+position = Vector2i(50, 278)
+size = Vector2i(680, 295)
+theme = ExtResource("36_u1skq")
+script = ExtResource("37_qd23q")
+metadata/_custom_type_script = "uid://s52op65y0iej"
+
+[node name="Panel" type="Panel" parent="SergesHome/27-inch-monitor-with-movable-mount/SubViewport/IngameWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("38_tcqr1")
+
+[node name="Label" type="Label" parent="SergesHome/27-inch-monitor-with-movable-mount/SubViewport/IngameWindow/Panel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 261.0
+offset_right = 57.0
+offset_bottom = 284.0
+
+[node name="FacilityGenerator" type="Node2D" parent="SergesHome/27-inch-monitor-with-movable-mount/SubViewport/IngameWindow"]
+z_index = 4
+position = Vector2(99, 57)
+script = ExtResource("38_2rod3")
+rooms = Array[ExtResource("39_tcqr1")]([SubResource("Resource_pqqbq")])
+grid_size = 16.0
+better_zone_generation = false
 
 [node name="Lamp14" parent="SergesHome" instance=ExtResource("35_w1gvj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.98384, 56.0921, 2.05579)
@@ -5299,8 +5373,8 @@ How did your eyes get there?"
 [node name="Stool" parent="." instance=ExtResource("16_pfnai")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6006, 51.6193, 4.49383)
 
-[node name="Statue" parent="." instance=ExtResource("112_t5g2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4646, 51.8409, -3.96909)
+[node name="ball" parent="." instance=ExtResource("121_2rod3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5992, 51.8393, -3.97341)
 
 [connection signal="body_entered" from="SergesHome/Door2/Area3D" to="SergesHome/Door2" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="SergesHome/Door2/Area3D" to="SergesHome/Door2" method="_on_area_3d_body_exited"]
