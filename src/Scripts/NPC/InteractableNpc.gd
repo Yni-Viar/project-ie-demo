@@ -38,7 +38,7 @@ enum State {
 @export var state: State = State.IDLE
 ## Applies height bugfix
 @export var apply_height_bugfix: bool = false
-## How much the heigfht of character will be decreased
+## How much the height of character will be decreased
 @export var height_bugfix_amount: float = -0.04
 ## Is the character on moving platform (a workaround, since without this the NPC flies away)
 @export var platform_moving: bool = false

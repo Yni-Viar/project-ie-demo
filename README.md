@@ -5,7 +5,7 @@ This project is a public showcase for a upcoming game.
 It may have non-critical bugs.
 
 ## License:
-My code is licensed under BSD-2 clause with patent exception [See License](/LICENSE)
+My code is licensed under MIT License. [(See License)](/LICENSE)
 Third party assets are licensed under different open-source licenses.
 
 In this demo the story is NOT leaked, except one character.

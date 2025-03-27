@@ -143,3 +143,8 @@ mesh = SubResource("SphereMesh_0vbhd")
 [node name="MeshInstance3D18" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3345, 0, 141.565)
 mesh = SubResource("SphereMesh_0vbhd")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43262, 0)
+text = "Actually, Sevi CAN access this world. You may or may not access this world.
+And WHO actually live in this strange world???"

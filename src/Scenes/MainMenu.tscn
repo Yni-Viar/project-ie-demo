@@ -131,10 +131,12 @@ theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 text = "[b]v.0.0.9[/b] (Demo)
-- Fix wooden table jiggle.
+- Fixed wooden table jiggle.
+- Fixed drawers animation.
 - Replaced something.
-- Added more realistic display (spoiler - it isn't, just it is a once-time rendered 2D image)
-- Added game seed support (map generator is an example of this mechanic)
+- Added a secret (which you cannot see normally (it is behind a wall), but if you see somehow, it will be reveal of another story character)
+- Added more realistic display (spoiler - it isn't, just it is a once-time rendered 2D viewport (I hope it won't be a performance problem for mobile to render two more frame (because the viewport and a window inside it)))
+- Added game seed support (map generator, hidden in protagonist's PC is an example of this mechanic)
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL
@@ -397,7 +399,7 @@ text = "[i]Models[/i]
 
 - Stopwatch model by mantledmoon (CC-BY)
 - Chair model - Neil dela Merced (solvalou) (CC-BY)
-- Screen of home computer contains assets and some assets in UI design are made by Microsoft, that are licensed under CC-BY
+- Fluent UI design and VSCod(ium) close buttons are made by Microsoft, that are licensed under CC-BY. Some assets are using this style.
 
 
 Thanks to awesome people from dscrd servers for pointing me on game-design issues!

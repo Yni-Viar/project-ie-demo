@@ -54,10 +54,12 @@ shadow_mesh = SubResource("ArrayMesh_rsgia")
 radius = 0.1
 
 [node name="ball" type="RigidBody3D"]
+collision_layer = 8
 script = ExtResource("1_1e168")
 
 [node name="Sphere_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 0, 0, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_kh8io")
 skeleton = NodePath("")
 

@@ -49,6 +49,7 @@ size = Vector3(0.845215, 0.863312, 0.808472)
 
 [node name="chair01" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_i24fb")
 skeleton = NodePath("")
 

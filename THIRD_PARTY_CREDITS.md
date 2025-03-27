@@ -112,7 +112,7 @@ SOFTWARE.
 # Art:
 - Stopwatch model by mantledmoon (CC-BY)
 - Chair model - Neil dela Merced (solvalou) (CC-BY)
-- Screen of home computer contains assets and some assets in UI design are made by Microsoft, that are licensed under CC-BY
+- Fluent UI 2 design and VSCod(ium) close buttons are made by Microsoft, that are licensed under CC-BY
 
 
 PolyHaven models are licensed under CC0.

@@ -1,0 +1,96 @@
+[gd_resource type="Theme" load_steps=16 format=3 uid="uid://kn6ecrhutiam"]
+
+[ext_resource type="StyleBox" uid="uid://b572heo645q8k" path="res://UI/FluentUI/UI/button_example.tres" id="1_hm1fv"]
+[ext_resource type="Texture2D" uid="uid://bi6516gnpsygo" path="res://UI/FluentUI/UI/ButtonSelected.svg" id="2_sswrr"]
+[ext_resource type="Texture2D" uid="uid://ca66hgpc0ygv7" path="res://UI/FluentUI/UI/ButtonHover.svg" id="3_aefms"]
+[ext_resource type="Texture2D" uid="uid://b1kmjqfy8olfo" path="res://UI/FluentUI/UI/ButtonNormal.svg" id="4_vf6nu"]
+[ext_resource type="Texture2D" uid="uid://d1w5nffpg2y3q" path="res://UI/FluentUI/UI/ButtonDisabled.svg" id="5_k6xlo"]
+[ext_resource type="Texture2D" uid="uid://b0nu4d7fg5e22" path="res://UI/FluentUI/UI/chrome-close.svg" id="6_0vv73"]
+[ext_resource type="StyleBox" uid="uid://bxrn51lffdhrp" path="res://UI/FluentUI/UI/windowborder_example.tres" id="7_are4c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6vcq7"]
+texture = ExtResource("2_sswrr")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(0, 24.2072, 96, 49.1199)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_alryx"]
+texture = ExtResource("3_aefms")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(0, 24.2072, 96, 49.1199)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tnhs1"]
+texture = ExtResource("4_vf6nu")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(0, 24.2072, 96, 49.1199)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rn8g3"]
+texture = ExtResource("5_k6xlo")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(0, 24.2072, 96, 49.1199)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_do1yj"]
+bg_color = Color(0.82606, 0.82606, 0.82606, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sutra"]
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sd08q"]
+bg_color = Color(0.0588235, 0.423529, 0.701961, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kfsy"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+expand_margin_top = 32.0
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 0.5)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_disabled_color = Color(0, 0, 0, 0.4)
+Button/colors/icon_focus_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_normal_color = Color(0, 0, 0, 1)
+Button/styles/disabled = ExtResource("1_hm1fv")
+Button/styles/focus = SubResource("StyleBoxTexture_6vcq7")
+Button/styles/hover = SubResource("StyleBoxTexture_alryx")
+Button/styles/normal = SubResource("StyleBoxTexture_tnhs1")
+Button/styles/pressed = SubResource("StyleBoxTexture_rn8g3")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Panel/styles/panel = SubResource("StyleBoxFlat_do1yj")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_sutra")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_sd08q")
+Window/constants/close_h_offset = 28
+Window/icons/close = ExtResource("6_0vv73")
+Window/icons/close_pressed = ExtResource("6_0vv73")
+Window/styles/embedded_border = ExtResource("7_are4c")
+Window/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_3kfsy")

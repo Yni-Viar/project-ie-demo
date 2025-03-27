@@ -146,6 +146,7 @@ shadow_mesh = SubResource("ArrayMesh_wsiqq")
 
 [node name="lightbulb_02" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.499869, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_lhmb4")
 skeleton = NodePath("")
 
@@ -158,5 +159,6 @@ omni_range = 7.5
 script = ExtResource("8_00hxv")
 
 [node name="3D_lamp_11" type="MeshInstance3D" parent="."]
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_706gi")
 skeleton = NodePath("")
