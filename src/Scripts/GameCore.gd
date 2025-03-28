@@ -88,7 +88,7 @@ func load_settings():
 	## Enable/disable reflection probes (cubemap)
 	for node in get_tree().get_nodes_in_group("reflection_probe"):
 		if node is ReflectionProbe:
-			if !Settings.setting_res.reflection_probes || Settings.setting_res.ssr:
+			if !Settings.setting_res.reflection_probes: # || Settings.setting_res.ssr:
 				node.hide()
 			else:
 				node.show()

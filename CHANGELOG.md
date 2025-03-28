@@ -1,5 +1,12 @@
 # ⚠️ VERSIONS BELOW v0.0.7.4 ARE REMOVED ENTIRELY (and became lost media), DUE TO POSSIBLE COPYRIGHT PROBLEMS.
 
+# v0.0.10 (2025.03.28)
+
+- Override Godot 4.4.1 bug # 104675 by selecting D3D12 as the default renderer for Windows.
+- Added fake loading screen.
+- Correct the world naming.
+- Move to 3-digit versioning style (major.minor.patch) (only the patch will be increased every new version, since major and minor versions are reserved for future game development, and this is only a first showcase demo)
+
 # v0.0.9 (2025.03.27)
 
 - Fixed wooden table jiggle.

@@ -102,6 +102,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "GRAPHICS"
 
+[node name="RuntimeNote" type="Label" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "RUNTIME_GRAPHIC_SETTINGS_INFO"
+
 [node name="ResolutionLabel" type="Label" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
 visible = false
 layout_mode = 2
@@ -191,7 +197,7 @@ theme = ExtResource("3_2qins")
 theme_override_font_sizes/font_size = 24
 text = "LIGHT_SHADOWS"
 
-[node name="LightSahdowWarning" type="Label" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
+[node name="LightShadowWarning" type="Label" parent="SettingsPanel/ScrollContainer/HBoxContainer/Page1"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 text = "LIGHT_SHADOWS_WARNING"
@@ -278,24 +284,6 @@ value = 2.0
 
 [node name="SoundTest" type="AudioStreamPlayer" parent="SettingsPanel"]
 stream = ExtResource("4_n8hvh")
-
-[node name="Label" type="Label" parent="SettingsPanel"]
-visible = false
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -311.0
-offset_top = -47.0
-offset_bottom = 54.0
-grow_horizontal = 0
-grow_vertical = 2
-text = "Beginning with 0.6.1,
-the settings are auto-saving,
-when you toggle buttons.
-As for now, \"Save\" button is deprecated."
 
 [connection signal="pressed" from="SettingsPanel/Back" to="SettingsPanel" method="_on_back_pressed"]
 [connection signal="item_selected" from="SettingsPanel/ScrollContainer/HBoxContainer/Page1/LanguageSet" to="SettingsPanel" method="_on_language_set_item_selected"]

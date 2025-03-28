@@ -25,3 +25,4 @@ DYNAMIC_GI,Dynamic GI,Динамическое освещение
 RESOLUTION_SCALING,Content resolution scaling,Настройка разрешения контента
 RESOLUTION_SCALING_INFO,The highest value is original quality.\nLower value will increase performance at the cost of render quality.,Наивысшее значение - оригинальное качество.\nЕсли установить значение ниже - производительность улучшится за счет качества рендера.
 VSYNC,V-Sync,Вертикальная синхронизация
+RUNTIME_GRAPHIC_SETTINGS_INFO,"Note: if you change graphic settings during playing,\nthe game may not respond for some time.","Внимание: если Вы поменяете графические настройки\nво время игры, возможно подвисание на какое-то время."

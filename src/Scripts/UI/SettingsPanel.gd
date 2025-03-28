@@ -25,6 +25,9 @@ func _ready():
 		$ScrollContainer/HBoxContainer/Page1/ResolutionScale.value = Settings.setting_res.resolution_scale
 		$ScrollContainer/HBoxContainer/Page1/WindowSizeSet.selected = Settings.setting_res.ui_window_size
 		#$ScrollContainer/VBoxContainer/GraphicDeviceSet.selected = Settings.renderer
+		
+		if get_tree().root.get_node_or_null("Game") != null:
+			$ScrollContainer/HBoxContainer/Page1/RuntimeNote.show()
 	graphic_device_check()
 
 func _on_language_set_item_selected(index):

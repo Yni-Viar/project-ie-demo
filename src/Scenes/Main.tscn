@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dudoqqr06mig7"]
+[gd_scene load_steps=4 format=3 uid="uid://dudoqqr06mig7"]
 
 [ext_resource type="Script" uid="uid://dk8ufw240rrwl" path="res://Scripts/AppManager.gd" id="1_fc470"]
 [ext_resource type="PackedScene" uid="uid://b6010fhhdn46b" path="res://Scenes/MainMenu.tscn" id="2_rsifw"]
+[ext_resource type="FontFile" uid="uid://j45d6xc2rd07" path="res://Assets/Fonts/Home_Video/HomeVideo-Regular.otf" id="3_kln2b"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_fc470")
@@ -27,3 +28,17 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "PRERELEASE_WARN"
 horizontal_alignment = 1
+
+[node name="Loading" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1185.0
+offset_bottom = 32.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("3_kln2b")
+theme_override_font_sizes/font_size = 32
+text = "LOAD_TITLE"
+horizontal_alignment = 2
+vertical_alignment = 1
