@@ -1,5 +1,10 @@
 # ⚠️ VERSIONS BELOW v0.0.7.4 ARE REMOVED ENTIRELY (and became lost media), DUE TO POSSIBLE COPYRIGHT PROBLEMS.
 
+# v0.0.11 (2025.03.29)
+
+- Fully introduce new character.
+- Revamped "fake" loading screen.
+
 # v0.0.10 (2025.03.28)
 
 - Override Godot 4.4.1 bug # 104675 by selecting D3D12 as the default renderer for Windows.

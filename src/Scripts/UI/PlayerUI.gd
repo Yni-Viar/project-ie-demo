@@ -2,7 +2,7 @@ extends Control
 ## Made by Yni, licensed under MIT License.
 
 var special_screen: Array = [false, ""]
-var speaker_prefab: InteractableNpc
+var speaker_prefab: PhysicsBody3D
 var button_busy = false
 
 # Called when the node enters the scene tree for the first time.
@@ -105,10 +105,11 @@ func speak(dlg_path: String, dlg_start_id: String, speaker_nodepath: String):
 		speaker_prefab = get_node(speaker_nodepath)
 		var player: PlayerScript = get_tree().root.get_node("Game/Player")
 		player.look_at(Vector3(speaker_prefab.global_position.x, player.global_position.y, speaker_prefab.global_position.z))
-		# Old Godot 4.3 code.
-		# speaker_prefab.look_at(Vector3(player.global_position.x, speaker_prefab.global_position.y, player.global_position.z))
-		# New Godot 4.4 code.
-		speaker_prefab.get_node(str(speaker_prefab.skeleton_path) + "/LookAtModifier3D").target_node = NodePath(player.get_node("LookAtTarget").get_path())
+
+		if speaker_prefab is MovableNpc:# New Godot 4.4 code for looking at player.
+			speaker_prefab.get_node(str(speaker_prefab.skeleton_path) + "/LookAtModifier3D").target_node = NodePath(player.get_node("LookAtTarget").get_path())
+		elif speaker_prefab is StaticNpc:# Old Godot 4.3 code for looking at player.
+			speaker_prefab.look_at(Vector3(player.global_position.x, speaker_prefab.global_position.y, player.global_position.z))
 		if special_screen[1].is_empty():
 			special_screen[0] = true
 			special_screen[1] = "dialogue"
@@ -125,8 +126,9 @@ func _on_dialogue_box_dialogue_ended() -> void:
 		special_screen[0] = false
 		special_screen[1] = ""
 	# New Godot 4.4 code
-	if speaker_prefab.follow_target.is_empty():
-		speaker_prefab.get_node(str(speaker_prefab.skeleton_path) + "/LookAtModifier3D").target_node = NodePath("")
+	if speaker_prefab is MovableNpc:
+		if speaker_prefab.follow_target.is_empty():
+			speaker_prefab.get_node(str(speaker_prefab.skeleton_path) + "/LookAtModifier3D").target_node = NodePath("")
 	speaker_prefab = null
 	if Settings.touchscreen:
 		$TouchUI.show()
@@ -139,18 +141,23 @@ func _on_dialogue_box_dialogue_signal(value: String) -> void:
 	# Generic interactions
 	match value:
 		"follow_player":
-			speaker_prefab.follow_target = "/root/Game/Player"
-			speaker_prefab.wandering = false
+			if speaker_prefab is MovableNpc:
+				speaker_prefab.follow_target = "/root/Game/Player"
+				speaker_prefab.wandering = false
 		"stop_moving":
-			speaker_prefab.follow_target = ""
-			speaker_prefab.wandering = false
+			if speaker_prefab is MovableNpc:
+				speaker_prefab.follow_target = ""
+				speaker_prefab.wandering = false
 		"wander":
-			speaker_prefab.follow_target = ""
-			speaker_prefab.wandering = true
+			if speaker_prefab is MovableNpc:
+				speaker_prefab.follow_target = ""
+				speaker_prefab.wandering = true
 		"stop_talk":
-			speaker_prefab.can_talk = false
+			if speaker_prefab is MovableNpc || speaker_prefab is StaticNpc:
+				speaker_prefab.can_talk = false
 		"next_talk_pos":
-			speaker_prefab.current_dialogue += 1
+			if speaker_prefab is MovableNpc || speaker_prefab is StaticNpc:
+				speaker_prefab.current_dialogue += 1
 	if value.contains("change_talk_pos"):
 		var splitted_value = int(value.get_slice("|", 1))
 		speaker_prefab.current_dialogue = splitted_value

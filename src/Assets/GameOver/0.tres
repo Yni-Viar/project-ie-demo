@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bijbh16ss2qio" path="res://Assets/GameOver/Screens/odeath.png" id="1_420og"]
 [ext_resource type="Script" uid="uid://dt7npqfe0wud6" path="res://Scripts/GameOverResource.gd" id="1_vbalp"]
 
+
 [resource]
 script = ExtResource("1_vbalp")
 screen = ExtResource("1_420og")

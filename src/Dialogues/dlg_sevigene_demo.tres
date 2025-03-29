@@ -1,0 +1,128 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://djm8xp0lsn7ls"]
+
+[ext_resource type="Script" uid="uid://bnjsf7gdri5lq" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_qtorh"]
+
+[resource]
+script = ExtResource("1_qtorh")
+starts = {
+"dlg_sevigene_introduce": &"0_1"
+}
+nodes = {
+&"0_1": {
+"link": &"1_1",
+"offset": Vector2(-164, 238),
+"start_id": "dlg_sevigene_introduce"
+},
+&"1_1": {
+"dialogue": "DLG_SEVIGENEDEMO_1_1",
+"offset": Vector2(200, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SERGE_MIND"
+},
+&"1_2": {
+"dialogue": "DLG_SEVIGENEDEMO_1_2",
+"offset": Vector2(540, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_VOICE"
+},
+&"1_3": {
+"dialogue": "DLG_SEVIGENEDEMO_1_3",
+"offset": Vector2(880, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SERGE_MIND"
+},
+&"1_4": {
+"dialogue": "DLG_SEVIGENEDEMO_1_4",
+"offset": Vector2(1220, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_VOICE"
+},
+&"1_5": {
+"dialogue": "DLG_SEVIGENEDEMO_1_5",
+"offset": Vector2(1560, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_6",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_SEVIGENE"
+},
+&"1_6": {
+"dialogue": "DLG_SEVIGENEDEMO_1_6",
+"offset": Vector2(1920, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_7",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SERGE_FEATHER"
+},
+&"1_7": {
+"dialogue": "DLG_SEVIGENEDEMO_1_7",
+"offset": Vector2(2280, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_8",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_SEVIGENE"
+},
+&"1_8": {
+"dialogue": "DLG_SEVIGENEDEMO_1_8",
+"offset": Vector2(2640, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "NPC_SEVIGENE"
+},
+&"3_1": {
+"link": "END",
+"offset": Vector2(3000, 220),
+"signalValue": "stop_talk"
+}
+}
+variables = {}
+strays = Array[String]([])
+characters = ""

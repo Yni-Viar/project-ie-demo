@@ -133,7 +133,7 @@ visible = false
 mesh = SubResource("QuadMesh_1kpcn")
 
 [node name="RayCast3D" type="RayCast3D" parent="PlayerHead/PlayerRecoil"]
-target_position = Vector3(0, 0, -3)
+target_position = Vector3(0, 0, -4)
 collision_mask = 13
 
 [node name="PlayerRightHand" type="Marker3D" parent="PlayerHead/PlayerRecoil"]

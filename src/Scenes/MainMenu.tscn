@@ -130,11 +130,9 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.10[/b] (Demo)
-- Override Godot 4.4.1 bug #104675 by selecting D3D12 as the default renderer for Windows.
-- Added fake loading screen.
-- Correct the world naming.
-- Move to 3-digit versioning style (major.minor.patch) (only the patch will be increased every new version, since major and minor versions are reserved for future game development, and this is only a first showcase demo)
+text = "[b]v.0.0.11[/b] (Demo)
+- Fully introduce new character.
+- Revamped \"fake\" loading screen.
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL

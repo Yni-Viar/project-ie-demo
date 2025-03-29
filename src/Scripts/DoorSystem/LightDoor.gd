@@ -10,10 +10,10 @@ extends DoorBase
 
 
 func _on_area_3d_body_entered(body):
-	if (body is PlayerScript || body is InteractableNpc) && can_open && NavigationServer3D:
+	if (body is PlayerScript || body is MovableNpc) && can_open:
 		door_open()
 
 
 func _on_area_3d_body_exited(body):
-	if (body is PlayerScript || body is InteractableNpc) && can_open:
+	if (body is PlayerScript || body is MovableNpc) && can_open:
 		door_close()

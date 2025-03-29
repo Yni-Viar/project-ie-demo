@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dyybt2ydb7vji" path="res://Scripts/ElevatorSystem/ElevatorFloor.gd" id="1_1v207"]
 
+
 [resource]
 script = ExtResource("1_1v207")
 destination_point = "/root/Game/Loc_Home/HouseElevator/Floor7"

@@ -4,6 +4,7 @@
 [ext_resource type="Material" uid="uid://fo0lvwxp1orq" path="res://Shaders/item_next_pass_material.tres" id="3_fh4by"]
 [ext_resource type="AudioStream" uid="uid://c1fs5i36r3yx6" path="res://Sounds/Interact/button.ogg" id="3_fjopp"]
 
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_s7dap"]
 height = 0.085
 radius = 0.115

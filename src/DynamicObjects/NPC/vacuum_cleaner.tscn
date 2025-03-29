@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://douht4b1itilf" path="res://Assets/OriginalModels/VacuumCleaner/vacuum_cleaner_nor.png" id="4_sftlr"]
 [ext_resource type="AudioStream" uid="uid://dau8lwuif80px" path="res://Sounds/NPC/RobotVacuumCleaner/robot_vacuum_cleaner.ogg" id="6_kletf"]
 
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ic13o"]
 resource_name = "wheel"
 cull_mode = 2

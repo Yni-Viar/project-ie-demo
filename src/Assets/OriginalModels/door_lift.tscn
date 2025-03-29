@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://3ra2xq0y2nuw" path="res://Assets/OriginalModels/Doors/Door_Lift1/Metal032_2K_NormalGL.png" id="3_ydyb7"]
 [ext_resource type="Texture2D" uid="uid://dyias48vuad4a" path="res://Assets/OriginalModels/Doors/Door_Lift1/Metal032_2K_Metalness_png-Metal032_2K_Roughness_png.png" id="4_ol4ed"]
 
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0s6tl"]
 resource_name = "Door"
 cull_mode = 2

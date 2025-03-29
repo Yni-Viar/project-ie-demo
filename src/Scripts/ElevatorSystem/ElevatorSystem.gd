@@ -174,20 +174,20 @@ func interact_down(player):
 		call("call_elevator", dir) #move the elevator down.
 
 func on_player_area_body_entered(body):
-	if body is PlayerScript || body is InteractableNpc: #|| body is Pickable:
+	if body is PlayerScript || body is MovableNpc: #|| body is Pickable:
 		call("add_object", body.get_path())
 
 func on_player_area_body_exited(body):
-	if body is PlayerScript || body is InteractableNpc: # || body is Pickable:
+	if body is PlayerScript || body is MovableNpc: # || body is Pickable:
 		call("remove_object", body.get_path())
 
 func add_object(body):
-	if get_node(body) is InteractableNpc:
+	if get_node(body) is MovableNpc:
 		changed_launch_state.connect(get_node(body).on_moving_platform)
 	objects_to_teleport.append(body)
 
 func remove_object(body):
-	if get_node(body) is InteractableNpc:
+	if get_node(body) is MovableNpc:
 		changed_launch_state.disconnect(get_node(body).on_moving_platform)
 	objects_to_teleport.erase(body)
 

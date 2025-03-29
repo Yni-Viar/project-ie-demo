@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dl1uy1qhq6sla" path="res://Assets/OriginalModels/OmnidotPlush/Omnidot_Cylinder_001_rough.png" id="5_ddqvd"]
 [ext_resource type="Texture2D" uid="uid://d3jbrl1k2aeqc" path="res://Assets/OriginalModels/OmnidotPlush/Omnidot_Cylinder_001_nor.png" id="6_wjywy"]
 
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5f18q"]
 resource_name = "Material"
 cull_mode = 2

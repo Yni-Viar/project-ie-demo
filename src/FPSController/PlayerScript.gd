@@ -112,7 +112,7 @@ func _physics_process(delta: float) -> void:
 				collided_with.call("interact", self)
 			elif collided_with is InteractableRigidBody:
 				collided_with.call("interact", self)
-			elif collided_with is InteractableNpc:
+			elif collided_with is MovableNpc || collided_with is StaticNpc:
 				collided_with.call("interact")
 			elif collided_with is PathWalkerHelper:
 				collided_with.call("interact")

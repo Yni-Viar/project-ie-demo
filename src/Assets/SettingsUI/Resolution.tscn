@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://4k2un7nm7xc6" path="res://UITheme.tres" id="1_qoo8c"]
 [ext_resource type="Script" uid="uid://bax8egdoqhyu7" path="res://Scripts/UI/ResolutionWindow.gd" id="2_hyxb0"]
 
+
 [node name="Resolution" type="Window"]
 title = "NEW_RESOLUTION"
 position = Vector2i(32, 64)
