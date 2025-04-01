@@ -1,5 +1,11 @@
 # ⚠️ VERSIONS BELOW v0.0.7.4 ARE REMOVED ENTIRELY (and became lost media), DUE TO POSSIBLE COPYRIGHT PROBLEMS.
 
+# v0.0.12 (2025.04.01)
+
+- No Escape sign can be turned on!
+- Fixed (again) floor placing.
+- Updated procedural tile generator component to 7.2.0 (used on PC screen)
+
 # v0.0.11 (2025.03.29)
 
 - Fully introduce new character.

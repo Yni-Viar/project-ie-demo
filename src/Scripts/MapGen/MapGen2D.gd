@@ -1,7 +1,5 @@
 @icon("res://Scripts/MapGen/Icons/MapGenNode2D.svg")
 extends Node2D
-## Map Generator, version 8, modified to use game's rng, instead of it's own rng.
-## Made by Yni under MIT license
 class_name FacilityGenerator2D
 
 signal generated
@@ -109,7 +107,6 @@ func generate_zone_astar() -> void:
 	var all_rooms_count: int = 0
 	for i in range(map_size_x + 1):
 		zone_counter.x = i
-		var connected_zones_x: bool = false
 		for j in range(map_size_y + 1):
 			# Large room amount
 			var large_room_amount: int = zone_size / 6
@@ -167,15 +164,14 @@ func generate_zone_astar() -> void:
 				number_of_rooms -= 1
 				
 			## Connect two zones
-			if zone_counter.x < map_size_x && !connected_zones_x:
-				connected_zones_x = true
+			if zone_counter.x < map_size_x:
 				var tmp_x2: int
 				if (zone_counter.x % 2 == 1):
 					tmp_x2 = (zone_counter.x + 2 + 2 * zone_counter.x)
 				else: # add one to be an odd number
 					tmp_x2 = (zone_counter.x + 3 + 2 * zone_counter.x)
 				var zone_center_x: int = float(size_x) * (float(tmp_x2) / float((map_size_x + 1) * 2))
-				walk_astar(Vector2(roundi(zone_center.x), roundi(zone_center.y)), Vector2(zone_center_x, roundi(zone_center.x)))
+				walk_astar(Vector2(roundi(zone_center.x), roundi(zone_center.y)), Vector2(zone_center_x, roundi(zone_center.y)))
 			if zone_counter.y < map_size_y:
 				var tmp_y2: int
 				if (zone_counter.x % 2 == 1):
@@ -183,7 +179,7 @@ func generate_zone_astar() -> void:
 				else: # add one to be an odd number
 					tmp_y2 = (zone_counter.y + 3 + 2 * zone_counter.y)
 				var zone_center_y: int = float(size_y) * (float(tmp_y2) / float((map_size_y + 1) * 2))
-				walk_astar(Vector2(roundi(zone_center.x), roundi(zone_center.y)), Vector2(roundi(zone_center.y), zone_center_y))
+				walk_astar(Vector2(roundi(zone_center.x), roundi(zone_center.y)), Vector2(roundi(zone_center.x), zone_center_y))
 		zone_index_default += map_size_y
 		zone_counter.y = 0
 	place_room_positions()

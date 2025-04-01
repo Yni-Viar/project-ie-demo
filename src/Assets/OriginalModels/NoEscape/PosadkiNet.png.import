@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnv7v6x7vdfjv"
-path.s3tc="res://.godot/imported/Cube_edit.png-02a1c53955fb2b9adac8a5c24cbb2396.s3tc.ctex"
-path.etc2="res://.godot/imported/Cube_edit.png-02a1c53955fb2b9adac8a5c24cbb2396.etc2.ctex"
+uid="uid://dnpbp33xip0t2"
+path.s3tc="res://.godot/imported/PosadkiNet.png-302b1c8cd9bbf8d19999c14febceed66.s3tc.ctex"
+path.etc2="res://.godot/imported/PosadkiNet.png-302b1c8cd9bbf8d19999c14febceed66.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/OriginalModels/NoEscape/Cube_edit.png"
-dest_files=["res://.godot/imported/Cube_edit.png-02a1c53955fb2b9adac8a5c24cbb2396.s3tc.ctex", "res://.godot/imported/Cube_edit.png-02a1c53955fb2b9adac8a5c24cbb2396.etc2.ctex"]
+source_file="res://Assets/OriginalModels/NoEscape/PosadkiNet.png"
+dest_files=["res://.godot/imported/PosadkiNet.png-302b1c8cd9bbf8d19999c14febceed66.s3tc.ctex", "res://.godot/imported/PosadkiNet.png-302b1c8cd9bbf8d19999c14febceed66.etc2.ctex"]
 
 [params]
 
