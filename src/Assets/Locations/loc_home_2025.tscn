@@ -37,7 +37,6 @@
 [ext_resource type="PackedScene" uid="uid://ccn606edn4ylv" path="res://Assets/OriginalModels/boot_holder.tscn" id="30_yjx1o"]
 [ext_resource type="PackedScene" uid="uid://b0vn55ioj6dfb" path="res://Assets/ExternalModels/electric_stove.tscn" id="31_j8jef"]
 [ext_resource type="PackedScene" uid="uid://bub0kcwgvaqyn" path="res://DynamicObjects/ActionItems/chair.tscn" id="32_r44ch"]
-[ext_resource type="Script" uid="uid://c0vyk8pjes2ne" path="res://Scripts/LightSystemOmni.gd" id="33_cfuef"]
 [ext_resource type="PackedScene" uid="uid://c2ykxe63xhb3e" path="res://Assets/ExternalModels/3d_lamp.tscn" id="35_w1gvj"]
 [ext_resource type="PackedScene" uid="uid://b2b0ph8o2wtkm" path="res://Assets/OriginalModels/door2.tscn" id="36_o1gvq"]
 [ext_resource type="Theme" uid="uid://kn6ecrhutiam" path="res://UI/FluentUI/godot_fluent_cropped.tres" id="36_u1skq"]
@@ -71,6 +70,7 @@
 [ext_resource type="PackedScene" uid="uid://btm3yh85og7mm" path="res://Assets/ExternalModels/monitor.tscn" id="50_8bju3"]
 [ext_resource type="AudioStream" uid="uid://dur4rfn0ufek6" path="res://Sounds/Music/DEgITx/Somewhere_on_Glade.wav" id="51_8cocw"]
 [ext_resource type="PackedScene" uid="uid://bu825cm6uv3r2" path="res://DynamicObjects/ActionItems/chair_4.tscn" id="53_nsk5i"]
+[ext_resource type="Script" uid="uid://c0vyk8pjes2ne" path="res://Scripts/LightSystemOmni.gd" id="53_rsm8q"]
 [ext_resource type="Script" uid="uid://dfpwopeoh37pp" path="res://Scripts/ElevatorSystem/ElevatorSystem.gd" id="56_6sn48"]
 [ext_resource type="Script" uid="uid://dyybt2ydb7vji" path="res://Scripts/ElevatorSystem/ElevatorFloor.gd" id="57_wj3uy"]
 [ext_resource type="Resource" uid="uid://c23s5sc0718um" path="res://Assets/Res/ElevatorFloors/Loc_home_floor1.tres" id="58_6gw8o"]
@@ -4118,7 +4118,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.98384, 56.0921, 2.05579)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1882, 56.0921, -1.92248)
 
 [node name="Lamp13" parent="SergesHome" instance=ExtResource("35_w1gvj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7091, 56.0921, 1.441)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.143, 56.0921, 1.85244)
 
 [node name="hanging_picture_frame_02_2k" parent="SergesHome" instance=ExtResource("26_hopf2")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12.8775, 54.3143, 0.184222)
@@ -4129,14 +4129,15 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -15.41
 [node name="Chair" parent="SergesHome" instance=ExtResource("32_r44ch")]
 transform = Transform3D(-0.0605435, 0, -0.998166, 0, 1, 0, 0.998166, 0, -0.0605435, -15.8533, 51.6251, 1.14066)
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="SergesHome"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8434, 54.8514, 3.34219)
+[node name="BathLight" type="OmniLight3D" parent="SergesHome"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -12.0613, 54.2901, 3.27062)
 light_color = Color(1, 1, 0.752941, 1)
+shadow_enabled = true
 distance_fade_enabled = true
-distance_fade_begin = 24.0
-distance_fade_shadow = 32.0
-omni_range = 2.553
-script = ExtResource("33_cfuef")
+distance_fade_begin = 16.0
+distance_fade_shadow = 8.0
+script = ExtResource("53_rsm8q")
+enabled = false
 
 [node name="Door2" type="Node3D" parent="SergesHome"]
 transform = Transform3D(-0.776359, 0, -8.74228e-08, 0, 1, 0, 6.78715e-08, 0, -1, -12.0353, 51.6201, 2.02078)
@@ -4251,21 +4252,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000469208, -0.00689316, -0
 [node name="ReflectionProbe" type="ReflectionProbe" parent="SergesHome/ReflectionProbes" groups=["reflection_probe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3137, 53.8465, -2.12762)
 blend_distance = 0.0
+max_distance = 64.0
 size = Vector3(9.62736, 4.68636, 4.67465)
 box_projection = true
 interior = true
-ambient_mode = 2
+ambient_mode = 0
 ambient_color = Color(0.501961, 0.501961, 0.376471, 1)
 
 [node name="ReflectionProbe2" type="ReflectionProbe" parent="SergesHome/ReflectionProbes" groups=["reflection_probe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3178, 53.8495, 2.52145)
 blend_distance = 0.0
+max_distance = 64.0
 size = Vector3(9.63271, 4.68038, 4.62865)
 origin_offset = Vector3(-2.06299, 0, 0)
 box_projection = true
 interior = true
-ambient_mode = 2
+ambient_mode = 0
 ambient_color = Color(0.501961, 0.501961, 0.376471, 1)
+ambient_color_energy = 0.5
 
 [node name="HouseElevator" type="Node3D" parent="."]
 
@@ -4274,15 +4278,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.865
 script = ExtResource("56_6sn48")
 floors = Array[ExtResource("57_wj3uy")]([ExtResource("58_6gw8o"), ExtResource("59_bsc33"), ExtResource("60_my12s"), ExtResource("61_4n78p"), ExtResource("62_rpjv7"), ExtResource("63_vt42b"), ExtResource("64_8xkjd"), ExtResource("65_m5usu"), ExtResource("66_4yjo5"), ExtResource("67_hxsp4"), ExtResource("68_5yt8f"), ExtResource("69_le5qv")])
 elevator_doors = PackedStringArray("Game/Loc_Home/HouseElevator/ElevDoor0", "Game/Loc_Home/HouseElevator/ElevDoor1", "Game/Loc_Home/HouseElevator/ElevDoor2", "Game/Loc_Home/HouseElevator/ElevDoor3", "Game/Loc_Home/HouseElevator/ElevDoor4", "Game/Loc_Home/HouseElevator/ElevDoor5", "Game/Loc_Home/HouseElevator/ElevDoor6", "Game/Loc_Home/HouseElevator/ElevDoor7", "Game/Loc_Home/HouseElevator/ElevDoor8", "Game/Loc_Home/HouseElevator/ElevDoor9", "Game/Loc_Home/HouseElevator/ElevDoor10", "Game/Loc_Home/HouseElevator/ElevDoor11")
-speed = null
-is_moving = null
-open_door_sounds = null
-close_door_sounds = null
-objects_to_teleport = null
-current_floor = null
-target_floor = null
-waypoints = null
-locked = null
+speed = 3.0
 navigation_link = NodePath("NavigationLink3D")
 navigation_region = NodePath("AnimatableBody3D/NavigationRegion3D")
 
@@ -4767,58 +4763,58 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.851098, 51.5056, -2.01886)
 [node name="HomeProps" type="Node3D" parent="HouseHall"]
 
 [node name="DoorProp" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 51.6188, 4.86691)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 51.5499, 4.86691)
 
 [node name="DoorProp48" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 51.6356, -1.96473)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 51.4898, -1.96473)
 
 [node name="DoorProp2" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 51.6188, 4.77115)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 51.4846, 4.77115)
 
 [node name="DoorProp70" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 51.6188, -1.95674)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 51.4846, -1.95674)
 
 [node name="DoorProp3" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 51.6191, 2.70744)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 51.4849, 2.70744)
 
 [node name="DoorProp4" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 46.9456, 4.86691)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 46.8443, 4.86691)
 
 [node name="DoorProp49" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 46.9456, -1.93843)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 46.8668, -1.93843)
 
 [node name="DoorProp5" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.04116, 46.9355, 4.80569)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.04116, 46.8185, 4.80569)
 
 [node name="DoorProp69" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 46.9355, -1.92712)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 46.8185, -1.92712)
 
 [node name="DoorProp6" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 46.9358, 2.70744)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 46.8188, 2.70744)
 
 [node name="DoorProp7" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 46.9358, 3.24292)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 46.8565, 3.24292)
 
 [node name="DoorProp8" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.75803, 42.322, 4.90249)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.75803, 42.2287, 4.90249)
 
 [node name="DoorProp51" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 42.322, -1.95462)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 42.242, -1.95462)
 
 [node name="DoorProp9" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 42.2674, 4.77115)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 42.212, 4.77115)
 
 [node name="DoorProp68" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 42.2674, -1.98525)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 42.212, -1.98525)
 
 [node name="DoorProp10" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 42.2677, 2.70744)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 42.2123, 2.70744)
 
 [node name="DoorProp11" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 42.3223, 3.24292)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 42.2423, 3.24292)
 
 [node name="DoorProp12" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 37.6149, 4.86691)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 37.5636, 4.86691)
 
 [node name="DoorProp50" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 37.6149, -1.93367)
@@ -4833,82 +4829,82 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 37.5843, -1.946)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 37.5604, 2.70744)
 
 [node name="DoorProp15" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 37.6335, 3.24292)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 37.607, 3.24292)
 
 [node name="DoorProp16" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 32.9393, 4.86691)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 32.9075, 4.86691)
 
 [node name="DoorProp52" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 32.9393, -1.9491)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 32.8999, -1.9491)
 
 [node name="DoorProp17" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.86495, 32.8916, 4.79967)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.86495, 32.855, 4.79967)
 
 [node name="DoorProp66" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 32.8916, -1.93941)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 32.855, -1.93941)
 
 [node name="DoorProp18" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 32.8919, 2.70744)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 32.8553, 2.70744)
 
 [node name="DoorProp19" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 32.9395, 3.24292)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 32.9001, 3.24292)
 
 [node name="DoorProp20" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 28.2666, 4.86691)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 28.2021, 4.86691)
 
 [node name="DoorProp53" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 28.2666, -1.91907)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 28.1963, -1.91907)
 
 [node name="DoorProp21" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 28.2105, 4.77115)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 28.1796, 4.77115)
 
 [node name="DoorProp65" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 28.2105, -1.94894)
 
 [node name="DoorProp22" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 28.2108, 2.70744)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 28.1799, 2.70744)
 
 [node name="DoorProp23" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 28.2669, 3.24292)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 28.1966, 3.24292)
 
 [node name="DoorProp24" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 23.5849, 4.86691)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 23.5221, 4.86691)
 
 [node name="DoorProp54" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 23.5849, -1.97242)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 23.5362, -1.97242)
 
 [node name="DoorProp25" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 23.5365, 4.77115)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 23.4995, 4.77115)
 
 [node name="DoorProp64" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 23.5365, -1.96711)
 
 [node name="DoorProp26" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 23.5368, 2.70744)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 23.4998, 2.70744)
 
 [node name="DoorProp27" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 23.5852, 3.24292)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 23.5365, 3.24292)
 
 [node name="DoorProp28" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 18.9001, 4.86691)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 18.8396, 4.86691)
 
 [node name="DoorProp55" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 18.9001, -1.96502)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 18.8438, -1.96502)
 
 [node name="DoorProp29" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 18.906, 4.77115)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 18.8074, 4.77115)
 
 [node name="DoorProp63" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 18.906, -1.90484)
 
 [node name="DoorProp71" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.07486, 14.733, -1.71881)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.07486, 14.1538, -1.71881)
 
 [node name="DoorProp30" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 18.8593, 2.70744)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 18.8114, 2.70744)
 
 [node name="DoorProp31" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 18.9163, 3.24292)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 18.8414, 3.24292)
 
 [node name="DoorProp32" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 14.1574, 4.86691)
@@ -4917,31 +4913,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 14.1574, 4.86691)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 14.178, -1.92321)
 
 [node name="DoorProp33" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 14.178, 4.77115)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 14.1546, 4.77115)
 
 [node name="DoorProp34" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 14.1783, 2.70744)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 14.1549, 2.70744)
 
 [node name="DoorProp35" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 14.1577, 3.24292)
 
 [node name="DoorProp36" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 9.56333, 4.86691)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 9.50139, 4.86691)
 
 [node name="DoorProp57" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58815, 9.50898, -1.96045)
 
 [node name="DoorProp37" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 9.51504, 4.77115)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91957, 9.47642, 4.77115)
 
 [node name="DoorProp62" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 9.51504, -1.96917)
 
 [node name="DoorProp38" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 9.53369, 2.70744)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 9.45059, 2.70744)
 
 [node name="DoorProp39" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 9.52205, 3.24292)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 9.49415, 3.24292)
 
 [node name="DoorProp40" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 4.87009, 4.86691)
@@ -4959,7 +4955,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21041, 4.85569, -1.95606)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.70574, 4.84737, 2.70744)
 
 [node name="DoorProp43" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 4.88334, 3.24292)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.42457, 4.87157, 3.24292)
 
 [node name="DoorProp44" parent="HouseHall/HomeProps" instance=ExtResource("99_1u63x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80738, 0.109249, 4.86691)

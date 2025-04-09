@@ -130,10 +130,8 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.12[/b] (Demo)
-- No Escape sign can be turned on!
-- Fixed (again) floor placing.
-- Updated procedural tile generator component to 7.2.0 (used on PC screen)
+text = "[b]v.0.0.15[/b] (Demo)
+- Backport changes from upcoming Demo 2.
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL

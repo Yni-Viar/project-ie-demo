@@ -32,7 +32,7 @@ enum TransportType {CABLECAR, TRAIN}
 @export var animatable_path: NodePath
 ## Necessary!!! Keys are used only in head wagon, values used both by head and other wagons.
 ## This is how stops are made.
-@export var waypoints : Dictionary = {}
+@export var waypoints : Dictionary[float, bool] = {}
 ## If true - opens the right door, else opens left door
 @export var which_door_open_on_start: bool = true
 ## Connected wagons. Connected wagons must have is_headwagon property DISABLED!
@@ -41,14 +41,14 @@ enum TransportType {CABLECAR, TRAIN}
 @export var wagon_offset: float
 ## The ACTUAL speed (if you are making networked game, sync this value)
 @export var sample_speed = 0.1
+## Next stop
+@export var last_move = 0
+## Checks, if the train have already reached the end.
+## In this case, "the end" means the train passed the last "station" on this curve/waypoint
+@export var at_end: bool = false
 var _move_sounds: Array[AudioStream] = []
 var left_door_open: bool = false
 var right_door_open: bool = false
-## Next stop
-var last_move = 0
-## Checks, if the train have already reached the end.
-## In this case, "the end" means the train passed the last "station" on this curve/waypoint
-var at_end: bool = false
 ## Wagons database
 var wagons: Array[TransportSystem]
 ## For checking difference between rotation
@@ -100,16 +100,20 @@ func _physics_process(delta):
 				# That is how train moves
 				progress += sample_speed * delta
 				# Move the mesh (AnimationBody3D do not move automatically)
-				get_node(animatable_path).global_position = global_position
+				#get_node(animatable_path).global_position = global_position
+				# Fix strange bug, where AnimatableBody rotates itself
+				#get_node(animatable_path).rotation = Vector3.ZERO
 				if sample_speed < speed:
-					if progress < waypoints.keys()[last_move] - speed * 8:
+					if progress < waypoints.keys()[last_move] - speed * 8 || at_end:
 						# Increase the speed
 						sample_speed = move_toward(sample_speed, speed, 0.5 * delta)
 				if wagons.size() > 0:
 					# Move of the wagons and move wagons mesh
 					for i in range(wagons.size()):
 						wagons[i].progress += sample_speed * delta
-						wagons[i].get_node(animatable_path).global_position = wagons[i].global_position
+						#wagons[i].get_node(animatable_path).global_position = wagons[i].global_position
+						# Fix strange bug, where AnimatableBody rotates itself
+						#wagons[i].get_node(animatable_path).rotation = Vector3.ZERO
 				# Smooth rotation for player(s) (and item(s))
 				for w in wagons.size():
 					for i in range(wagons[w].objects_to_teleport.size()):
@@ -120,19 +124,34 @@ func _physics_process(delta):
 					var node: Node3D = get_node(objects_to_teleport[i])
 					node.global_rotation = node.global_rotation + (global_rotation - rotator[0])
 					rotator[0] = global_rotation
-		# Increase pitch when change speed
-		if sample_speed < speed:
-			if progress < waypoints.keys()[last_move] - speed * 8:
-				if $Move.pitch_scale < 1:
-					$Move.pitch_scale += 0.0625 * delta
-		elif !at_end && progress > waypoints.keys()[last_move] - speed * 8:
-			if $Move.pitch_scale > 0.5:
-				$Move.pitch_scale -= 0.0625 * delta
+			# Increase pitch when change speed
+				if sample_speed < speed:
+					if progress < waypoints.keys()[last_move] - speed * 8:
+						if $Move.pitch_scale < 1:
+							$Move.pitch_scale += 0.015625 * delta
+							for i in range(wagons.size()):
+								wagons[i].get_node("Move").pitch_scale += 0.015625 * delta
+				elif !at_end && progress > waypoints.keys()[last_move] - speed * 8:
+					if $Move.pitch_scale > 0.5:
+						$Move.pitch_scale -= 0.0625 * delta
+						for i in range(wagons.size()):
+							wagons[i].get_node("Move").pitch_scale -= 0.0625 * delta
+	# Optimize physics
+	if get_viewport().get_camera_3d() == null:
+		set_physics_process(false)
+	else:
+		if global_position.distance_to(get_viewport().get_camera_3d().global_position) > 128.0:
+			$Mesh.collision_layer = 0
+			$Mesh.collision_mask = 0
+		else: #If current player is near, enable collisions again
+			$Mesh.collision_layer = 1
+			$Mesh.collision_mask = 1
 
 ## Stop the transport
 func stop():
 	$Move.pitch_scale = 0.5
 	$Move.stop()
+	sample_speed = 0.1
 	changed_launch_state.emit(false)
 	call("open_dest_doors", waypoints[waypoints.keys()[last_move]])
 	is_moving = false
