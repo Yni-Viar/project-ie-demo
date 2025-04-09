@@ -37,6 +37,10 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 
+[editor]
+
+import/use_multiple_threads=false
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg", "res://addons/limbo_console/plugin.cfg", "res://addons/virtual_joystick/plugin.cfg")
