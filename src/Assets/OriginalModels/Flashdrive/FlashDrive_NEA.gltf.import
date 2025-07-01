@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://n3edsrc3uldn"
-path="res://.godot/imported/Eledrive.gltf-18fb6752651b34e92be82b7a83a6ee6c.scn"
+uid="uid://r1ria42ob62j"
+path="res://.godot/imported/FlashDrive_NEA.gltf-2b9cc782e2368263c8a406a9dfbc12c0.scn"
 
 [deps]
 
-source_file="res://Assets/OriginalModels/Eledrive/Eledrive.gltf"
-dest_files=["res://.godot/imported/Eledrive.gltf-18fb6752651b34e92be82b7a83a6ee6c.scn"]
+source_file="res://Assets/OriginalModels/Flashdrive/FlashDrive_NEA.gltf"
+dest_files=["res://.godot/imported/FlashDrive_NEA.gltf-2b9cc782e2368263c8a406a9dfbc12c0.scn"]
 
 [params]
 

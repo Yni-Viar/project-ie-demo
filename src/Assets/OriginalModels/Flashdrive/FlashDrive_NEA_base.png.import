@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bogv3mthr3hr"
-path.s3tc="res://.godot/imported/Eledrive_base.png-cfb5026e166107c82e892a8da84587df.s3tc.ctex"
-path.etc2="res://.godot/imported/Eledrive_base.png-cfb5026e166107c82e892a8da84587df.etc2.ctex"
+uid="uid://b12fe4hkdwco6"
+path.s3tc="res://.godot/imported/FlashDrive_NEA_base.png-026aa2822c52d49603579c4a4fd73460.s3tc.ctex"
+path.etc2="res://.godot/imported/FlashDrive_NEA_base.png-026aa2822c52d49603579c4a4fd73460.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/OriginalModels/Eledrive/Eledrive_base.png"
-dest_files=["res://.godot/imported/Eledrive_base.png-cfb5026e166107c82e892a8da84587df.s3tc.ctex", "res://.godot/imported/Eledrive_base.png-cfb5026e166107c82e892a8da84587df.etc2.ctex"]
+source_file="res://Assets/OriginalModels/Flashdrive/FlashDrive_NEA_base.png"
+dest_files=["res://.godot/imported/FlashDrive_NEA_base.png-026aa2822c52d49603579c4a4fd73460.s3tc.ctex", "res://.godot/imported/FlashDrive_NEA_base.png-026aa2822c52d49603579c4a4fd73460.etc2.ctex"]
 
 [params]
 

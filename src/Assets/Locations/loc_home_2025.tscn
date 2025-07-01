@@ -52,7 +52,7 @@
 [ext_resource type="Resource" uid="uid://dkax2pgmsnpbr" path="res://Scripts/MapGen/room2C.tres" id="41_5ypn2"]
 [ext_resource type="PackedScene" uid="uid://dllklb0hh5g7y" path="res://Assets/ExternalModels/keyboard.tscn" id="41_him17"]
 [ext_resource type="Resource" uid="uid://defw3e0yk60rh" path="res://Scripts/MapGen/room4.tres" id="42_mjxna"]
-[ext_resource type="PackedScene" uid="uid://q7sgr1j7yydg" path="res://InventorySystem/Items/Pickup/eledrive.tscn" id="42_phao5"]
+[ext_resource type="PackedScene" uid="uid://q7sgr1j7yydg" path="res://InventorySystem/Items/Pickup/flashdrive.tscn" id="42_phao5"]
 [ext_resource type="PackedScene" uid="uid://cwdjg1cmbvj8f" path="res://DynamicObjects/ActionItems/metrowagon_anka_toy.tscn" id="42_rv8r1"]
 [ext_resource type="Resource" uid="uid://djlh4pej75w62" path="res://Scripts/MapGen/room1.tres" id="43_cdmpj"]
 [ext_resource type="Script" uid="uid://dd6jjlxp57v08" path="res://Scripts/DoorSystem/LightDoor.gd" id="43_u4kjh"]

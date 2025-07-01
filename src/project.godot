@@ -230,6 +230,7 @@ common/physics_interpolation=true
 
 occlusion_culling/bvh_build_quality=1
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
 occlusion_culling/occlusion_rays_per_thread=256

@@ -1,6 +1,6 @@
 {
 	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.2.57",
+		"generator":"Khronos glTF Blender I/O v4.4.55",
 		"version":"2.0"
 	},
 	"scene":0,
@@ -73,18 +73,18 @@
 	"images":[
 		{
 			"mimeType":"image/png",
-			"name":"Eledrive_nor",
-			"uri":"Eledrive_nor.png"
+			"name":"FlashDrive_NEA_nor",
+			"uri":"FlashDrive_NEA_nor.png"
 		},
 		{
 			"mimeType":"image/png",
-			"name":"Eledrive_base",
-			"uri":"Eledrive_base.png"
+			"name":"FlashDrive_NEA_base",
+			"uri":"FlashDrive_NEA_base.png"
 		},
 		{
 			"mimeType":"image/png",
-			"name":"Eledrive_metal-Eledrive_rough",
-			"uri":"Eledrive_metal-Eledrive_rough.png"
+			"name":"FlashDrive_NEA_metal-FlashDrive_NEA_rough",
+			"uri":"FlashDrive_NEA_metal-FlashDrive_NEA_rough.png"
 		}
 	],
 	"accessors":[
@@ -158,7 +158,7 @@
 	"buffers":[
 		{
 			"byteLength":9496,
-			"uri":"Eledrive.bin"
+			"uri":"FlashDrive_NEA.bin"
 		}
 	]
 }
