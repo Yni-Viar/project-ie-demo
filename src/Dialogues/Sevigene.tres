@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterList" load_steps=5 format=3 uid="uid://c8eodwnbah4cc"]
+
+[ext_resource type="Script" uid="uid://urh5p4atyoyi" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_gjqjp"]
+[ext_resource type="Script" uid="uid://bqqa8okdheslq" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="2_4m5rd"]
+[ext_resource type="Texture2D" uid="uid://cb3pcnm50dy4v" path="res://Assets/HUD/DlgIcons/Sevigene/sevigene_demonform.png" id="2_qk88s"]
+
+[sub_resource type="Resource" id="Resource_p2fhs"]
+script = ExtResource("1_gjqjp")
+name = "NPC_SEVIGENE"
+image = ExtResource("2_qk88s")
+color = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://urh5p4atyoyi"
+
+[resource]
+script = ExtResource("2_4m5rd")
+characters = Array[ExtResource("1_gjqjp")]([SubResource("Resource_p2fhs")])
+metadata/_custom_type_script = "uid://bqqa8okdheslq"

@@ -1,6 +1,6 @@
 keys,en,ru
-NPC_WIFE_FIRSTSTART,Julia Cloud (your wife),Юлия Облакова (твоя жена)
-NPC_WIFE,Julia Cloud,Юля Облакова
+NPC_GF_FIRSTSTART,Julia Cloud (your girlfriend),Юлия Облакова (твоя подруга)
+NPC_GF,Julia Cloud,Юля Облакова
 NPC_VOICE,Voice,Голос
 SERGE_FEATHER,You,Вы
 SERGE_MIND,Your mind,Ваш разум

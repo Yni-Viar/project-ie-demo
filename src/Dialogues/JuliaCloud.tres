@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="CharacterList" load_steps=18 format=3 uid="uid://bp55u00mvwogd"]
+
+[ext_resource type="Script" uid="uid://urh5p4atyoyi" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_xlqm4"]
+[ext_resource type="Texture2D" uid="uid://dwc4bwn1ogpnv" path="res://Assets/HUD/DlgIcons/JuliaCloud/julia_cloud_smiling.png" id="2_e2y0b"]
+[ext_resource type="Script" uid="uid://bqqa8okdheslq" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="2_mnwew"]
+[ext_resource type="Texture2D" uid="uid://cub42smy7xa4e" path="res://Assets/HUD/DlgIcons/JuliaCloud/julia_cloud_neutral.png" id="3_lkept"]
+[ext_resource type="Texture2D" uid="uid://c2x70jn6f4ssa" path="res://Assets/HUD/DlgIcons/JuliaCloud/julia_cloud_laughing.png" id="4_b3aby"]
+[ext_resource type="Texture2D" uid="uid://bgvtdoj02rks7" path="res://Assets/HUD/DlgIcons/JuliaCloud/julia_cloud_angry.png" id="5_vq5i6"]
+[ext_resource type="Texture2D" uid="uid://bvuvcm7nbjn7i" path="res://Assets/HUD/DlgIcons/JuliaCloud/julia_cloud_o.png" id="6_5rbmq"]
+[ext_resource type="Texture2D" uid="uid://b24b2i5oqpuni" path="res://Assets/HUD/DlgIcons/JuliaCloud/julia_cloud_offense.png" id="7_8qek0"]
+[ext_resource type="Texture2D" uid="uid://dgcdrfxuyv5dp" path="res://Assets/HUD/DlgIcons/JuliaCloud/julia_cloud_upset.png" id="8_lkept"]
+
+[sub_resource type="Resource" id="Resource_uueec"]
+script = ExtResource("1_xlqm4")
+name = "NPC_GF_FIRSTSTART"
+image = ExtResource("2_e2y0b")
+color = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://urh5p4atyoyi"
+
+[sub_resource type="Resource" id="Resource_8wd3l"]
+script = ExtResource("1_xlqm4")
+name = "NPC_GF"
+image = ExtResource("2_e2y0b")
+color = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://urh5p4atyoyi"
+
+[sub_resource type="Resource" id="Resource_hdq6h"]
+script = ExtResource("1_xlqm4")
+name = "NPC_GF"
+image = ExtResource("3_lkept")
+color = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://urh5p4atyoyi"
+
+[sub_resource type="Resource" id="Resource_nh13y"]
+script = ExtResource("1_xlqm4")
+name = "NPC_GF"
+image = ExtResource("4_b3aby")
+color = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://urh5p4atyoyi"
+
+[sub_resource type="Resource" id="Resource_lkhh0"]
+script = ExtResource("1_xlqm4")
+name = "NPC_GF"
+image = ExtResource("5_vq5i6")
+color = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://urh5p4atyoyi"
+
+[sub_resource type="Resource" id="Resource_6icvq"]
+script = ExtResource("1_xlqm4")
+name = "NPC_GF"
+image = ExtResource("6_5rbmq")
+color = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://urh5p4atyoyi"
+
+[sub_resource type="Resource" id="Resource_y6kmn"]
+script = ExtResource("1_xlqm4")
+name = "NPC_GF"
+image = ExtResource("7_8qek0")
+color = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://urh5p4atyoyi"
+
+[sub_resource type="Resource" id="Resource_uaaw2"]
+script = ExtResource("1_xlqm4")
+name = "NPC_GF"
+image = ExtResource("8_lkept")
+color = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://urh5p4atyoyi"
+
+[resource]
+script = ExtResource("2_mnwew")
+characters = Array[ExtResource("1_xlqm4")]([SubResource("Resource_uueec"), SubResource("Resource_8wd3l"), SubResource("Resource_hdq6h"), SubResource("Resource_nh13y"), SubResource("Resource_lkhh0"), SubResource("Resource_6icvq"), SubResource("Resource_y6kmn"), SubResource("Resource_uaaw2")])
+metadata/_custom_type_script = "uid://bqqa8okdheslq"

@@ -36,7 +36,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "NPC_WIFE_FIRSTSTART"
+"speaker": 0
 },
 &"1_10": {
 "dialogue": "DLG_TEST_1_7",
@@ -75,7 +75,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "NPC_WIFE"
+"speaker": 5
 },
 &"1_13": {
 "dialogue": "DLG_TEST_2_3",
@@ -88,7 +88,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "NPC_WIFE"
+"speaker": 2
 },
 &"1_14": {
 "dialogue": "DLG_TEST_3_1",
@@ -101,7 +101,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "NPC_WIFE"
+"speaker": 5
 },
 &"1_15": {
 "dialogue": "DLG_TEST_3_2",
@@ -184,7 +184,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "NPC_WIFE"
+"speaker": 1
 },
 &"1_20": {
 "dialogue": "DLG_TEST_3_7",
@@ -210,7 +210,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "NPC_WIFE"
+"speaker": 1
 },
 &"1_4": {
 "dialogue": "DLG_TEST_1_4",
@@ -228,7 +228,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 308),
-"speaker": "NPC_WIFE"
+"speaker": 1
 },
 &"1_5": {
 "dialogue": "DLG_TEST_1_5",
@@ -241,7 +241,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 273),
-"speaker": "NPC_WIFE"
+"speaker": 5
 },
 &"1_6": {
 "dialogue": "DLG_TEST_1_6",
@@ -318,4 +318,4 @@ nodes = {
 }
 variables = {}
 strays = Array[String]([])
-characters = ""
+characters = "res://Dialogues/JuliaCloud.tres"

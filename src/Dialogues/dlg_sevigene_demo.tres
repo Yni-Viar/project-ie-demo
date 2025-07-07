@@ -76,7 +76,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "NPC_SEVIGENE"
+"speaker": 0
 },
 &"1_6": {
 "dialogue": "DLG_SEVIGENEDEMO_1_6",
@@ -102,7 +102,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "NPC_SEVIGENE"
+"speaker": 0
 },
 &"1_8": {
 "dialogue": "DLG_SEVIGENEDEMO_1_8",
@@ -115,7 +115,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "NPC_SEVIGENE"
+"speaker": 0
 },
 &"3_1": {
 "link": "END",
@@ -125,4 +125,4 @@ nodes = {
 }
 variables = {}
 strays = Array[String]([])
-characters = ""
+characters = "res://Dialogues/Sevigene.tres"
