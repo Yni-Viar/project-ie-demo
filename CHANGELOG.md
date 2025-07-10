@@ -1,5 +1,10 @@
 # ⚠️ VERSIONS BELOW v0.0.7.4 ARE REMOVED ENTIRELY (and became lost media), DUE TO POSSIBLE COPYRIGHT PROBLEMS.
 
+# v0.0.15 (2025.07.07)
+
+- Backport changes from upcoming Demo 2.
+- Switch the renderer to OpenGL 3 (because it is a more stable renderer in Godot)
+
 # v0.0.12 (2025.04.01)
 
 - No Escape sign can be turned on!

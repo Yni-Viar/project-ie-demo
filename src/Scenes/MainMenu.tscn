@@ -130,9 +130,8 @@ theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
-text = "[b]v.0.0.15[/b] (Demo)
-- Backport changes from upcoming Demo 2.
-- Switch the renderer to OpenGL 3 (because it is a more stable renderer in Godot)
+text = "[b]v.0.0.16[/b] (Demo)
+
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL
