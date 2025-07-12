@@ -1,6 +1,6 @@
 # Project "I.E." showcase
 ## Info.
-### ⚠️ **Demo 1 possible updates will be located at `demo1` branch, the `main` branch will NOT be updated, until Demo 2**
+### ⚠️ **Demo 1 future updates code are located at `demo1` branch, the `main` branch will NOT be updated, until Demo 2**
 This project is a public showcase for a upcoming game.
 It may have non-critical bugs.
 
