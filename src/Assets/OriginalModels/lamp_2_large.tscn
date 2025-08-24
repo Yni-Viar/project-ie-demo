@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://cjue664kqeq8k" path="res://Assets/OriginalModels/Lamp/lamp_nor.png" id="3_6v471"]
 [ext_resource type="Script" uid="uid://c0vyk8pjes2ne" path="res://Scripts/LightSystemOmni.gd" id="4_oay5n"]
 
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27svx"]
 resource_name = "Material.002"
 cull_mode = 2
@@ -150,9 +149,8 @@ mesh = SubResource("ArrayMesh_00h50")
 skeleton = NodePath("")
 
 [node name="LightSystemOmni" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.793241, 0)
-light_indirect_energy = 2.0
-light_size = 0.3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82035, 0.000939012)
+light_specular = 1.623
 shadow_enabled = true
 distance_fade_enabled = true
 distance_fade_begin = 16.0

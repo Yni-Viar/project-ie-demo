@@ -131,7 +131,9 @@ theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 text = "[b]v.0.0.16[/b] (Demo)
-
+- Fixed shadowing bug in the hall.
+- Removed map generator package.
+- Removed Transport system package.
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL
@@ -418,7 +420,7 @@ text = "[i]Sounds and music[/i]
 - Robot vacuum cleaner.ogg by Eelke -- https://freesound.org/s/383372/ -- License: Attribution 4.0
 - Dialup.mp3 by Jlew -- https://freesound.org/s/16475/ -- License: Attribution 3.0
 - Music:
-Credit: Alexey Kasyanchuk (DEgITx) (CC BY 4.0)"
+Home Sweet Home by Yni - licensed under CC-BY 4.0"
 fit_content = true
 
 [connection signal="pressed" from="Title/Play" to="." method="_on_play_pressed"]
