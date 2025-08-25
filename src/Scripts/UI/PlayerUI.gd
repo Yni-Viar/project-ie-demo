@@ -42,7 +42,7 @@ func input_values(state: String):
 	button_busy = true
 	match state:
 		"exitgame":
-			if special_screen[1] != "exitgame":
+			if special_screen[1] != "exitgame" || special_screen[1] != "gameover":
 				$PauseMenu.show()
 				if special_screen[1].is_empty():
 					special_screen[0] = true
@@ -161,6 +161,9 @@ func _on_dialogue_box_dialogue_signal(value: String) -> void:
 	if value.contains("change_talk_pos"):
 		var splitted_value = int(value.get_slice("|", 1))
 		speaker_prefab.current_dialogue = splitted_value
+	if value.contains("gameover"):
+		var splitted_value = int(value.get_slice("|", 1))
+		get_tree().root.get_node("Game").game_over(splitted_value)
 
 
 
@@ -192,3 +195,7 @@ func _on_back_button_down() -> void:
 
 func _on_back_button_up() -> void:
 	button_busy = false
+
+# For game-over scenario.
+func _on_menu_button_button_down() -> void:
+	get_tree().root.get_node("Game").quit()

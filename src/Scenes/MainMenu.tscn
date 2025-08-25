@@ -134,6 +134,7 @@ text = "[b]v.0.0.16[/b] (Demo)
 - Fixed shadowing bug in the hall.
 - Removed map generator package.
 - Removed Transport system package.
+- Added \"ending\" screen (fake gameover)
 [b]KNOWN ISSUES:[/b]
 - NPC can glitch out for a few seconds, when they try to pass the door if elevator is moving.
 - Toon photomode is glitchy due to lack of normal roughness texture on Godot OpenGL

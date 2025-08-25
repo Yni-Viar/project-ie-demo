@@ -192,7 +192,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_5",
 "text": ""
 }
 },
@@ -314,6 +314,11 @@ nodes = {
 "link": &"3_2",
 "offset": Vector2(1720, 1200),
 "signalValue": "next_talk_pos"
+},
+&"3_5": {
+"link": "END",
+"offset": Vector2(2540, 2380),
+"signalValue": "gameover|1"
 }
 }
 variables = {}

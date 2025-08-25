@@ -43,16 +43,20 @@ func load_save():
 
 ## Game over system.
 func game_over(id: int):
-	for node in get_tree().get_nodes_in_group("Players"):
-		#node.set_physics_process(false)
-		node.queue_free()
+	$PlayerUI/GameOverColorRect.show()
+	$AnimationPlayer.play("game_over_fade")
+	var player = get_tree().get_first_node_in_group("Players")
+	await get_tree().create_timer(1.0).timeout
+	player.queue_free()
+	get_node(current_loc).queue_free()
 	var game_over_screen: GameOverResource = load("res://Assets/GameOver/" + str(id) + ".tres")
 	
 	$PlayerUI/GameOverPanel/TextureRect.texture = game_over_screen.screen
 	$PlayerUI/GameOverPanel/ODeath.text = game_over_screen.text
 	$PlayerUI/GameOverPanel/Reason.text = game_over_screen.reason
+	$PlayerUI/GameOverPanel/AudioStreamPlayer.play()
 	$PlayerUI/GameOverPanel.show()
-	$PlayerUI.special_screen = true
+	$PlayerUI.special_screen = [true, "gameover"]
 
 ## Exits the game.
 func quit():

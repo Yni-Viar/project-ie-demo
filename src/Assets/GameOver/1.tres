@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameOverResource" load_steps=3 format=3 uid="uid://ckounbuxi8jif"]
+
+[ext_resource type="Texture2D" uid="uid://da1bbb2de7ua5" path="res://Assets/GameOver/Screens/ine.png" id="1_cbu5r"]
+[ext_resource type="Script" uid="uid://dt7npqfe0wud6" path="res://Scripts/GameOverResource.gd" id="2_6vyys"]
+
+[resource]
+script = ExtResource("2_6vyys")
+screen = ExtResource("1_cbu5r")
+text = "SHOWCASE_END"
+reason = "REASON_DEMO_END"

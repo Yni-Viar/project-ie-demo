@@ -1,3 +1,5 @@
 keys,en,ru
-DEATH,o' Death,о' Смерть
+DEATH,Lost signal.,Сигнал потерян.
 REASON_GENERIC,Your soul was teared apart,Ваша душа распалась на части
+REASON_DEMO_END,Thank you for playing\nthis demo,Спасибо за игру в\nэто демо.
+SHOWCASE_END,You reached the end of demo.,Вы прошли демо.

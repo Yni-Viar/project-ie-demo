@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://dyeqacmwaajfm"]
+[gd_scene load_steps=47 format=4 uid="uid://dyeqacmwaajfm"]
 
 [ext_resource type="Script" uid="uid://b3kpus4t1p7wb" path="res://Scripts/GameCore.gd" id="1_hqmbo"]
 [ext_resource type="Resource" uid="uid://dtootndbrxot5" path="res://Scripts/GameData/gamedata.tres" id="2_pv0oa"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://b7dx6fx42lptt" path="res://Assets/HUD/Touch/interact_with_item_click.png" id="17_c0a4b"]
 [ext_resource type="PackedScene" uid="uid://ce8coeohfwec8" path="res://Assets/Locations/loc_home_2025.tscn" id="17_yj2b2"]
 [ext_resource type="Texture2D" uid="uid://dbuli3lw4wfbv" path="res://Assets/HUD/Touch/interact_with_item_disabled.png" id="18_pfem7"]
+[ext_resource type="AudioStream" uid="uid://b2dljwarsap8i" path="res://Sounds/Music/Yni/InE_GameOver.ogg" id="20_a27gi"]
 [ext_resource type="Texture2D" uid="uid://bb2n2d6wuhc44" path="res://Assets/HUD/Touch/inventory.png" id="20_o63h1"]
 [ext_resource type="Texture2D" uid="uid://cban3527gkxep" path="res://Assets/HUD/Touch/inventory_click.png" id="21_eaiiv"]
 [ext_resource type="Texture2D" uid="uid://dmtbadda5r5ql" path="res://Assets/HUD/Touch/inventory_disabled.png" id="22_8m35i"]
@@ -45,6 +46,100 @@ script = ExtResource("12_wmvxn")
 [sub_resource type="RichTextEffect" id="RichTextEffect_q6nqb"]
 script = ExtResource("13_clcop")
 
+[sub_resource type="Animation" id="Animation_wy5bh"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerUI/GameOverColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerUI/GameOverColorRect:color:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerUI/GameOverColorRect:color:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayerUI/GameOverColorRect:color:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_0ysrw"]
+resource_name = "game_over_fade"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerUI/GameOverColorRect:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerUI/GameOverColorRect:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerUI/GameOverColorRect:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayerUI/GameOverColorRect:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
 [sub_resource type="Animation" id="Animation_4tulc"]
 resource_name = "music_change"
 tracks/0/type = "bezier"
@@ -61,6 +156,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o7fn3"]
 _data = {
+&"RESET": SubResource("Animation_wy5bh"),
+&"game_over_fade": SubResource("Animation_0ysrw"),
 &"music_change": SubResource("Animation_4tulc")
 }
 
@@ -276,6 +373,16 @@ grow_horizontal = 0
 texture_normal = ExtResource("23_o63h1")
 stretch_mode = 0
 
+[node name="GameOverColorRect" type="ColorRect" parent="PlayerUI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
 [node name="GameOverPanel" type="Control" parent="PlayerUI"]
 visible = false
 layout_mode = 1
@@ -285,15 +392,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="PlayerUI/GameOverPanel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
 [node name="TextureRect" type="TextureRect" parent="PlayerUI/GameOverPanel"]
 layout_mode = 1
 anchors_preset = 15
@@ -301,6 +399,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+expand_mode = 1
 
 [node name="ODeath" type="Label" parent="PlayerUI/GameOverPanel"]
 layout_mode = 1
@@ -386,6 +485,9 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("9_hs5nv")
 text = "GIVE_UP"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PlayerUI/GameOverPanel"]
+stream = ExtResource("20_a27gi")
 
 [node name="PauseMenu" type="Control" parent="PlayerUI"]
 visible = false
@@ -576,7 +678,7 @@ shape = SubResource("SphereShape3D_8m35i")
 [connection signal="button_up" from="PlayerUI/TouchUI/UIPanel/Inventory" to="PlayerUI/TouchUI/UIPanel" method="_on_inventory_button_up"]
 [connection signal="button_down" from="PlayerUI/TouchUI/Back" to="PlayerUI" method="_on_back_button_down"]
 [connection signal="button_up" from="PlayerUI/TouchUI/Back" to="PlayerUI" method="_on_back_button_up"]
-[connection signal="pressed" from="PlayerUI/GameOverPanel/MenuButton" to="PlayerUI" method="_on_exit_button_pressed"]
+[connection signal="button_down" from="PlayerUI/GameOverPanel/MenuButton" to="PlayerUI" method="_on_menu_button_button_down"]
 [connection signal="button_down" from="PlayerUI/PauseMenu/Panel/ExitButton" to="PlayerUI" method="_on_exit_button_button_down"]
 [connection signal="button_down" from="PlayerUI/PauseMenu/Panel/SettingsButton" to="PlayerUI" method="_on_settings_button_button_down"]
 [connection signal="button_down" from="PlayerUI/PauseMenu/Panel/PhotomodeButton" to="PlayerUI" method="_on_photomode_button_button_down"]
