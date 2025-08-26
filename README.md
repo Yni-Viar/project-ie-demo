@@ -1,14 +1,15 @@
-# Project "I.E." showcase
+# Project "In.E." showcase
 ## Info.
 ### ⚠️ **The project is NOT actively maintained.**
 This project is a public showcase for a upcoming game.
 It may have non-critical bugs.
 
+### Notice about Android version
+[How to install Android version after 2026 guide](https://github.com/Yni-Viar/Yni-Viar/blob/main/google-android-2026-foss.md)
+
 ## License:
 My code is licensed under MIT License. [(See License)](/LICENSE)
 Third party assets are licensed under different open-source licenses.
-
-In this demo the story is NOT leaked, except one character.
 
 ## How to build game.
 
