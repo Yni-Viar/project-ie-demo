@@ -5,7 +5,8 @@ This project is a public showcase for a upcoming game.
 It may have non-critical bugs.
 
 ### Notice about Android version
-[How to install Android version after 2026 guide](https://github.com/Yni-Viar/Yni-Viar/blob/main/google-android-2026-foss.md)
+**The game will be incompatible with Google Android 16 QPR2 and later since 2026-2027!** (Xiaomi, Android forks and VR devices are *probably not affected*)
+Tutorial to install apps without Google verification coming soon
 
 ## License:
 My code is licensed under MIT License. [(See License)](/LICENSE)
