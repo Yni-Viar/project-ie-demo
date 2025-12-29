@@ -5,7 +5,7 @@ This project is a public showcase for a upcoming game.
 It may have non-critical bugs.
 
 ### Notice about Android version
-**The game will be incompatible with Google Android 16 QPR2 and later since 2026-2027!** (Xiaomi, Android forks and VR devices are *probably not affected*)
+**The game will be incompatible with Google Android since 2026-2027, unless Google provides method for disabling verification for developers!** (*Xiaomi, Android forks and VR devices are probably not affected*)
 Tutorial to install apps without Google verification coming soon
 
 ## License:
